@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "disclaimer": "Do not rely on this data, this data is for demo purpose only.",
+        "terms": "https://github.com/AmitXShukla/SCM_Rx_Inventory_OLIVEai/blob/main/LICENSE",
+        "license": "https://github.com/AmitXShukla/SCM_Rx_Inventory_OLIVEai/blob/main/LICENSE",
+        "last_updated": "2021-12-15",
+        "results": {
+            "skip": 0,
+            "limit": 10,
+            "total": 2200000
+        }
+    },
+    "results": [
+        {
+            "entity": "NCAL",
+            "city": "Oakland",
+            "status": "red",
+            "message": "ALERT: DocCART Surgical items at par location Oakland are low in inventory, Auto Replenishment POs must dispatch to avoid deficit."
+        },
+        {
+            "entity": "NCAL",
+            "city": "SanFrancisco",
+            "status": "yellow",
+            "message": "ALERT: At par OTC items are received in open package, initiate return to vendor."
+        },
+        {
+            "entity": "SCAL",
+            "city": "Irvine",
+            "status": "orange",
+            "message": "ALERT: Purchase order # PO345k Qty/Price anomaly detected."
+        },
+        {
+            "entity": "NW",
+            "city": "Seattle",
+            "status": "green",
+            "message": "ALERT: none"
+        }
+    ]
+}

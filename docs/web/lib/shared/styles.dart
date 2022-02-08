@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const cAppTitle = "Procure2Pay.ai";
 const cAboutusTitle = "About us";
+const cAITitle = "AI";
 
 enum cMessageType { error, success }
 
@@ -140,15 +141,16 @@ class CustomNavDrawer extends StatelessWidget {
             style: cNavRightText,
           ),
           const Divider(),
-          const ListTile(
-            leading: Icon(
+          ListTile(
+            leading: const Icon(
               Icons.animation,
               color: Colors.orange,
             ),
-            title: Text(
+            title: const Text(
               'AI',
               style: cHeaderText,
             ),
+            onTap: () => {Navigator.pushNamed(context, "/ai")},
           ),
           const Divider(),
           ListTile(

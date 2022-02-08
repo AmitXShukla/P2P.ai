@@ -59,17 +59,17 @@ class _AboutUsState extends State<AboutUs> {
                 tabs: <Widget>[
                   Tab(
                     icon: Icon(
-                      Icons.business,
-                      color: Colors.brown,
-                    ),
-                    text: "company",
-                  ),
-                  Tab(
-                    icon: Icon(
                       Icons.arrow_upward,
                       color: Colors.deepPurple,
                     ),
                     text: "career",
+                  ),
+                  Tab(
+                    icon: Icon(
+                      Icons.business,
+                      color: Colors.brown,
+                    ),
+                    text: "company",
                   ),
                   Tab(
                     icon: Icon(
@@ -83,6 +83,35 @@ class _AboutUsState extends State<AboutUs> {
             ),
             body: TabBarView(
               children: <Widget>[
+                Center(
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: const [
+                        SizedBox(
+                          width: 10,
+                          height: 20,
+                        ),
+                        ListTile(
+                          leading: Icon(
+                            Icons.email,
+                            color: Colors.blue,
+                            size: 60,
+                          ),
+                          title: Text(
+                            'email your resume',
+                            style: cNavText,
+                          ),
+                          subtitle: Text("career@elishconsulting.com",
+                              style: cBodyText),
+                          isThreeLine: false,
+                          // trailing: Image(
+                          //     image: NetworkImage(
+                          //         "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ai_interceptor.png")),
+                        )
+                      ]),
+                ),
+                //company page
                 Center(
                   child: Column(children: const [
                     ListTile(
@@ -143,34 +172,6 @@ class _AboutUsState extends State<AboutUs> {
                       //         "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/resize.jpg")),
                     ),
                   ]),
-                ),
-                Center(
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
-                        SizedBox(
-                          width: 10,
-                          height: 20,
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.email,
-                            color: Colors.blue,
-                            size: 60,
-                          ),
-                          title: Text(
-                            'email your resume',
-                            style: cNavText,
-                          ),
-                          subtitle: Text("career@elishconsulting.com",
-                              style: cBodyText),
-                          isThreeLine: false,
-                          // trailing: Image(
-                          //     image: NetworkImage(
-                          //         "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ai_interceptor.png")),
-                        )
-                      ]),
                 ),
                 // connect page
                 Center(

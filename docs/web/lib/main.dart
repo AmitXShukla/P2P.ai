@@ -1,7 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:web/views/aboutus.dart';
 import './shared/styles.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
         // '/': (BuildContext context) => const MyHomePage(title: cAppTitle),
-        // '/signup': (BuildContext context) => const SignUpPage(),
+        '/aboutus': (BuildContext context) => const AboutUs(title: cAppTitle),
       },
       theme: ThemeData(primarySwatch: Colors.lime),
       home: const MyHomePage(title: cAppTitle),
@@ -37,119 +39,35 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // ignore: unused_field
+  late Future<void> _launched;
+  Future<void> _launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        forceSafariVC: false,
+        forceWebView: false,
+        // headers: <String, String>{'my_header_key': 'my_header_value'},
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: const <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                      'https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/drawerlogo.png'),
-                  // fit: BoxFit.fill,
-                ),
-                shape: BoxShape.circle,
-              ),
-              // decoration: BoxDecoration(
-              //   color: Colors.lime,
-              // ),
-              curve: Curves.easeIn,
-              child: Text(
-                cAppTitle,
-                style: cTitleText,
-              ),
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.production_quantity_limits_rounded,
-                color: Colors.greenAccent,
-              ),
-              title: Text(
-                'Products',
-                style: cHeaderText,
-              ),
-            ),
-            Text(
-              "                       community",
-              style: cNavRightText,
-            ),
-            Text(
-              "                       solutions",
-              style: cNavRightText,
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(
-                Icons.add_business_outlined,
-                color: Colors.purpleAccent,
-              ),
-              title: Text(
-                'Services',
-                style: cHeaderText,
-              ),
-            ),
-            Text(
-              "                       community",
-              style: cNavRightText,
-            ),
-            Text(
-              "                       custom",
-              style: cNavRightText,
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(
-                Icons.animation,
-                color: Colors.orange,
-              ),
-              title: Text(
-                'AI',
-                style: cHeaderText,
-              ),
-            ),
-            Divider(),
-            ListTile(
-              leading: Icon(
-                Icons.business,
-                color: Colors.blue,
-              ),
-              title: Text(
-                'About us',
-                style: cHeaderText,
-              ),
-            ),
-            Text(
-              "                       company",
-              style: cNavRightText,
-            ),
-            Text(
-              "                       career",
-              style: cNavRightText,
-            ),
-            Text(
-              "                       connect",
-              style: cNavRightText,
-            ),
-          ],
-        ),
-      ),
+      drawer: const CustomNavDrawer(),
       appBar: AppBar(
         title: Text(widget.title, style: cTitleText),
         leadingWidth: 40,
         actions: [
           IconButton(
-            icon: const Icon(Icons.contact_mail_rounded),
+            icon: const Icon(Icons.close_fullscreen_sharp),
             color: cNavColor,
             iconSize: 28.0,
             onPressed: () {
-              // Navigator.pushReplacementNamed(context, '/aboutus');
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => AboutUs()),
-              // );
+              Navigator.pushReplacementNamed(context, '/');
             },
           ),
         ],
@@ -170,8 +88,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         children: <Widget>[
                           const ListTile(
                               leading: Icon(
-                                Icons.assessment,
-                                color: Colors.pinkAccent,
+                                Icons.electrical_services,
+                                color: Colors.pink,
                                 size: 60,
                               ),
                               title: Text(
@@ -179,20 +97,20 @@ class _MyHomePageState extends State<MyHomePage> {
                                 style: cNavText,
                               ),
                               subtitle: Text(
-                                  "P2P.ai acts as live assistant, which learns your inputs. AI renders live predictive analytics results through REST API, which help business user make quick informed decisions.",
+                                  "P2P.ai acts as an live assistant. As user input data, search over Items or browse through Supply chain documents in ERP or any on-premise/cloud applications, AI learns your input (non-invasive by all means). AI doesn't store any input and respect all ethical privacy contraints. based on user's inputs, AI renders live predictive analytics results through secure REST API, which help business user evaluate, understand, compare results and make quick informed decisions immediatly.",
                                   style: cBodyText),
-                              isThreeLine: true,
+                              isThreeLine: false,
                               trailing: Image(
                                   image: NetworkImage(
-                                      "https://amitxshukla.github.io/P2P.jl/images/p2p_business_process.png"))),
+                                      "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ai_interceptor.png"))),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: <Widget>[
                               TextButton(
-                                child: const Text(
-                                    'powered by elishconsulting.com'),
-                                onPressed: () {/* ... */},
-                              ),
+                                  child: const Text(
+                                      'powered by elishconsulting.com'),
+                                  onPressed: () => _launched = _launchInBrowser(
+                                      'http://www.elishconsulting.com/')),
                             ],
                           ),
                           const SizedBox(
@@ -200,19 +118,22 @@ class _MyHomePageState extends State<MyHomePage> {
                             height: 20,
                           ),
                           const ListTile(
-                            leading: Icon(
-                              Icons.bluetooth,
-                              color: Colors.blueAccent,
-                            ),
-                            title: Text(
-                              'no one knows your data better than you',
-                              style: cNavText,
-                            ),
-                            subtitle: Text(
-                                "connect live to learned AI, trained through years of ERP learning experience at your fingertip.",
-                                style: cHeaderText),
-                            isThreeLine: true,
-                          ),
+                              leading: Icon(
+                                Icons.bubble_chart_rounded,
+                                color: Colors.orange,
+                                size: 60,
+                              ),
+                              title: Text(
+                                'no one knows your data better than you',
+                                style: cNavText,
+                              ),
+                              subtitle: Text(
+                                  "Your database not only keeps live transactions, it is knowledge encylopedia. There is no other better intelligence than your database itself. All P2P.ai does is, train on your wealth of data, learns years of your business experience and produces learned experience prediction results, at your fingertip.",
+                                  style: cHeaderText),
+                              isThreeLine: true,
+                              trailing: Image(
+                                  image: NetworkImage(
+                                      "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/Online-Lead-Generation2.jpg"))),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: <Widget>[
@@ -222,28 +143,118 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ],
                           ),
-                          Container(
-                              width: 600,
-                              height: 400,
-                              child: Image(
+                          const SizedBox(
+                            width: 10,
+                            height: 20,
+                          ),
+                          const ListTile(
+                              leading: Icon(
+                                Icons.mark_chat_read,
+                                color: Colors.grey,
+                                size: 60,
+                              ),
+                              title: Text(
+                                'query on-premise data with market insights',
+                                style: cNavText,
+                              ),
+                              subtitle: Text(
+                                  "Often users use guided learning in procurement. P2P.ai learns, each item on supply chain voucher or purchase order and prepare a live guided learning based on on-premise historical data set comparing directly with open market. This guided learning experinece, let users manage CRM, Sales, Finance, Supply Chain Procure to Pay, inventory operations with complete visibility.",
+                                  style: cHeaderText),
+                              isThreeLine: true,
+                              trailing: Image(
                                   image: NetworkImage(
-                                      "https://amitxshukla.github.io/P2P.jl/images/p2p_business_process.png"))),
+                                      "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/CRM & Sales Analytics.jpg"))),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: <Widget>[
                               TextButton(
-                                child: const Text(
-                                    'powered by elishconsulting.com'),
+                                child: const Text('guided market insights'),
                                 onPressed: () {/* ... */},
                               ),
-                              const SizedBox(width: 8),
-                              // TextButton(
-                              //   child: const Text('LISTEN'),
-                              //   onPressed: () {/* ... */},
-                              // ),
-                              const SizedBox(width: 8),
                             ],
                           ),
+                          const SizedBox(
+                            width: 10,
+                            height: 20,
+                          ),
+                          const ListTile(
+                              leading: Icon(
+                                Icons.analytics_rounded,
+                                color: Colors.blueAccent,
+                                size: 60,
+                              ),
+                              title: Text(
+                                'Predictive analytical results',
+                                style: cNavText,
+                              ),
+                              subtitle: Text(
+                                  "operation intelligence information readily available to make quick, effective decisions with confidence. User can trust on P2P.ai framework. P2P.ai periodically self-train itself based on behind the scene AutoML mechanism. You can trust P2P.ai to produce results on frequently trained machine learning models.",
+                                  style: cHeaderText),
+                              isThreeLine: true,
+                              trailing: Image(
+                                  image: NetworkImage(
+                                      "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/BI1.jpg"))),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              TextButton(
+                                child: const Text('operational intelligence'),
+                                onPressed: () {/* ... */},
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                            height: 20,
+                          ),
+                          const ListTile(
+                              leading: Icon(
+                                Icons.search_sharp,
+                                color: Colors.redAccent,
+                                size: 60,
+                              ),
+                              title: Text(
+                                'fast search results',
+                                style: cNavText,
+                              ),
+                              subtitle: Text(
+                                  "search for Items, Purchase orders, DocCART or all Finance & SCM related information. P2P.ai uses Oracle Cloud ODI, Julia Lang Distributed Parallel GPU computing and state of the art REST APIs to query your on-premise data based on elastic search.",
+                                  style: cHeaderText),
+                              isThreeLine: true,
+                              trailing: Image(
+                                  image: NetworkImage(
+                                      "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/finance_banne1r.jpg"))),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              TextButton(
+                                child: const Text('search on campus first'),
+                                onPressed: () {/* ... */},
+                              ),
+                            ],
+                          ),
+                          // Container(
+                          //     width: 600,
+                          //     height: 400,
+                          //     child: Image(
+                          //         image: NetworkImage(
+                          //             "https://amitxshukla.github.io/P2P.jl/images/p2p_business_process.png"))),
+                          // Row(
+                          //   mainAxisAlignment: MainAxisAlignment.end,
+                          //   children: <Widget>[
+                          //     TextButton(
+                          //       child: const Text(
+                          //           'powered by elishconsulting.com'),
+                          //       onPressed: () {/* ... */},
+                          //     ),
+                          //     const SizedBox(width: 8),
+                          //     // TextButton(
+                          //     //   child: const Text('LISTEN'),
+                          //     //   onPressed: () {/* ... */},
+                          //     // ),
+                          //     const SizedBox(width: 8),
+                          //   ],
+                          // ),
                         ],
                       ),
                     ),

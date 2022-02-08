@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const cAppTitle = "Procure2Pay.ai";
+const cAboutusTitle = "About us";
 
 enum cMessageType { error, success }
 
@@ -63,7 +64,118 @@ const cHeaderDarkText = TextStyle(
 var cThemeData = ThemeData(
   primaryColor: Colors.blue,
   //primarySwatch: Colors.white,
-  buttonColor: Colors.blue,
   backgroundColor: Colors.white,
   buttonTheme: const ButtonThemeData(textTheme: ButtonTextTheme.primary),
 );
+
+class CustomNavDrawer extends StatelessWidget {
+  //final bool toggleSpinner;
+  const CustomNavDrawer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          const DrawerHeader(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(
+                    'https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/drawerlogo.png'),
+                // fit: BoxFit.fill,
+              ),
+              shape: BoxShape.circle,
+            ),
+            curve: Curves.easeIn,
+            child: null,
+          ),
+          ListTile(
+            leading: const Icon(
+              Icons.home,
+              color: Colors.lime,
+            ),
+            title: const Text(
+              'Home',
+              style: cHeaderText,
+            ),
+            onTap: () => {Navigator.pushNamed(context, "/")},
+          ),
+          const Divider(),
+          const ListTile(
+            leading: Icon(
+              Icons.production_quantity_limits_rounded,
+              color: Colors.greenAccent,
+            ),
+            title: Text(
+              'Products',
+              style: cHeaderText,
+            ),
+          ),
+          const Text(
+            "                       community",
+            style: cNavRightText,
+          ),
+          const Text(
+            "                       solutions",
+            style: cNavRightText,
+          ),
+          const Divider(),
+          const ListTile(
+            leading: Icon(
+              Icons.add_business_outlined,
+              color: Colors.purpleAccent,
+            ),
+            title: Text(
+              'Services',
+              style: cHeaderText,
+            ),
+          ),
+          const Text(
+            "                       community",
+            style: cNavRightText,
+          ),
+          const Text(
+            "                       custom",
+            style: cNavRightText,
+          ),
+          const Divider(),
+          const ListTile(
+            leading: Icon(
+              Icons.animation,
+              color: Colors.orange,
+            ),
+            title: Text(
+              'AI',
+              style: cHeaderText,
+            ),
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(
+              Icons.business,
+              color: Colors.blue,
+            ),
+            title: const Text(
+              'About us',
+              style: cHeaderText,
+            ),
+            onTap: () => {Navigator.pushNamed(context, "/aboutus")},
+          ),
+          const Text(
+            "                       company",
+            style: cNavRightText,
+          ),
+          const Text(
+            "                       career",
+            style: cNavRightText,
+          ),
+          const Text(
+            "                       connect",
+            style: cNavRightText,
+          ),
+        ],
+      ),
+    );
+  }
+}

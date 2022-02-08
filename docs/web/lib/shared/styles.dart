@@ -14,9 +14,16 @@ const cTitleText = TextStyle(
 
 const cNavText = TextStyle(
     color: Colors.blueAccent,
-    fontSize: 14.0,
+    fontSize: 18.0,
     fontWeight: FontWeight.w500,
     fontStyle: FontStyle.normal);
+
+const cBodyText = TextStyle(
+    color: Colors.black54,
+    fontSize: 16.0,
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal);
+
 const cNavRightText = TextStyle(
     color: Colors.blueAccent,
     fontSize: 14.0,
@@ -36,9 +43,9 @@ const cSuccessText = TextStyle(
 );
 
 const cHeaderText = TextStyle(
-    color: Colors.blueAccent,
-    fontSize: 20.0,
-    fontWeight: FontWeight.w500,
+    color: Colors.black54,
+    fontSize: 16.0,
+    fontWeight: FontWeight.w900,
     fontStyle: FontStyle.normal);
 
 const cHeaderWhiteText = TextStyle(
@@ -48,7 +55,7 @@ const cHeaderWhiteText = TextStyle(
     fontStyle: FontStyle.normal);
 
 const cHeaderDarkText = TextStyle(
-    color: Colors.blueGrey,
+    color: Colors.black26,
     fontSize: 20.0,
     fontWeight: FontWeight.w500,
     fontStyle: FontStyle.normal);

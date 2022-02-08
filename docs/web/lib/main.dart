@@ -48,8 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
-                      'https://amitxshukla.github.io/P2P.jl/assets/logo.png'),
-                  fit: BoxFit.fill,
+                      'https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/drawerlogo.png'),
+                  // fit: BoxFit.fill,
                 ),
                 shape: BoxShape.circle,
               ),
@@ -58,46 +58,85 @@ class _MyHomePageState extends State<MyHomePage> {
               // ),
               curve: Curves.easeIn,
               child: Text(
-                'P2P.ai',
+                cAppTitle,
                 style: cTitleText,
               ),
             ),
             ListTile(
-              leading: Icon(Icons.message),
-              title: Text('Messages'),
+              leading: Icon(
+                Icons.production_quantity_limits_rounded,
+                color: Colors.greenAccent,
+              ),
+              title: Text(
+                'Products',
+                style: cHeaderText,
+              ),
             ),
-            ListTile(
-              leading: Icon(Icons.account_circle),
-              title: Text('Profile'),
+            Text(
+              "                       community",
+              style: cNavRightText,
             ),
+            Text(
+              "                       solutions",
+              style: cNavRightText,
+            ),
+            Divider(),
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
+              leading: Icon(
+                Icons.add_business_outlined,
+                color: Colors.purpleAccent,
+              ),
+              title: Text(
+                'Services',
+                style: cHeaderText,
+              ),
+            ),
+            Text(
+              "                       community",
+              style: cNavRightText,
+            ),
+            Text(
+              "                       custom",
+              style: cNavRightText,
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.animation,
+                color: Colors.orange,
+              ),
+              title: Text(
+                'AI',
+                style: cHeaderText,
+              ),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.business,
+                color: Colors.blue,
+              ),
+              title: Text(
+                'About us',
+                style: cHeaderText,
+              ),
+            ),
+            Text(
+              "                       company",
+              style: cNavRightText,
+            ),
+            Text(
+              "                       career",
+              style: cNavRightText,
+            ),
+            Text(
+              "                       connect",
+              style: cNavRightText,
             ),
           ],
         ),
       ),
       appBar: AppBar(
-        // leading: IconButton(
-        //   icon: const Icon(Icons.menu_open),
-        //   color: cNavColor,
-        //   iconSize: 28.0,
-        //   onPressed: () {
-        //     PopupMenuButton(
-        //       onSelected: (result) {
-        //         setState(() {
-        //           // _selection = result;
-        //         });
-        //       },
-        //       itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-        //         const PopupMenuItem(
-        //           value: "Home",
-        //           child: Text('Home'),
-        //         )
-        //       ],
-        //     );
-        //   },
-        // ),
         title: Text(widget.title, style: cTitleText),
         leadingWidth: 40,
         actions: [
@@ -124,27 +163,91 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  const ListTile(
-                    leading: Icon(Icons.album),
-                    title: Text('The Enchanted Nightingale'),
-                    subtitle:
-                        Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      TextButton(
-                        child: const Text('BUY TICKETS'),
-                        onPressed: () {/* ... */},
+                  Center(
+                    child: Card(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          const ListTile(
+                              leading: Icon(
+                                Icons.assessment,
+                                color: Colors.pinkAccent,
+                                size: 60,
+                              ),
+                              title: Text(
+                                'your live AI assistant',
+                                style: cNavText,
+                              ),
+                              subtitle: Text(
+                                  "P2P.ai acts as live assistant, which learns your inputs. AI renders live predictive analytics results through REST API, which help business user make quick informed decisions.",
+                                  style: cBodyText),
+                              isThreeLine: true,
+                              trailing: Image(
+                                  image: NetworkImage(
+                                      "https://amitxshukla.github.io/P2P.jl/images/p2p_business_process.png"))),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              TextButton(
+                                child: const Text(
+                                    'powered by elishconsulting.com'),
+                                onPressed: () {/* ... */},
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            width: 10,
+                            height: 20,
+                          ),
+                          const ListTile(
+                            leading: Icon(
+                              Icons.bluetooth,
+                              color: Colors.blueAccent,
+                            ),
+                            title: Text(
+                              'no one knows your data better than you',
+                              style: cNavText,
+                            ),
+                            subtitle: Text(
+                                "connect live to learned AI, trained through years of ERP learning experience at your fingertip.",
+                                style: cHeaderText),
+                            isThreeLine: true,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              TextButton(
+                                child: const Text('use on-premise knowledge'),
+                                onPressed: () {/* ... */},
+                              ),
+                            ],
+                          ),
+                          Container(
+                              width: 600,
+                              height: 400,
+                              child: Image(
+                                  image: NetworkImage(
+                                      "https://amitxshukla.github.io/P2P.jl/images/p2p_business_process.png"))),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              TextButton(
+                                child: const Text(
+                                    'powered by elishconsulting.com'),
+                                onPressed: () {/* ... */},
+                              ),
+                              const SizedBox(width: 8),
+                              // TextButton(
+                              //   child: const Text('LISTEN'),
+                              //   onPressed: () {/* ... */},
+                              // ),
+                              const SizedBox(width: 8),
+                            ],
+                          ),
+                        ],
                       ),
-                      const SizedBox(width: 8),
-                      TextButton(
-                        child: const Text('LISTEN'),
-                        onPressed: () {/* ... */},
-                      ),
-                      const SizedBox(width: 8),
-                    ],
-                  ),
+                    ),
+                  )
                 ],
               ),
             ),

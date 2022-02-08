@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:web/views/aboutus.dart';
 import 'package:web/views/ai.dart';
+import 'package:web/views/solutions.dart';
+import 'package:web/views/services.dart';
 import './shared/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -23,6 +25,9 @@ class MyApp extends StatelessWidget {
         // '/': (BuildContext context) => const MyHomePage(title: cAppTitle),
         '/aboutus': (BuildContext context) => const AboutUs(title: cAppTitle),
         '/ai': (BuildContext context) => const AI(title: cAppTitle),
+        '/solutions': (BuildContext context) =>
+            const Solutions(title: cAppTitle),
+        '/services': (BuildContext context) => const Services(title: cAppTitle),
       },
       theme: ThemeData(primarySwatch: Colors.lime),
       home: const MyHomePage(title: cAppTitle),

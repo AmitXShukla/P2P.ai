@@ -147,68 +147,18 @@ class _AIState extends State<AI> {
                     },
                   ),
                 ),
-                // connect page
+                // ail list
                 Center(
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
-                        SizedBox(
-                          width: 10,
-                          height: 20,
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.email,
-                            color: Colors.blue,
-                            size: 60,
-                          ),
-                          title: Text(
-                            'email us',
-                            style: cNavText,
-                          ),
-                          subtitle: Text("info@elishconsulting.com",
-                              style: cBodyText),
-                          isThreeLine: false,
-                          // trailing: Image(
-                          //     image: NetworkImage(
-                          //         "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ai_interceptor.png")),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.phone,
-                            color: Colors.black38,
-                            size: 60,
-                          ),
-                          title: Text(
-                            'call us',
-                            style: cNavText,
-                          ),
-                          subtitle: Text("+1-732-407-2527", style: cBodyText),
-                          isThreeLine: false,
-                          // trailing: Image(
-                          //     image: NetworkImage(
-                          //         "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ai_interceptor.png")),
-                        ),
-                        ListTile(
-                          leading: Icon(
-                            Icons.business,
-                            color: Colors.blueGrey,
-                            size: 60,
-                          ),
-                          title: Text(
-                            'visit us',
-                            style: cNavText,
-                          ),
-                          subtitle: Text(
-                              "2711 Centerville Rd Wilmington DE 19808",
-                              style: cBodyText),
-                          isThreeLine: false,
-                          // trailing: Image(
-                          //     image: NetworkImage(
-                          //         "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ai_interceptor.png")),
-                        )
-                      ]),
+                  child: ListView.builder(
+                    itemCount: 1,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Column(children: const [
+                        Image(
+                            image: NetworkImage(
+                                "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ai_list.png")),
+                      ]);
+                    },
+                  ),
                 ),
               ],
             ),

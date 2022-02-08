@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 const cAppTitle = "Procure2Pay.ai";
 const cAboutusTitle = "About us";
 const cAITitle = "AI";
+const cProductTitle = "Solutions";
+const cServicesTitle = "Services";
 
 enum cMessageType { error, success }
 
@@ -103,42 +105,28 @@ class CustomNavDrawer extends StatelessWidget {
             onTap: () => {Navigator.pushNamed(context, "/")},
           ),
           const Divider(),
-          const ListTile(
-            leading: Icon(
+          ListTile(
+            leading: const Icon(
               Icons.production_quantity_limits_rounded,
               color: Colors.greenAccent,
             ),
-            title: Text(
+            title: const Text(
               'Products',
               style: cHeaderText,
             ),
-          ),
-          const Text(
-            "                       community",
-            style: cNavRightText,
-          ),
-          const Text(
-            "                       solutions",
-            style: cNavRightText,
+            onTap: () => {Navigator.pushNamed(context, "/solutions")},
           ),
           const Divider(),
-          const ListTile(
-            leading: Icon(
+          ListTile(
+            leading: const Icon(
               Icons.add_business_outlined,
               color: Colors.purpleAccent,
             ),
-            title: Text(
+            title: const Text(
               'Services',
               style: cHeaderText,
             ),
-          ),
-          const Text(
-            "                       community",
-            style: cNavRightText,
-          ),
-          const Text(
-            "                       custom",
-            style: cNavRightText,
+            onTap: () => {Navigator.pushNamed(context, "/services")},
           ),
           const Divider(),
           ListTile(

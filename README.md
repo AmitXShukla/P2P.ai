@@ -10,7 +10,7 @@ A complete data science AI framework to manage live Supply Chain Rx Inventory ER
 
 #### Documentation: https://amitxshukla.github.io/P2P.ai/#/ai
 
-** please do not clone, @copyright <a href="www.elishconsulting.com">www.elishconsulting.com</a> **
+*please do not clone, @copyright <a href="www.elishconsulting.com">www.elishconsulting.com</a>*
 
 [<img src="https://github.com/AmitXShukla/AmitXShukla.github.io/blob/master/assets/icons/youtube.svg" width=40 height=50>](https://youtube.com/AmitShukla_AI)
 [<img src="https://github.com/AmitXShukla/AmitXShukla.github.io/blob/master/assets/icons/github.svg" width=40 height=50>](https://github.com/AmitXShukla)

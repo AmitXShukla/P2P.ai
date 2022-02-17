@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             style: cNavText,
                           ),
                           subtitle: Text(
-                              "P2P.ai acts as an live assistant. As user input data, search over Items or browse through Supply chain documents in ERP or any on-premise/cloud applications, AI learns your input (non-invasive by all means). AI doesn't store any input and respect all ethical privacy contraints. based on user's inputs, AI renders live predictive analytics results through secure REST API, which help business user evaluate, understand, compare results and make quick informed decisions immediatly.",
+                              "P2P.ai acts as an live assistant. As user input data, search over Items or browse through Supply chain documents in ERP or any on-premise/cloud applications, AI learns your input (non-invasive by all means). AI doesn't store any input and respect all ethical privacy constraints. based on user's inputs, AI renders live predictive analytics results through secure REST API, which help business user evaluate, understand, compare results and make quick informed decisions immediately.",
                               style: cBodyText),
                           isThreeLine: false,
                           trailing: Image(
@@ -121,28 +121,27 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 20,
                       ),
                       const ListTile(
-                          leading: Icon(
-                            Icons.bubble_chart_rounded,
-                            color: Colors.orange,
-                            size: 60,
-                          ),
-                          title: Text(
-                            'no one knows your data better than you',
-                            style: cNavText,
-                          ),
-                          subtitle: Text(
-                              "Your database not only keeps live transactions, it is knowledge encylopedia. There is no other better intelligence than your database itself. All P2P.ai does is, train on your wealth of data, learns years of your business experience and produces learned experience prediction results, at your fingertip.",
-                              style: cHeaderText),
-                          isThreeLine: true,
-                          trailing: Image(
-                              image: NetworkImage(
-                                  "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/Online-Lead-Generation2.jpg"))),
+                        leading: Icon(
+                          Icons.bubble_chart_rounded,
+                          color: Colors.orange,
+                          size: 60,
+                        ),
+                        title: Text(
+                          'no one knows your data better than you',
+                          style: cNavText,
+                        ),
+                        subtitle: Text(
+                            "Your database not only keeps live transactions, it is knowledge encyclopedia. There is no other better intelligence than your database itself. All P2P.ai does is, train on your wealth of data, learns years of your business experience and produces learned experience prediction results, at your fingertip.",
+                            style: cHeaderText),
+                        isThreeLine: true,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
                           TextButton(
                             child: const Text('use on-premise knowledge'),
-                            onPressed: () {/* ... */},
+                            onPressed: () => _launched = _launchInBrowser(
+                                'http://www.elishconsulting.com/'),
                           ),
                         ],
                       ),
@@ -151,28 +150,27 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 20,
                       ),
                       const ListTile(
-                          leading: Icon(
-                            Icons.mark_chat_read,
-                            color: Colors.grey,
-                            size: 60,
-                          ),
-                          title: Text(
-                            'query on-premise data with market insights',
-                            style: cNavText,
-                          ),
-                          subtitle: Text(
-                              "Often users use guided learning in procurement. P2P.ai learns, each item on supply chain voucher or purchase order and prepare a live guided learning based on on-premise historical data set comparing directly with open market. This guided learning experinece, let users manage CRM, Sales, Finance, Supply Chain Procure to Pay, inventory operations with complete visibility.",
-                              style: cHeaderText),
-                          isThreeLine: true,
-                          trailing: Image(
-                              image: NetworkImage(
-                                  "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/CRM & Sales Analytics.jpg"))),
+                        leading: Icon(
+                          Icons.mark_chat_read,
+                          color: Colors.grey,
+                          size: 60,
+                        ),
+                        title: Text(
+                          'query on-premise data with market insights',
+                          style: cNavText,
+                        ),
+                        subtitle: Text(
+                            "Often users use guided learning in procurement. P2P.ai learns, each item on supply chain voucher or purchase order and prepare a live guided learning based on on-premise historical data set comparing directly with open market. This guided learning experience, let users manage CRM, Sales, Finance, Supply Chain Procure to Pay, inventory operations with complete visibility.",
+                            style: cHeaderText),
+                        isThreeLine: true,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
                           TextButton(
                             child: const Text('guided market insights'),
-                            onPressed: () {/* ... */},
+                            onPressed: () => _launched = _launchInBrowser(
+                                'http://www.elishconsulting.com/'),
                           ),
                         ],
                       ),
@@ -181,28 +179,27 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 20,
                       ),
                       const ListTile(
-                          leading: Icon(
-                            Icons.analytics_rounded,
-                            color: Colors.blueAccent,
-                            size: 60,
-                          ),
-                          title: Text(
-                            'Predictive analytical results',
-                            style: cNavText,
-                          ),
-                          subtitle: Text(
-                              "operation intelligence information readily available to make quick, effective decisions with confidence. User can trust on P2P.ai framework. P2P.ai periodically self-train itself based on behind the scene AutoML mechanism. You can trust P2P.ai to produce results on frequently trained machine learning models.",
-                              style: cHeaderText),
-                          isThreeLine: true,
-                          trailing: Image(
-                              image: NetworkImage(
-                                  "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/BI1.jpg"))),
+                        leading: Icon(
+                          Icons.analytics_rounded,
+                          color: Colors.blueAccent,
+                          size: 60,
+                        ),
+                        title: Text(
+                          'Predictive analytical results',
+                          style: cNavText,
+                        ),
+                        subtitle: Text(
+                            "operation intelligence information readily available to make quick, effective decisions with confidence. User can trust on P2P.ai framework. P2P.ai periodically self-train itself based on behind the scene AutoML mechanism. You can trust P2P.ai to produce results on frequently trained machine learning models.",
+                            style: cHeaderText),
+                        isThreeLine: true,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
                           TextButton(
                             child: const Text('operational intelligence'),
-                            onPressed: () {/* ... */},
+                            onPressed: () => _launched = _launchInBrowser(
+                                'http://www.elishconsulting.com/'),
                           ),
                         ],
                       ),
@@ -211,28 +208,27 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 20,
                       ),
                       const ListTile(
-                          leading: Icon(
-                            Icons.search_sharp,
-                            color: Colors.redAccent,
-                            size: 60,
-                          ),
-                          title: Text(
-                            'fast search results',
-                            style: cNavText,
-                          ),
-                          subtitle: Text(
-                              "search for Items, Purchase orders, DocCART or all Finance & SCM related information. P2P.ai uses Oracle Cloud ODI, Julia Lang Distributed Parallel GPU computing and state of the art REST APIs to query your on-premise data based on elastic search.",
-                              style: cHeaderText),
-                          isThreeLine: true,
-                          trailing: Image(
-                              image: NetworkImage(
-                                  "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/finance_banne1r.jpg"))),
+                        leading: Icon(
+                          Icons.search_sharp,
+                          color: Colors.redAccent,
+                          size: 60,
+                        ),
+                        title: Text(
+                          'fast search results',
+                          style: cNavText,
+                        ),
+                        subtitle: Text(
+                            "search for Items, Purchase orders, DocCART or all Finance & SCM related information. P2P.ai uses Oracle Cloud ODI, Julia Lang Distributed Parallel GPU computing and state of the art REST APIs to query your on-premise data based on elastic search.",
+                            style: cHeaderText),
+                        isThreeLine: true,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
                           TextButton(
                             child: const Text('search on campus first'),
-                            onPressed: () {/* ... */},
+                            onPressed: () => _launched = _launchInBrowser(
+                                'http://www.elishconsulting.com/'),
                           ),
                         ],
                       ),

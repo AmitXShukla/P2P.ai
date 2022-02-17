@@ -97,7 +97,14 @@ class _SolutionsState extends State<Solutions> {
                         ),
                         Image(
                             image: NetworkImage(
-                                "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ERD.png")),
+                                "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ERD_logical.png")),
+                        SizedBox(
+                          width: 10,
+                          height: 20,
+                        ),
+                        Image(
+                            image: NetworkImage(
+                                "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/ERD_physical.png")),
                         SizedBox(
                           width: 10,
                           height: 20,

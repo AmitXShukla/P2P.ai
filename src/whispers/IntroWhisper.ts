@@ -32,7 +32,7 @@ export default class IntroWhisper {
 
   constructor() {
     this.whisper = undefined;
-    this.label = 'Welcome to SCM_Rx_INV_AI Loop';
+    this.label = 'Welcome to P2P.ai';
     this.props = {
       newMessage: '',
       numClones: 1,

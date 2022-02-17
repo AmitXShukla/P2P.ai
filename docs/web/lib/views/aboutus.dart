@@ -140,22 +140,20 @@ class _AboutUsState extends State<AboutUs> {
                           height: 20,
                         ),
                         ListTile(
-                            leading: Icon(
-                              Icons.business_center,
-                              color: Colors.orange,
-                              size: 60,
-                            ),
-                            title: Text(
-                              'About company',
-                              style: cNavText,
-                            ),
-                            subtitle: Text(
-                                "We proudly introduce us as IT Business Intelligence Consulting Company.\n\n We are one of the management and technology consulting companies. \n\n We are also primary developer and vendor for IT Software development and IT Services for small business solutions and as well as large enterprises. \n\n Elish Consulting is legally separate and independent entity operating through Delaware USA since 2008.",
-                                style: cBodyText),
-                            isThreeLine: false,
-                            trailing: Image(
-                                image: NetworkImage(
-                                    "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/docs/assets/images/customLogo.jpg"))),
+                          leading: Icon(
+                            Icons.business_center,
+                            color: Colors.orange,
+                            size: 60,
+                          ),
+                          title: Text(
+                            'About company',
+                            style: cNavText,
+                          ),
+                          subtitle: Text(
+                              "We proudly introduce us as IT Business Intelligence Consulting Company.\n\n We are one of the management and technology consulting companies. \n\n We are also primary developer and vendor for IT Software development and IT Services for small business solutions and as well as large enterprises. \n\n Elish Consulting is legally separate and independent entity operating through Delaware USA since 2008.",
+                              style: cBodyText),
+                          isThreeLine: false,
+                        ),
                         ListTile(
                           leading: Icon(
                             Icons.cloud_done_sharp,

@@ -21,8 +21,8 @@ export default class ClipboardWhisper {
     const decodedBody = await network.decode(response.body);
     const parsedObject = JSON.parse(decodedBody);
     const recalls = parsedObject.results;
-    console.log("Print results")
-    console.log(JSON.stringify(recalls))
+    // console.log("Print results")
+    // console.log(JSON.stringify(recalls))
     const whisper = new NetworkSearchWhisper(recalls);
     whisper.show();
   }
@@ -77,6 +77,6 @@ export default class ClipboardWhisper {
     if (err) {
       console.error('There was an error closing Clipboard whisper', err);
     }
-    console.log('Clipboard whisper closed');
+    // console.log('Clipboard whisper closed');
   }
 }

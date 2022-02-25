@@ -24,8 +24,8 @@ export default class IntroWhisper {
     const decodedBody = await network.decode(response.body);
     const parsedObject = JSON.parse(decodedBody);
     const recalls = parsedObject.results;
-    console.log("Print results")
-    console.log(JSON.stringify(recalls))
+    // console.log("Print results")
+    // console.log(JSON.stringify(recalls))
     const whisper = new NetworkSearchWhisper(recalls);
     whisper.show();
   }
@@ -213,7 +213,7 @@ export default class IntroWhisper {
       type: whisper.WhisperComponentType.TextInput,
       label: 'New Search Input',
       onChange: (_error: Error | undefined, val: string) => {
-        console.log('Updating message text: ', val);
+        // console.log('Updating message text: ', val);
         this.update({ newMessage: val });
       },
     };
@@ -322,6 +322,6 @@ export default class IntroWhisper {
     if (err) {
       console.error('There was an error closing Intro whisper', err);
     }
-    console.log('Intro whisper closed');
+    // console.log('Intro whisper closed');
   }
 }

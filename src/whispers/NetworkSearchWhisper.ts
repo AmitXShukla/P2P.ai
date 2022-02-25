@@ -133,6 +133,6 @@ export default class NetworkSearchWhisper {
     if (err) {
       console.error('There was an error closing Network whisper', err);
     }
-    console.log('Network whisper closed');
+    // console.log('Network whisper closed');
   }
 }

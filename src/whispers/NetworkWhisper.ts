@@ -16,7 +16,7 @@ export default class NetworkWhisper {
 
   constructor(recalls: Recall[]) {
     this.whisper = undefined;
-    this.label = 'Review System Alerts';
+    this.label = 'P2P Org Alerts';
     this.props = {
       recalls,
     };
@@ -26,15 +26,16 @@ export default class NetworkWhisper {
     this.props.recalls.forEach((recall) => {
       components.push({
         type: whisper.WhisperComponentType.Link,
-        text: `${recall.city} (${recall.status})`,
+        text: `${recall.entity} - ${recall.unit} : ${recall.status}`,
         onClick: () => {
           const markdown = stripIndent`
           # ALERT
+          ${recall.last_updated} :- 
           ${recall.message}
           `;
 
           whisper.create({
-            label: `Alert for ${recall.city}`,
+            label: `Alert for ${recall.unit}`,
             components: [
               {
                 type: whisper.WhisperComponentType.Markdown,
@@ -102,6 +103,6 @@ export default class NetworkWhisper {
     if (err) {
       console.error('There was an error closing Network whisper', err);
     }
-    console.log('Network whisper closed');
+    // console.log('Network whisper closed');
   }
 }

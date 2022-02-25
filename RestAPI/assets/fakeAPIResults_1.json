@@ -1,0 +1,50 @@
+{
+    "meta": {
+        "disclaimer": "Do not rely on this data, this data is for demo purpose only.",
+        "terms": "https://github.com/AmitXShukla/P2P.ai/blob/main/LICENSE",
+        "license": "https://github.com/AmitXShukla/P2P.ai/blob/main/LICENSE",
+        "last_updated": "2022-02-15",
+        "url": "https://t7gfwerxpcslwfy-elishdb.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/p2p/sysalerts/NW",
+        "results": {
+            "error": false,
+            "message": "none",
+            "skip": 0,
+            "limit": 10,
+            "total": 2200000
+        }
+    },
+    "results": [
+        {
+            "id": 1,
+            "entity": "NCAL",
+            "unit": "Oakland",
+            "status": "red",
+            "last_updated": "2022-02-15",
+            "message": "ALERT: DocCART Surgical items at par location Oakland are low in inventory, Auto Replenishment POs must dispatch to avoid deficit."
+        },
+        {
+            "id": 2,
+            "entity": "NCAL",
+            "unit": "SanFrancisco",
+            "status": "yellow",
+            "last_updated": "2022-02-15",
+            "message": "ALERT: At par OTC items are received in open package, initiate return to vendor."
+        },
+        {
+            "id": 3,
+            "entity": "SCAL",
+            "unit": "Irvine",
+            "status": "orange",
+            "last_updated": "2022-02-15",
+            "message": "ALERT: Purchase order # PO345k Qty/Price anomaly detected."
+        },
+        {
+            "id": 4,
+            "entity": "NW",
+            "unit": "Seattle",
+            "status": "green",
+            "last_updated": "2022-02-15",
+            "message": "ALERT: none"
+        }
+    ]
+}

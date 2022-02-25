@@ -1,0 +1,156 @@
+{
+    "meta": {
+        "disclaimer": "Do not rely on this data, this data is for demo purpose only.",
+        "terms": "https://github.com/AmitXShukla/SCM_Rx_Inventory_OLIVEai/blob/main/LICENSE",
+        "license": "https://github.com/AmitXShukla/SCM_Rx_Inventory_OLIVEai/blob/main/LICENSE",
+        "last_updated": "2021-12-15",
+        "url": "https://t7gfwerxpcslwfy-elishdb.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/p2p/elasticsrch/ITEM",
+        "results": {
+            "error": false,
+            "message": "none",
+            "skip": 0,
+            "limit": 10,
+            "total": 4000000
+        }
+    },
+    "results": [
+        {
+            "transactionType": "ITEM",
+            "itemID": "ITEM12345",
+            "UNSPSC": "44000000",
+            "entity": "ALL",
+            "category": "Office Supply",
+            "resultType": "ITEM",
+            "preferredItem": "N",
+            "preferredVendor": "Guys Brown",
+            "onContract": "N",
+            "description": "Office Item required in reception locations.",
+            "message": "ALERT: DocCART Surgical items at par location Oakland are low in inventory, Auto Replenishment POs must dispatch to avoid deficit.",
+            "alert": {
+                "anomalyDetection": {
+                    "price": "10% above threshold",
+                    "receivingTime": "on-time",
+                    "qtyOrdered": "low",
+                    "qtyOnHand": "normal",
+                    "matchExceptionRaised": "none"
+                },
+                "purchaseRecommendation": "BOUGHT TOGETHER: pens, writing pads, ink refills"
+            }
+        },
+        {
+            "transactionType": "PO",
+            "itemID": "PO12345",
+            "UNSPSC": "-",
+            "entity": "SCAL",
+            "category": "Office Supply",
+            "resultType": "Procurement",
+            "preferredItem": "N",
+            "preferredVendor": "Elixir",
+            "onContract": "N",
+            "description": "Surgical Items.",
+            "message": "ALERT: none",
+            "alert": {
+                "anomalyDetection": {
+                    "price": "10% above threshold",
+                    "receivingTime": "on-time",
+                    "qtyOrdered": "low",
+                    "qtyOnHand": "normal",
+                    "matchExceptionRaised": "none"
+                },
+                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
+            }
+        },
+        {
+            "transactionType": "RECV",
+            "itemID": "RECV12345",
+            "UNSPSC": "-",
+            "entity": "SCAL",
+            "category": "Office Supply",
+            "resultType": "Procurement",
+            "preferredItem": "N",
+            "preferredVendor": "Elixir",
+            "onContract": "N",
+            "description": "Surgical Items.",
+            "message": "ALERT: none",
+            "alert": {
+                "anomalyDetection": {
+                    "price": "10% above threshold",
+                    "receivingTime": "on-time",
+                    "qtyOrdered": "low",
+                    "qtyOnHand": "normal",
+                    "matchExceptionRaised": "none"
+                },
+                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
+            }
+        },
+        {
+            "transactionType": "INV",
+            "itemID": "INV12345",
+            "UNSPSC": "-",
+            "entity": "SCAL",
+            "category": "Office Supply",
+            "resultType": "Procurement",
+            "preferredItem": "N",
+            "preferredVendor": "Elixir",
+            "onContract": "N",
+            "description": "Surgical Items.",
+            "message": "ALERT: none",
+            "alert": {
+                "anomalyDetection": {
+                    "price": "10% above threshold",
+                    "receivingTime": "on-time",
+                    "qtyOrdered": "low",
+                    "qtyOnHand": "normal",
+                    "matchExceptionRaised": "none"
+                },
+                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
+            }
+        },
+        {
+            "transactionType": "MSR",
+            "itemID": "MSR12345",
+            "UNSPSC": "-",
+            "entity": "NCAL",
+            "category": "Office Supply",
+            "resultType": "Procurement",
+            "preferredItem": "N",
+            "preferredVendor": "Internal transfer",
+            "onContract": "N",
+            "description": "Surgical Items.",
+            "message": "ALERT: none",
+            "alert": {
+                "anomalyDetection": {
+                    "price": "10% above threshold",
+                    "receivingTime": "on-time",
+                    "qtyOrdered": "low",
+                    "qtyOnHand": "normal",
+                    "matchExceptionRaised": "none"
+                },
+                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
+            }
+        },
+        {
+            "transactionType": "PAR",
+            "itemID": "PAR12345",
+            "UNSPSC": "-",
+            "entity": "NW",
+            "category": "Office Supply",
+            "resultType": "Procurement",
+            "preferredItem": "N",
+            "preferredVendor": "Internal transfer",
+            "onContract": "N",
+            "description": "Surgical Items.",
+            "message": "ALERT: none",
+            "alert": {
+                "anomalyDetection": {
+                    "price": "10% above threshold",
+                    "receivingTime": "on-time",
+                    "qtyOrdered": "low",
+                    "qtyOnHand": "normal",
+                    "matchExceptionRaised": "none"
+                },
+                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
+            }
+        }
+    ]
+}

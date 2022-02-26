@@ -27,13 +27,13 @@ const run = async () => {
   const req = network.httpRequest
   const request2: network.HTTPRequest = {
     method: 'GET',
-    url: "https://raw.githubusercontent.com/AmitXShukla/SCM_Rx_Inventory_OLIVEai/main/assets/json/alerts.json",
+    url: "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/RestAPI/assets/fakeAPIResults_1.json",
   };
   try {
-    console.log("print res")
+    // console.log("print res")
     const response = await network.httpRequest(request1);
     const decodedBody = await network.decode(response.body);
-    console.log("data from OCI:", decodedBody)
+    // console.log("data from OCI:", decodedBody)
     const parsedObject = JSON.parse(decodedBody);
     const recalls = parsedObject.items;
     const whisper = new NetworkWhisper(recalls);

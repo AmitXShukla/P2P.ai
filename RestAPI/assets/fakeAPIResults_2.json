@@ -20,137 +20,75 @@
             "UNSPSC": "44000000",
             "entity": "ALL",
             "category": "Office Supply",
-            "resultType": "ITEM",
-            "preferredItem": "N",
-            "preferredVendor": "Guys Brown",
-            "onContract": "N",
+            "resulttype": "ITEM",
+            "preferreditem": "N",
+            "preferredvendor": "Guys Brown",
+            "oncontract": "N",
             "description": "Office Item required in reception locations.",
             "message": "ALERT: DocCART Surgical items at par location Oakland are low in inventory, Auto Replenishment POs must dispatch to avoid deficit.",
-            "alert": {
-                "anomalyDetection": {
-                    "price": "10% above threshold",
-                    "receivingTime": "on-time",
-                    "qtyOrdered": "low",
-                    "qtyOnHand": "normal",
-                    "matchExceptionRaised": "none"
-                },
-                "purchaseRecommendation": "BOUGHT TOGETHER: pens, writing pads, ink refills"
-            }
+            "ai_price": "10% above threshold",
+            "ai_receivingTime": "on-time",
+            "ai_qty_ordered": "low",
+            "ai_qty_onhand": "normal",
+            "ai_mxp_raised": "none",
+            "ai_po_recomm": "BOUGHT TOGETHER: pens, writing pads, ink refills"
         },
         {
             "transactionType": "PO",
             "itemID": "PO12345",
-            "UNSPSC": "-",
+            "UNSPSC": "_",
             "entity": "SCAL",
             "category": "Office Supply",
-            "resultType": "Procurement",
-            "preferredItem": "N",
-            "preferredVendor": "Elixir",
-            "onContract": "N",
+            "resulttype": "Procurement",
+            "preferreditem": "N",
+            "preferredvendor": "Elixir",
+            "oncontract": "N",
             "description": "Surgical Items.",
-            "message": "ALERT: none",
-            "alert": {
-                "anomalyDetection": {
-                    "price": "10% above threshold",
-                    "receivingTime": "on-time",
-                    "qtyOrdered": "low",
-                    "qtyOnHand": "normal",
-                    "matchExceptionRaised": "none"
-                },
-                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
-            }
-        },
-        {
-            "transactionType": "RECV",
-            "itemID": "RECV12345",
-            "UNSPSC": "-",
-            "entity": "SCAL",
-            "category": "Office Supply",
-            "resultType": "Procurement",
-            "preferredItem": "N",
-            "preferredVendor": "Elixir",
-            "onContract": "N",
-            "description": "Surgical Items.",
-            "message": "ALERT: none",
-            "alert": {
-                "anomalyDetection": {
-                    "price": "10% above threshold",
-                    "receivingTime": "on-time",
-                    "qtyOrdered": "low",
-                    "qtyOnHand": "normal",
-                    "matchExceptionRaised": "none"
-                },
-                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
-            }
-        },
-        {
-            "transactionType": "INV",
-            "itemID": "INV12345",
-            "UNSPSC": "-",
-            "entity": "SCAL",
-            "category": "Office Supply",
-            "resultType": "Procurement",
-            "preferredItem": "N",
-            "preferredVendor": "Elixir",
-            "onContract": "N",
-            "description": "Surgical Items.",
-            "message": "ALERT: none",
-            "alert": {
-                "anomalyDetection": {
-                    "price": "10% above threshold",
-                    "receivingTime": "on-time",
-                    "qtyOrdered": "low",
-                    "qtyOnHand": "normal",
-                    "matchExceptionRaised": "none"
-                },
-                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
-            }
+            "message": "ALERT: DocCART Surgical items at par location Oakland are low in inventory, Auto Replenishment POs must dispatch to avoid deficit.",
+            "ai_price": "10% above threshold",
+            "ai_receivingTime": "on-time",
+            "ai_qty_ordered": "low",
+            "ai_qty_onhand": "normal",
+            "ai_mxp_raised": "none",
+            "ai_po_recomm": "BOUGHT TOGETHER: pens, writing pads, ink refills"
         },
         {
             "transactionType": "MSR",
             "itemID": "MSR12345",
-            "UNSPSC": "-",
-            "entity": "NCAL",
+            "UNSPSC": "_",
+            "entity": "SCAL",
             "category": "Office Supply",
-            "resultType": "Procurement",
-            "preferredItem": "N",
-            "preferredVendor": "Internal transfer",
-            "onContract": "N",
+            "resulttype": "Material Service Request",
+            "preferreditem": "N",
+            "preferredvendor": "Elixir",
+            "oncontract": "N",
             "description": "Surgical Items.",
-            "message": "ALERT: none",
-            "alert": {
-                "anomalyDetection": {
-                    "price": "10% above threshold",
-                    "receivingTime": "on-time",
-                    "qtyOrdered": "low",
-                    "qtyOnHand": "normal",
-                    "matchExceptionRaised": "none"
-                },
-                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
-            }
+            "message": "ALERT: DocCART Surgical items at par location Oakland are low in inventory, Auto Replenishment POs must dispatch to avoid deficit.",
+            "ai_price": "10% above threshold",
+            "ai_receivingTime": "on-time",
+            "ai_qty_ordered": "low",
+            "ai_qty_onhand": "normal",
+            "ai_mxp_raised": "none",
+            "ai_po_recomm": "BOUGHT TOGETHER: pens, writing pads, ink refills"
         },
         {
-            "transactionType": "PAR",
-            "itemID": "PAR12345",
-            "UNSPSC": "-",
-            "entity": "NW",
+            "transactionType": "RECV",
+            "itemID": "RECV12345",
+            "UNSPSC": "_",
+            "entity": "SCAL",
             "category": "Office Supply",
-            "resultType": "Procurement",
-            "preferredItem": "N",
-            "preferredVendor": "Internal transfer",
-            "onContract": "N",
+            "resulttype": "Receiving",
+            "preferreditem": "N",
+            "preferredvendor": "Elixir",
+            "oncontract": "N",
             "description": "Surgical Items.",
-            "message": "ALERT: none",
-            "alert": {
-                "anomalyDetection": {
-                    "price": "10% above threshold",
-                    "receivingTime": "on-time",
-                    "qtyOrdered": "low",
-                    "qtyOnHand": "normal",
-                    "matchExceptionRaised": "none"
-                },
-                "purchaseRecommendation": "BOUGHT TOGETHER: surgical masks, sanitary pads, bandages"
-            }
+            "message": "ALERT: DocCART Surgical items at par location Oakland are low in inventory, Auto Replenishment POs must dispatch to avoid deficit.",
+            "ai_price": "10% above threshold",
+            "ai_receivingTime": "on-time",
+            "ai_qty_ordered": "low",
+            "ai_qty_onhand": "normal",
+            "ai_mxp_raised": "none",
+            "ai_po_recomm": "BOUGHT TOGETHER: pens, writing pads, ink refills"
         }
     ]
 }

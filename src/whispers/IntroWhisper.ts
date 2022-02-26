@@ -16,23 +16,40 @@ export default class IntroWhisper {
   props: Props;
 
   async getData(str) {
-    const request: network.HTTPRequest = {
+    const request1: network.HTTPRequest = {
       method: 'GET',
-      url: `https://raw.githubusercontent.com/AmitXShukla/SCM_Rx_Inventory_OLIVEai/main/assets/json/searchresults.json`,
+      headers: { "Content-Type": ["application/json"] },
+      url: "https://t7gfwerxpcslwfy-elishdb.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/p2p/elasticsrch/" + str,
     };
-    const response = await network.httpRequest(request);
-    const decodedBody = await network.decode(response.body);
-    const parsedObject = JSON.parse(decodedBody);
-    const recalls = parsedObject.results;
-    // console.log("Print results")
-    // console.log(JSON.stringify(recalls))
-    const whisper = new NetworkSearchWhisper(recalls);
-    whisper.show();
+    const req = network.httpRequest
+    const request2: network.HTTPRequest = {
+      method: 'GET',
+      url: "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/RestAPI/assets/fakeAPIResults_2.json",
+    };
+    try {
+      // console.log("print res")
+      const response = await network.httpRequest(request1);
+      const decodedBody = await network.decode(response.body);
+      // console.log("data from OCI:", decodedBody)
+      const parsedObject = JSON.parse(decodedBody);
+      const recalls = parsedObject.items;
+      const whisper = new NetworkSearchWhisper(recalls);
+      whisper.show();
+    } catch (error) {
+      console.log("error:", error)
+      // console.log("calling backup REST API:")
+      const response = await network.httpRequest(request2);
+      const decodedBody = await network.decode(response.body);
+      const parsedObject = JSON.parse(decodedBody);
+      const recalls = parsedObject.results;
+      const whisper = new NetworkSearchWhisper(recalls);
+      whisper.show();
+    }
   }
 
   constructor() {
     this.whisper = undefined;
-    this.label = 'Welcome to P2P.ai';
+    this.label = 'P2P.ai';
     this.props = {
       newMessage: '',
       numClones: 1,
@@ -205,13 +222,14 @@ export default class IntroWhisper {
     // };
     const updatableMessage: whisper.Message = {
       type: whisper.WhisperComponentType.Message,
-      header: 'find ....',
-      body: this.props.newMessage || 'Type in the field below to search for input',
+      header: 'search for .... ',
+      // body: this.props.newMessage || 'Type in the field below to search for any input',
+      body: this.props.newMessage,
       style: whisper.Urgency.Warning,
     };
     const updatableMessageInput: whisper.TextInput = {
       type: whisper.WhisperComponentType.TextInput,
-      label: 'New Search Input',
+      label: 'type here ex. PO12345',
       onChange: (_error: Error | undefined, val: string) => {
         // console.log('Updating message text: ', val);
         this.update({ newMessage: val });
@@ -263,9 +281,9 @@ export default class IntroWhisper {
     // }
 
     return [
-      introMessage,
-      divider,
-      collapseBox,
+      // introMessage,
+      // divider,
+      // collapseBox,
       // divider,
       // alertMessage,
       // boxHeader,

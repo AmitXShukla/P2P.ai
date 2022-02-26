@@ -14,7 +14,7 @@ export default class NetworkSearchWhisper {
 
   constructor(recalls: Recall[]) {
     this.whisper = undefined;
-    this.label = 'SCM_Rx_INV Search Results';
+    this.label = 'P2P.ai Search Results';
     this.props = {
       recalls,
     };
@@ -24,25 +24,25 @@ export default class NetworkSearchWhisper {
     this.props.recalls.forEach((recall) => {
       components.push({
         type: whisper.WhisperComponentType.Link,
-        text: `ENTITY: ${recall.entity}- ${recall.transactionType} (${recall.itemID})`,
+        text: `ENTITY: ${recall.entity}- ${recall.transactiontype} (${recall.itemid})`,
         onClick: () => {
           const markdown = stripIndent`
           ## Item Details
-          transactionType: ${recall.transactionType}
+          transactionType: ${recall.transactiontype}
 
-          UNSPSC: ${recall.UNSPSC}
+          UNSPSC: ${recall.unspsc}
 
           entity: ${recall.entity}
 
           category: ${recall.category}
 
-          resultType: ${recall.resultType}
+          resultType: ${recall.resulttype}
 
-          preferredItem: ${recall.preferredItem}
+          preferredItem: ${recall.preferreditem}
 
-          preferredVendor: ${recall.preferredVendor}
+          preferredVendor: ${recall.preferredvendor}
 
-          onContract: ${recall.onContract}
+          onContract: ${recall.oncontract}
 
           description: ${recall.description}
 
@@ -50,22 +50,22 @@ export default class NetworkSearchWhisper {
 
           # AI ALERTS
           ## Anomaly Detection
-          price: ${recall.alert["anomalyDetection"].price}
+          price: ${recall.ai_price}
 
-          receivingTime: ${recall.alert["anomalyDetection"].receivingTime}
+          receivingTime: ${recall.ai_recv_time}
 
-          qtyOrdered: ${recall.alert["anomalyDetection"].qtyOrdered}
+          qtyOrdered: ${recall.ai_qty_ordered}
 
-          qtyOnHand: ${recall.alert["anomalyDetection"].qtyOnHand}
+          qtyOnHand: ${recall.ai_qty_onhand}
 
-          matchExceptionRaised: ${recall.alert["anomalyDetection"].matchExceptionRaised}
+          matchExceptionRaised: ${recall.ai_mxp_raised}
 
           ## Purchase Recommendation
-          ${recall.alert["purchaseRecommendation"]}
+          ${recall.ai_po_recomm}
           `;
 
           whisper.create({
-            label: `Details for ${recall.itemID}`,
+            label: `Details for ${recall.itemid}`,
             components: [
               {
                 type: whisper.WhisperComponentType.Markdown,

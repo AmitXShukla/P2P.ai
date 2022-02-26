@@ -188,3 +188,15 @@ https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE
 
 # loop is utilizing the loopOpenHandler to initiate loop's start whisper upon selection from search dropdown
     tested
+
+---
+
+## TODO
+- fix JWT Auth, validate OLIVE Token for authorized Rest API access
+- elastic search enhancements
+
+## other loops - in active development
+- Clinical Trial Loop API
+- Read Text from Images - OCR Loop API
+- Invoice Image AI Alert - file handler loop
+- audio cardiac pulse monitoring AI Alert - file handler loop for 

@@ -301,7 +301,6 @@ export default class IntroWhisper {
       // numberInput,
       // select,
       // radioBtn,
-      divider,
       // updatableComponentsHeading,
       updatableMessage,
       updatableMessageInput,

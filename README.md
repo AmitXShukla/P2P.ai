@@ -22,7 +22,7 @@ A complete data science AI framework to manage live Supply Chain Rx Inventory ER
 ```sbtshell
 Frontend: Olive AI
 Backend: Oracle
-Rest API: Julia Genie
+Rest API: Julia, Oracle ADW REST API
 Ai: Julia, Fluxml.ai, H2O.ai, Oracle AutoML
 ``` 
 
@@ -31,13 +31,34 @@ Managing supply chain (Procure 2 Pay operations) is always a challenging tasks f
 
 Business user must have complete visibility and require operation intelligence information readily available to make quick, effective and informed decisions.
 
-SCM Rx Inventory AI Olive LOOP solves this problem. 
+P2P.ai solves this problem. 
 
-It acts as an AI assistant to help user make quick informed decision. As user input, search for Items, Purchase orders, DocCART or other SCM related information, Olive Loop connects to a REST API, which render live data & predictive analytics based on pre-trained AI models, historical transactions stored in system.
+It acts as an AI assistant to help user make quick informed decision. As user input, search for Items, Purchase orders, DocCART or other SCM related information, Olive Loop connects to P2P.ai REST API, which render live data & predictive analytics based on pre-trained AI models, historical transactions stored in system.
 
 # how does it work
+![Application Process](docs/assets/images/app_process.png)
 
-    user login to Healthcare OLTP / ERP Application
+# Technology stack
+    Front end: Olive Helps
+    Middleware: Olive Loop
+    REST API: JuliaLang | Oracle ADW REST API
+    AI/ML API: https://github.com/AmitXShukla/P2P.jl
+    Cloud: any (** Oracle OCI | Microsoft Azure | AWS)
+    Database: any (**Oracle | MYSQL | Firebase | MongoDB)
+    AI: JuliaLang & FluxML.ai | Oracle AutoML | H2o.ai | Python & Pytorch
+
+# Application Process
+![Application Process](docs/assets/images/Application_Process.png)
+
+# Business Process
+![Business Process](docs/assets/images/ERD_logical.png)
+
+# Physical ERD
+![ERD Diagram](docs/assets/images/ERD_physical.png)
+
+# Technical Flow Diagram
+
+user login to Healthcare OLTP / ERP Application
     user input
     for example, PO12345 | VNDR12345 | ITEM12345 (use these string for **demo)
 
@@ -72,21 +93,6 @@ It acts as an AI assistant to help user make quick informed decision. As user in
     ** in demo environment, use input such as - PO12345 | VNDR12345 | ITEM12345
     ** in production, backend AI build a unique index tables for elastic search and acknowledge and classify user input search accordingly.
 
-# Technology stack
-    Front end: Olive Helps
-    Middleware: Olive Loop
-    REST API: JuliaLang | NodeJS
-    AI/ML API: https://github.com/AmitXShukla/P2P.jl
-    Cloud: any (** Oracle OCI | Microsoft Azure | AWS)
-    Database: any (**Oracle | MYSQL | Firebase | MongoDB)
-    AI: JuliaLang & FluxML.ai | Python & Pytorch
-
-# Application Process
-![Application Process](docs/assets/images/Application_Process.png)
-
-# System Process
-![Application Process](docs/assets/images/ERD.png)
-
 # Dictionary
     SCM - Supply chain Management
     AUTO_REPL - Auto replenishment - automated Critical Item order when below threshold
@@ -116,13 +122,12 @@ https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE
 https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE
 
 # Aptitudes used
-    clipboardListener
-    keyboardListener
-    networkExample
-    searchListener
+    clipboard
+    network
+    ui
 
 # how Loop/Author uses the user’s information
-    SCM_Rx_IN loop reads clipboard/ user input text and access/search database / AI Prediction analytics through REST API and renders results.
+    P2P/ai Olive loop reads clipboard/ user input text and access/search database / AI Prediction analytics through REST API and renders results.
 
     This loop does NOT store any user input information anywhere in application and it does NOT alter/update any back-end information based on Olive Helps loop user input.
 
@@ -131,7 +136,7 @@ https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE
 
 # Provide documentation and/or source code of how data transmitted from Olive Helps is being consumed and/or persisted
 
-    SCM_Rx_IN loop reads clipboard/ user input text and access/search database / AI Prediction analytics through REST API and renders results.
+    P2P.ai loop reads clipboard/ user input text and access/search database / AI Prediction analytics through REST API and renders results.
 
     This loop does NOT store any user input information anywhere in application and it does NOT alter/update any back-end information based on Olive Helps loop user input.
     Please refer to Application process above for more details.
@@ -192,6 +197,7 @@ https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE
 ---
 
 ## TODO
+- fix openuihandler
 - fix JWT Auth, validate OLIVE Token for authorized Rest API access
 - elastic search enhancements
 
@@ -200,3 +206,6 @@ https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE
 - Read Text from Images - OCR Loop API
 - Invoice Image AI Alert - file handler loop
 - audio cardiac pulse monitoring AI Alert - file handler loop for 
+
+fix readme
+create docs and images

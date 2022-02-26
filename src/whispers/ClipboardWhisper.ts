@@ -1,6 +1,7 @@
 import { whisper } from '@oliveai/ldk';
 import { network } from '@oliveai/ldk';
 import NetworkSearchWhisper from '../whispers/NetworkSearchWhisper';
+import { UiWhisper } from '.';
 
 interface Props {
   clipboardText: string;
@@ -13,34 +14,41 @@ export default class ClipboardWhisper {
   props: Props;
 
   async getData(str) {
-    const request1: network.HTTPRequest = {
-      method: 'GET',
-      headers: { "Content-Type": ["application/json"] },
-      url: "https://t7gfwerxpcslwfy-elishdb.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/p2p/elasticsrch/" + str,
-    };
-    const req = network.httpRequest
-    const request2: network.HTTPRequest = {
-      method: 'GET',
-      url: "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/RestAPI/assets/fakeAPIResults_2.json",
-    };
-    try {
-      // console.log("print res")
-      const response = await network.httpRequest(request1);
-      const decodedBody = await network.decode(response.body);
-      // console.log("data from OCI:", decodedBody)
-      const parsedObject = JSON.parse(decodedBody);
-      const recalls = parsedObject.items;
-      const whisper = new NetworkSearchWhisper(recalls);
+
+    var Str: String = str;
+    if (Str == null || Str.length < 5 || Str.length > 12) {
+      const whisper = new UiWhisper("Please search for a valid input between 5 to 12 characters.");
       whisper.show();
-    } catch (error) {
-      console.log("error:", error)
-      // console.log("calling backup REST API:")
-      const response = await network.httpRequest(request2);
-      const decodedBody = await network.decode(response.body);
-      const parsedObject = JSON.parse(decodedBody);
-      const recalls = parsedObject.results;
-      const whisper = new NetworkSearchWhisper(recalls);
-      whisper.show();
+    } else {
+      const request1: network.HTTPRequest = {
+        method: 'GET',
+        headers: { "Content-Type": ["application/json"] },
+        url: "https://t7gfwerxpcslwfy-elishdb.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/p2p/elasticsrch/" + str,
+      };
+      const req = network.httpRequest
+      const request2: network.HTTPRequest = {
+        method: 'GET',
+        url: "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/RestAPI/assets/fakeAPIResults_2.json",
+      };
+      try {
+        // console.log("print res")
+        const response = await network.httpRequest(request1);
+        const decodedBody = await network.decode(response.body);
+        // console.log("data from OCI:", decodedBody)
+        const parsedObject = JSON.parse(decodedBody);
+        const recalls = parsedObject.items;
+        const whisper = new NetworkSearchWhisper(recalls);
+        whisper.show();
+      } catch (error) {
+        console.log("error:", error)
+        // console.log("calling backup REST API:")
+        const response = await network.httpRequest(request2);
+        const decodedBody = await network.decode(response.body);
+        const parsedObject = JSON.parse(decodedBody);
+        const recalls = parsedObject.results;
+        const whisper = new NetworkSearchWhisper(recalls);
+        whisper.show();
+      }
     }
   }
 

@@ -4,6 +4,7 @@ import { getOverlappingDaysInIntervals } from 'date-fns';
 import { networkExample } from '../aptitudes';
 import { network } from '@oliveai/ldk';
 import NetworkSearchWhisper from '../whispers/NetworkSearchWhisper';
+import { UiWhisper } from '.';
 
 interface Props {
   newMessage: string;
@@ -16,34 +17,40 @@ export default class IntroWhisper {
   props: Props;
 
   async getData(str) {
-    const request1: network.HTTPRequest = {
-      method: 'GET',
-      headers: { "Content-Type": ["application/json"] },
-      url: "https://t7gfwerxpcslwfy-elishdb.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/p2p/elasticsrch/" + str,
-    };
-    const req = network.httpRequest
-    const request2: network.HTTPRequest = {
-      method: 'GET',
-      url: "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/RestAPI/assets/fakeAPIResults_2.json",
-    };
-    try {
-      // console.log("print res")
-      const response = await network.httpRequest(request1);
-      const decodedBody = await network.decode(response.body);
-      // console.log("data from OCI:", decodedBody)
-      const parsedObject = JSON.parse(decodedBody);
-      const recalls = parsedObject.items;
-      const whisper = new NetworkSearchWhisper(recalls);
+    var Str: String = str;
+    if (Str == null || Str.length < 5 || Str.length > 12) {
+      const whisper = new UiWhisper("Please search for a valid input between 5 to 12 characters.");
       whisper.show();
-    } catch (error) {
-      console.log("error:", error)
-      // console.log("calling backup REST API:")
-      const response = await network.httpRequest(request2);
-      const decodedBody = await network.decode(response.body);
-      const parsedObject = JSON.parse(decodedBody);
-      const recalls = parsedObject.results;
-      const whisper = new NetworkSearchWhisper(recalls);
-      whisper.show();
+    } else {
+      const request1: network.HTTPRequest = {
+        method: 'GET',
+        headers: { "Content-Type": ["application/json"] },
+        url: "https://t7gfwerxpcslwfy-elishdb.adb.us-phoenix-1.oraclecloudapps.com/ords/admin/p2p/elasticsrch/" + str,
+      };
+      const req = network.httpRequest
+      const request2: network.HTTPRequest = {
+        method: 'GET',
+        url: "https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/RestAPI/assets/fakeAPIResults_2.json",
+      };
+      try {
+        // console.log("print res")
+        const response = await network.httpRequest(request1);
+        const decodedBody = await network.decode(response.body);
+        // console.log("data from OCI:", decodedBody)
+        const parsedObject = JSON.parse(decodedBody);
+        const recalls = parsedObject.items;
+        const whisper = new NetworkSearchWhisper(recalls);
+        whisper.show();
+      } catch (error) {
+        console.log("error:", error)
+        // console.log("calling backup REST API:")
+        const response = await network.httpRequest(request2);
+        const decodedBody = await network.decode(response.body);
+        const parsedObject = JSON.parse(decodedBody);
+        const recalls = parsedObject.results;
+        const whisper = new NetworkSearchWhisper(recalls);
+        whisper.show();
+      }
     }
   }
 
@@ -65,7 +72,7 @@ export default class IntroWhisper {
     // Intro message.
     const introMessage: whisper.Message = {
       type: whisper.WhisperComponentType.Message,
-      body: 'REST API is using a demo database. Please do not use it for any live reporting purpose. refer to https://github.com/AmitXShukla/SCM_Rx_Inventory_OLIVEai for documentation.',
+      body: 'P2P is using a demo database. Please visit https://amitxshukla.github.io/P2P.ai/#/ai for documentation, on-premise database/AI Models product implementation.',
       style: whisper.Urgency.Success,
     };
 
@@ -76,12 +83,12 @@ export default class IntroWhisper {
       # Startup instructions
       Step 0: Review ALERTs section above for latest system messages.
 
-      Step 1: login to Healthcare OLTP / ERP Application, Olive_SCM_Rx_AI is expecting you to use a your ERP app.
+      Step 1: login to Healthcare OLTP / ERP Application, P2P.ai is expecting you to use a your ERP app.
 
       Step 2: enter some data in app | search text in Olive Help | select & copy text to your clipboard
         for example, PO12345 | MSR12345 | ITEM12345 | RECV12345 (use these strings for **demo)
 
-      Step 3: AI API is smart to parse your text as PO | ITEM | others, perform an elastic search in database and render active matching results.
+      Step 3: P2P API is smart to parse your text as PO | ITEM | others, perform an elastic search in database and render active matching results.
 
       Step 4: Review two sections in search results, Section 1: About/Details about searched items | Section 2: AI Alerts based on pre-trained ML Models.
       `,
@@ -281,10 +288,10 @@ export default class IntroWhisper {
     // }
 
     return [
-      // introMessage,
+      introMessage,
       // divider,
       // collapseBox,
-      // divider,
+      divider,
       // alertMessage,
       // boxHeader,
       // box,

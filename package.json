@@ -1,6 +1,6 @@
 {
-  "name": "scm_rx_inventory_oliveai",
-  "version": "1.0.1",
+  "name": "P2P.ai",
+  "version": "1.0.2",
   "description": "Olive Loop to manage Supply Chain Rx Inventory system using Predictive Analytics AI",
   "main": "src/index.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "author": "Amit Shukla",
-  "license": "MIT",
+  "license": "CC",
   "devDependencies": {
     "@types/common-tags": "^1.8.1",
     "@types/jest": "^27.0.2",

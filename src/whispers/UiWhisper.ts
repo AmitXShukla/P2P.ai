@@ -12,7 +12,7 @@ export default class UiWhisper {
 
   constructor(searchText: string) {
     this.whisper = undefined;
-    this.label = 'UI Search Aptitude Fired';
+    this.label = 'Search text validation failed';
     this.props = {
       searchText,
     };
@@ -22,6 +22,7 @@ export default class UiWhisper {
     const message: whisper.Message = {
       type: whisper.WhisperComponentType.Message,
       body: this.props.searchText,
+      style: whisper.Urgency.Warning
     };
 
     return [message];

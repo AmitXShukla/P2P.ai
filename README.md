@@ -196,11 +196,6 @@ https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE
 
 ---
 
-## TODO
-- fix openuihandler
-- fix JWT Auth, validate OLIVE Token for authorized Rest API access
-- elastic search enhancements
-
 ## other loops - in active development
 - Clinical Trial Loop API
 - Read Text from Images - OCR Loop API
@@ -209,3 +204,38 @@ https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE
 
 fix readme
 create docs and images
+
+
+---
+
+P2P.ai Loop metadata
+
+Procure to Pay
+
+P2P.ai - A complete data science framework to manage live Supply Chain Rx Inventory, ERP, Predictive Analytics
+
+
+# about P2P.ai
+Managing supply chain (Procure to Pay operations) is always a challenging tasks for any organization whether small, medium and large. And managing these operations effectively become even more critical for Healthcare providers.
+
+Business user must have complete visibility and require operation intelligence information readily available to make quick, effective and informed decisions.
+
+**P2P.ai** solves this problem. 
+
+It acts as an AI assistant to help user make quick informed decision. As user input, search for Items, Purchase orders, DocCART or other SCM related information, Olive Loop connects to P2P.ai REST API, which render live data & predictive analytics based on pre-trained AI models, historical transactions stored in system.
+
+[Documentation](https://amitxshukla.github.io/P2P.ai/#/ai)
+
+## application process
+![Application Process](https://github.com/AmitXShukla/P2P.ai/blob/main/docs/assets/images/app_process.png?raw=true)
+
+*P2P is using a demo database. Please visit [P2P.ai](https://amitxshukla.github.io/P2P.ai/#/ai) for on-premise / cloud database connectivity, AI Model consulting, product and solutions/services.*
+
+
+Aptitudes used: Clipboard, UI search, network
+[Terms & Conditions](https://raw.githubusercontent.com/AmitXShukla/P2P.ai/main/LICENSE)
+Questions, concerns, or feedback?
+info@elishconsulting.com
+
+
+#2E75B6

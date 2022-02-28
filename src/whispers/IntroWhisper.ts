@@ -56,7 +56,7 @@ export default class IntroWhisper {
 
   constructor() {
     this.whisper = undefined;
-    this.label = 'P2P.ai';
+    this.label = 'Procure to Pay search';
     this.props = {
       newMessage: '',
       numClones: 1,
@@ -72,7 +72,7 @@ export default class IntroWhisper {
     // Intro message.
     const introMessage: whisper.Message = {
       type: whisper.WhisperComponentType.Message,
-      body: 'P2P is using a demo database. Please visit https://amitxshukla.github.io/P2P.ai/#/ai for documentation, on-premise database/AI Models product implementation.',
+      body: 'P2P is using a demo database. Please visit https://amitxshukla.github.io/P2P.ai/#/ai for documentation, on-premise / cloud database connectivity, AI Model services.',
       style: whisper.Urgency.Success,
     };
 

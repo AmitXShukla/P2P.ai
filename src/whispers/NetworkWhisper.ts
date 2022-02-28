@@ -16,7 +16,7 @@ export default class NetworkWhisper {
 
   constructor(recalls: Recall[]) {
     this.whisper = undefined;
-    this.label = 'P2P Org Alerts';
+    this.label = 'Org Alerts';
     this.props = {
       recalls,
     };

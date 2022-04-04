@@ -1,9 +1,8 @@
 push!(LOAD_PATH, "../src/")
-using Documenter, GeneralLedger
+using Documenter, P2P
 
-makedocs(sitename="GeneralLedger.jl",
+makedocs(sitename="P2P.ai",
     pages=[
-        "Objective" => "index.md"
         "Introduction" => "introduction.md"
         "Tutorials" => [
             "About GL" => "tutorials/aboutgl.md"

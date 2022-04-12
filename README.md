@@ -1,6 +1,6 @@
 # P2P.ai
 
-## Supply Chain Rx_Inventory API with Predictive Analytics
+## Procure to Pay - Supply Chain Rx Inventory API with Predictive Analytics
 A complete data science AI framework to manage live Supply Chain Rx Inventory ERPs using Predictive Analytics.
 
 ---
@@ -8,7 +8,7 @@ A complete data science AI framework to manage live Supply Chain Rx Inventory ER
 #### Contact: info@elishconsulting.com
 #### License: Creative Commons, CC0 1.0 Universal
 
-#### Documentation: https://amitxshukla.github.io/P2P.ai/#/ai
+#### Documentation: [https://amitxshukla.github.io/P2P.ai](https://amitxshukla.github.io/P2P.ai/)
 
 *please do not clone, @copyright <a href="www.elishconsulting.com">www.elishconsulting.com</a>*
 
@@ -20,7 +20,7 @@ A complete data science AI framework to manage live Supply Chain Rx Inventory ER
 
 ## Technologies
 ```sbtshell
-Frontend: Olive AI
+Frontend: Julia, Flutter, Olive AI
 Backend: Oracle
 Rest API: Julia, Oracle ADW REST API
 Ai: Julia, Fluxml.ai, H2O.ai, Oracle AutoML

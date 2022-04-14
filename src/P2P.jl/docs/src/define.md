@@ -9,6 +9,21 @@ remember this...
 
 ---
 
+Just to be clear, This book is really about Data Science, Graph Analysis to understand, how something like toilet paper is sold as gold during Pandemic.
+
+I am sure, There are thousands of other items like Ventilators which are lot more essential than toilet papers, and certainly most critical for survivals.
+Toilet paper may be least popular item which are needed in essentials, but is a symbol of cleanliness to start with.
+
+One can't deny, in recent time, AI Advance Predictive Analytics dominate market conditions. Most of the organizations now a days can predict their capital purchases, sales with great accuracy and plan manufacturing accordingly. Yet, These organizations and Advance technologies failed to predict and manage life essentials supply chain shortage during recent covid pandemic. Not because, We don't have the capabilities, it was due to lack of monetary benefits realized.
+
+I can guarantee, we have Technologies to predict and manage any supply chain shortages at any time, what we lack is, intent to use these technologies to a good use due to lesser ROI.
+
+In next few chapters, we will use data science technologies to understand, predict and perhaps prevent global supply chain shortages specially for those items which every person needs to survive. And this is sole objective of this book.
+
+If you are still not convinced that solving toilet paper, cleaning items or other life saving essentials, supply chain crisis is a real problem then let me share a real story.
+
+---
+
 If you are still not convinced that solving toilet paper supply chain crisis is a real problem then let me share a real story.
 
 **January 1, 2020**

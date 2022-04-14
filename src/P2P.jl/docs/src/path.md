@@ -88,3 +88,31 @@ conn = tg.TigerGraphConnection(host=hostName, username=userName, password=passwo
 ```
 
 
+```
+TODO - julia and tg version
+
+graph 1 - sun => swirling gas & dust form earth or
+ someone create earth
+graph 2
+dinaosaur, cocroaches, fish, mammoth lives in earth
+internal (supply chain, virus) or external (fireball) disruption
+they all eat drink and sleep
+who eats , drinks and sleeps more, die
+roaches and fish survive
+
+human eat, drink, sleep
+chain is interrupted
+fight
+
+supply chain, virus handle it
+
+that is it, simple , we are here to fix supply chain crisis
+
+now, why toliet paper,
+because tp belongs to a family of clearning supplies
+if you solve it for tp, you solve it for all cleanign supplies category
+
+and if you solve it for cleaning supply, you can solve it for all "life essentials"
+```
+
+*I am not sure, if you buy all the logic above or not, but I am sure, you now know how to create, plot and define graph, vertices and edges.*

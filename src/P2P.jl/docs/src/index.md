@@ -69,11 +69,11 @@ Pages = [
     "define.md"
     "path.md"
     "process.md"
-    "data.md"
-    "analysis.md"
-    "solve.md"
-    "test.md"
-    "retrain.md"
+    "facts.md"
+    "graph.md"
+    "query.md"
+    "analytics.md"
+    "ml.md"
     "api.md"
 ]
 ```

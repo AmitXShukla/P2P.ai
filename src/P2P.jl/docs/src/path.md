@@ -87,7 +87,6 @@ conn = tg.TigerGraphConnection(host=hostName, username=userName, password=passwo
 
 ```
 
-
 ```
 TODO - julia and tg version
 

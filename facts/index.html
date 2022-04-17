@@ -1,2 +1,597 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>get Facts straight · P2P.ai</title><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.039/juliamono-regular.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../"><img src="../assets/logo.png" alt="P2P.ai logo"/></a><div class="docs-package-name"><span class="docs-autofit"><a href="../">P2P.ai</a></span></div><form class="docs-search" action="../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../">Introduction</a></li><li><a class="tocitem" href="../define/">Define Problem</a></li><li><a class="tocitem" href="../path/">How did we get here</a></li><li><a class="tocitem" href="../process/">what do we know</a></li><li class="is-active"><a class="tocitem" href>get Facts straight</a><ul class="internal"><li><a class="tocitem" href="#Finance-data"><span>Finance data</span></a></li><li><a class="tocitem" href="#Supply-chain-data"><span>Supply chain data</span></a></li></ul></li><li><a class="tocitem" href="../graph/">graph</a></li><li><a class="tocitem" href="../query/">data insights</a></li><li><a class="tocitem" href="../analytics/">analytics</a></li><li><a class="tocitem" href="../ml/">AI predictions</a></li><li><a class="tocitem" href="../api/">API</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>get Facts straight</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>get Facts straight</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/AmitXShukla/P2P.ai/blob/master/src/P2P.jl/docs/src/facts.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Getting-Facts-data"><a class="docs-heading-anchor" href="#Getting-Facts-data">Getting Facts data</a><a id="Getting-Facts-data-1"></a><a class="docs-heading-anchor-permalink" href="#Getting-Facts-data" title="Permalink"></a></h1><p>In previous chapter, we saw business process operational workflow diagram and also learned high level physical ERDs.</p><p>most of the time, Organizations store these datasets in RDBMS tables, document databases and in some case, actual PDFs, images serve as document data itself.</p><p>In this chapter, we will use Julia language and Julia packages to mimic Finance &amp; Supply chain data. Majority of this data is <strong>sample data</strong> and <strong>DOES NOT</strong>  bear any resemblance to real life data.</p><p>at the same time, I am using lots of actual real life data like UNSPSC codes, GUDID, Vendor, Item master data. Also, These datasets are not specific to any particular ERP systems like SAP, Oracle etc.</p><p>However, these sample dataset below are very close to real life data sets and are great assets to learn ERP systems architecture.</p><div class="admonition is-info"><header class="admonition-header">ERP Data Structure</header><div class="admonition-body"><p>In this chapter, we will read, write and understand typical Finance, Supply chain datasets in Julia language.</p><p>Once we understand these datasets, in following chapters, we will create Graphs, Vertices and Edges for data analysis, load actual data into Graphs.P2P.jl package supports these ERP systems data structures.</p></div></div><p>let&#39;s get started.</p><hr/><h2 id="Finance-data"><a class="docs-heading-anchor" href="#Finance-data">Finance data</a><a id="Finance-data-1"></a><a class="docs-heading-anchor-permalink" href="#Finance-data" title="Permalink"></a></h2><h2 id="Supply-chain-data"><a class="docs-heading-anchor" href="#Supply-chain-data">Supply chain data</a><a id="Supply-chain-data-1"></a><a class="docs-heading-anchor-permalink" href="#Supply-chain-data" title="Permalink"></a></h2></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../process/">« what do we know</a><a class="docs-footer-nextpage" href="../graph/">graph »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.15 on <span class="colophon-date" title="Thursday 14 April 2022 06:05">Thursday 14 April 2022</span>. Using Julia version 1.7.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>get Facts straight · P2P.ai</title><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.039/juliamono-regular.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../"><img src="../assets/logo.png" alt="P2P.ai logo"/></a><div class="docs-package-name"><span class="docs-autofit"><a href="../">P2P.ai</a></span></div><form class="docs-search" action="../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../">Introduction</a></li><li><a class="tocitem" href="../define/">Define Problem</a></li><li><a class="tocitem" href="../path/">How did we get here</a></li><li><a class="tocitem" href="../process/">what do we know</a></li><li class="is-active"><a class="tocitem" href>get Facts straight</a><ul class="internal"><li><a class="tocitem" href="#About-ERP-Systems,-General-Ledger-and-Supply-chain"><span>- About ERP Systems, General Ledger &amp; Supply chain</span></a></li><li><a class="tocitem" href="#start-with-Julia"><span>start with Julia</span></a></li><li><a class="tocitem" href="#adding-Packages"><span>adding Packages</span></a></li><li><a class="tocitem" href="#create-Finance-Data-model"><span>create Finance Data model</span></a></li><li><a class="tocitem" href="#Supply-chain-data-model"><span>Supply chain data model</span></a></li><li><a class="tocitem" href="#Item-Master"><span>Item Master</span></a></li><li><a class="tocitem" href="#creating-complete-Supply-Chain-Data-Model-DataFrames"><span>creating complete Supply Chain Data Model DataFrames</span></a></li></ul></li><li><a class="tocitem" href="../graph/">graph</a></li><li><a class="tocitem" href="../query/">data insights</a></li><li><a class="tocitem" href="../analytics/">analytics</a></li><li><a class="tocitem" href="../ml/">AI predictions</a></li><li><a class="tocitem" href="../api/">API</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>get Facts straight</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>get Facts straight</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/AmitXShukla/P2P.ai/blob/master/src/P2P.jl/docs/src/facts.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Getting-Facts-data"><a class="docs-heading-anchor" href="#Getting-Facts-data">Getting Facts data</a><a id="Getting-Facts-data-1"></a><a class="docs-heading-anchor-permalink" href="#Getting-Facts-data" title="Permalink"></a></h1><div class="admonition is-info"><header class="admonition-header">ERP Data Structure</header><div class="admonition-body"><p>In this chapter, we will read, write and understand typical Finance, Supply chain datasets in Julia language. These datasets will layout foundations for Finance, Supply Chain Anaytics.</p><p><strong>Target Audience:</strong> This chapter, is meant for Julia Language consultants, ERP Analysts, IT Developers, Finance, Supply chain, HR &amp; CRM managers, executive leaders or anyone curious to implement data science concepts in ERP space.</p><p><strong>Once we understand these datasets, in following chapters, we will create Graphs, Vertices and Edges for data analysis, load actual data into Graphs.P2P.jl package supports these ERP systems data structures.</strong></p></div></div><p>most of the time, Organizations store these datasets in RDBMS tables, document databases and in some case, actual PDFs, images serve as document data itself.</p><p>In previous chapter, we saw business process operational workflow diagram and also learned high level physical ERDs.</p><p>In this chapter, we will use Julia language and Julia packages to mimic Finance &amp; Supply chain data. Majority of this data is <strong>sample data</strong> and <strong>DOES NOT</strong>  bear any resemblance to real life data.</p><p>at the same time, I am using lots of actual real life data like UNSPSC codes, GUDID, Vendor, Item master data. Also, These datasets are not specific to any particular ERP systems like SAP, Oracle etc.</p><p>However, these sample dataset below are very close to real life data sets and are great assets to learn ERP systems architecture.</p><p>let&#39;s get started.</p><hr/><p><strong>Background:</strong> Most of Enterprise ERP providers like SAP, Oracle, Microsoft build HCM, Finance, Supply Chain, CRM like systems, which store data in highly structured RDBMS tables. Recent advancements in ERP systems also support authoring non-structured data like digital invoices, receipt or hand-held OCR readers.</p><p>All of these ERP systems are great OLTP systems, but depend on Analytic systems for creating dashboards, ad-hoc analysis, operational reporting or live predictive analytics.</p><p>Further, ERP systems depend on ELT/ELT or 3rd party tools for data mining, analysis and visualizations.</p><p>While data engineers use Java, Scala, SPARK based big data solutions to move data, they depend on 3rd party BI Reporting tools for creating dashboards, use Data Mining tools for data cleansing and AI Languages for advance predictive analytics.</p><p>When I started learning more about Julia Language, I thought of using Julia Language to solve ERP Analytics multiple languages problem. Why not just use Julia Language to move, clean massive data set as Big data reporting solution, as Julia support multi-threading, distributing parallel computing. Julia language and associated packages has first class support for large arrays, which can be used for data analysis.</p><p>and Julia has great visualization packages to publish interactive dashboards, live data reporting.</p><p>best of all, Julia is great in numerical computing, advance data science machine learning.</p><p>This blog, I am sharing my notes specific to perform typical ERP data analysis using Julia Language.</p><hr/><h2 id="About-ERP-Systems,-General-Ledger-and-Supply-chain"><a class="docs-heading-anchor" href="#About-ERP-Systems,-General-Ledger-and-Supply-chain">- About ERP Systems, General Ledger &amp; Supply chain</a><a id="About-ERP-Systems,-General-Ledger-and-Supply-chain-1"></a><a class="docs-heading-anchor-permalink" href="#About-ERP-Systems,-General-Ledger-and-Supply-chain" title="Permalink"></a></h2><p>A typical ERP system consists of many modules based on business domain, functions and operations. GL is core of Finance and Supply chain domains and Buy to Pay, Order to Cash deal with different aspects of business operations in an Organization. Many organization, use ERPs in different ways and may chose to implement all or some of the modules. You can find examples of module specific business operations/processes diagram here.</p><ul><li><a href="https://github.com/AmitXShukla/AmitXShukla.github.io/raw/master/blogs/PlutoCon/gl.png">General Ledger process flow</a></li><li><a href="https://github.com/AmitXShukla/AmitXShukla.github.io/raw/master/blogs/PlutoCon/ap.png">Account Payable process flow</a></li><li><a href="https://github.com/AmitXShukla/AmitXShukla.github.io/raw/master/blogs/PlutoCon/tax.png">Tax Analytics</a></li><li><a href="https://github.com/AmitXShukla/AmitXShukla.github.io/raw/master/blogs/PlutoCon/gl_erd.png">Sample GL ERD - Entity Relaton Diagram</a></li></ul><p>A typical ERP modules list looks like below diagram.</p><p><img src="https://github.com/AmitXShukla/AmitXShukla.github.io/raw/master/blogs/PlutoCon/ERP_modules.png" alt="ERP Modules"/></p><p>A typical ERP business process flow looks like below diagram.</p><p><img src="https://github.com/AmitXShukla/P2P.ai/blob/main/docs/assets/images/ERD_logical.png?raw=true" alt="ERP Processes"/></p><p>A typical GL Balance sheet, Cash-flow or Income Statement looks like this </p><p><a href="https://s2.q4cdn.com/470004039/files/doc_financials/2020/q4/FY20_Q4_Consolidated_Financial_Statements.pdf">click here</a></p><p>In this notebook, I will do my best to cite examples from real world data like above mentioned GL Financial statement.</p><hr/><h2 id="start-with-Julia"><a class="docs-heading-anchor" href="#start-with-Julia">start with Julia</a><a id="start-with-Julia-1"></a><a class="docs-heading-anchor-permalink" href="#start-with-Julia" title="Permalink"></a></h2><p>It literally takes &lt; 1 min to install Julia environments on almost any machine.</p><p>Here is <a href="https://amit-shukla.medium.com/setup-local-machine-ipad-android-tablets-for-julia-lang-data-science-computing-823d84f2cb28">link to my tutorial</a>, which discuss Julia installation on different machines (including remote and mobile tablets).</p><h2 id="adding-Packages"><a class="docs-heading-anchor" href="#adding-Packages">adding Packages</a><a id="adding-Packages-1"></a><a class="docs-heading-anchor-permalink" href="#adding-Packages" title="Permalink"></a></h2><pre><code class="language-julia hljs">using Pkg
+Pkg.add(&quot;DataFrames&quot;)
+Pkg.add(&quot;Dates&quot;)
+Pkg.add(&quot;CategoricalArrays&quot;)
+using DataFrames, Dates, CategoricalArrays
+Pkg.status()</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+      Status `~/.julia/environments/v1.7/Project.toml`
+  [336ed68f] CSV v0.10.3
+  [54eefc05] Cascadia v1.0.1
+  [324d7699] CategoricalArrays v0.10.5
+  [8f4d0f93] Conda v1.7.0
+  [a93c6f00] DataFrames v1.3.2
+  [31c24e10] Distributions v0.25.53
+  [e30172f5] Documenter v0.27.15
+  [8f5d6c58] EzXML v1.1.0
+  [708ec375] Gumbo v0.8.0
+  [cd3eb016] HTTP v0.9.17
+  [7073ff75] IJulia v1.23.2
+  [c601a237] Interact v0.10.4
+  [0f8b85d8] JSON3 v1.9.4
+  [b9914132] JSONTables v1.0.3
+  [4d0d745f] PDFIO v0.1.13
+  [c3e4b0f8] Pluto v0.18.4
+  [2dfb63ee] PooledArrays v1.4.0
+  [438e738f] PyCall v1.93.1
+  [88034a9c] StringDistances v0.11.2
+  [a2db99b7] TextAnalysis v0.7.3
+  [05625dda] WebDriver v0.1.2
+  [0f1e0344] WebIO v0.8.17
+  [fdbf4ff8] XLSX v0.7.9
+  [ade2ca70] Dates
+  [8bb1440f] DelimitedFiles</code></pre><p><strong>rest of this blog, I will assume, all packages are added and imported in current namespace/notebook scope.</strong></p><pre><code class="language-julia hljs"># run one command at a time
+repeat([&quot;AMIT&quot;,&quot;SHUKLA&quot;], inner=5) # repeat list/string number of times
+fill(&quot;34&quot;, 4) # repeat list/string number of times
+range(1.0, stop=9.0, length=100) # generate n number of equal values between start and stop values
+11000:1000:45000 # genarate a range of # from start to finish with set intervals
+collect(1:4) # collect funtion collect all values in list
+rand([1,2,3,4]) # random value from a list of values
+rand(11000:1000:45000) # random value from a list of values
+randn() # random # from a list of float values (+ or -)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">-0.024842025618673335</code></pre><pre><code class="language-julia hljs">using DataFrames, CategoricalArrays
+# run one command at a time
+# basic dataframe is constructed by passing column vectors (think of adding one excel column at a time)
+org = &quot;Apple Inc&quot; # is a simple string
+_ap = [1,2] # this is a vector
+
+ap = categorical(_ap) # this is a vector
+fy = categorical(repeat([2022], inner=2)) # this is a vector
+
+actuals, budget = (98.40, 100) # this is a tuple
+amount = (actuals = 98.54, budget = 100) # this is a named tuple
+df_Ledger = DataFrame(Entity=fill(org), FiscalYear=fy, AccountingPeriod = ap, Actuals = actuals, Budget = budget)
+# fill(org) or org will produce same results
+
+# run one command at a time
+# adding one row at a time, can be done, but is not very efficient
+push!(df_Ledger, Dict(:Entity =&gt; &quot;Google&quot;, :FiscalYear =&gt; 2022,
+        :AccountingPeriod =&gt; 1, :Actuals =&gt; 95.42, :Budget =&gt; 101))
+push!(df_Ledger, Dict(:Entity =&gt; &quot;Google&quot;, :FiscalYear =&gt; 2022,
+        :AccountingPeriod =&gt; 2, :Actuals =&gt; 91.42, :Budget =&gt; 99))</code></pre><div class="data-frame"><p>4 rows × 5 columns</p><table class="data-frame"><thead><tr><th></th><th>Entity</th><th>FiscalYear</th><th>AccountingPeriod</th><th>Actuals</th><th>Budget</th></tr><tr><th></th><th title="String">String</th><th title="CategoricalArrays.CategoricalValue{Int64, UInt32}">Cat…</th><th title="CategoricalArrays.CategoricalValue{Int64, UInt32}">Cat…</th><th title="Float64">Float64</th><th title="Int64">Int64</th></tr></thead><tbody><tr><th>1</th><td>Apple Inc</td><td>2022</td><td>1</td><td>98.4</td><td>100</td></tr><tr><th>2</th><td>Apple Inc</td><td>2022</td><td>2</td><td>98.4</td><td>100</td></tr><tr><th>3</th><td>Google</td><td>2022</td><td>1</td><td>95.42</td><td>101</td></tr><tr><th>4</th><td>Google</td><td>2022</td><td>2</td><td>91.42</td><td>99</td></tr></tbody></table></div><h2 id="create-Finance-Data-model"><a class="docs-heading-anchor" href="#create-Finance-Data-model">create Finance Data model</a><a id="create-Finance-Data-model-1"></a><a class="docs-heading-anchor-permalink" href="#create-Finance-Data-model" title="Permalink"></a></h2><p>Chart of accounts (organized hierarchy of account groups in tree form), Location/Department or Product based hierarchy allows businesses to group and report organization activities based on business processes.</p><p>These hierarchical grouping help capture monetary and statistical values of organization in finance statements.</p><hr/><p>To create Finance Data model and  <a href="https://s2.q4cdn.com/470004039/files/doc_financials/2020/q4/FY20_Q4_Consolidated_Financial_Statements.pdf">Ledger Cash-flow or Balance Sheet like statements</a>, We need associated dimensions (chartfields like chart of accounts).</p><p>We will discuss how to load actual data from CSV or RDBMS later. We will also learn how to group and create chartfield hierarchies later.</p><p>But for now, first Let&#39;s start with creating fake ACCOUNT, department and location chartfields.</p><pre><code class="language-julia hljs">using DataFrames, Dates
+# create dummy data
+accountsDF = DataFrame(
+    ENTITY = &quot;Apple Inc.&quot;,
+    AS_OF_DATE=Date(&quot;1900-01-01&quot;, dateformat&quot;y-m-d&quot;),
+    ID = 11000:1000:45000,
+    CLASSIFICATION=repeat([
+        &quot;OPERATING_EXPENSES&quot;,&quot;NON-OPERATING_EXPENSES&quot;, &quot;ASSETS&quot;,&quot;LIABILITIES&quot;,&quot;NET_WORTH&quot;,&quot;STATISTICS&quot;,&quot;REVENUE&quot;
+                ], inner=5),
+    CATEGORY=[
+        &quot;Travel&quot;,&quot;Payroll&quot;,&quot;non-Payroll&quot;,&quot;Allowance&quot;,&quot;Cash&quot;,
+        &quot;Facility&quot;,&quot;Supply&quot;,&quot;Services&quot;,&quot;Investment&quot;,&quot;Misc.&quot;,
+        &quot;Depreciation&quot;,&quot;Gain&quot;,&quot;Service&quot;,&quot;Retired&quot;,&quot;Fault.&quot;,
+        &quot;Receipt&quot;,&quot;Accrual&quot;,&quot;Return&quot;,&quot;Credit&quot;,&quot;ROI&quot;,
+        &quot;Cash&quot;,&quot;Funds&quot;,&quot;Invest&quot;,&quot;Transfer&quot;,&quot;Roll-over&quot;,
+        &quot;FTE&quot;,&quot;Members&quot;,&quot;Non_Members&quot;,&quot;Temp&quot;,&quot;Contractors&quot;,
+        &quot;Sales&quot;,&quot;Merchant&quot;,&quot;Service&quot;,&quot;Consulting&quot;,&quot;Subscriptions&quot;],
+    STATUS=&quot;A&quot;,
+    DESCR=repeat([
+    &quot;operating expenses&quot;,&quot;non-operating expenses&quot;,&quot;assets&quot;,&quot;liability&quot;,&quot;net-worth&quot;,&quot;stats&quot;,&quot;revenue&quot;], inner=5),
+    ACCOUNT_TYPE=repeat([&quot;E&quot;,&quot;E&quot;,&quot;A&quot;,&quot;L&quot;,&quot;N&quot;,&quot;S&quot;,&quot;R&quot;],inner=5));
+
+show(&quot;Accounts DIM size is: &quot;), show(size(accountsDF)), show(&quot;Accounts Dim sample: &quot;), accountsDF[collect(1:5:35),:]</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">(nothing, nothing, nothing, 7×8 DataFrame
+ Row │ ENTITY      AS_OF_DATE  ID     CLASSIFICATION          CATEGORY      ST ⋯
+     │ String      Dates.Date  Int64  String                  String        St ⋯
+─────┼──────────────────────────────────────────────────────────────────────────
+   1 │ Apple Inc.  1900-01-01  11000  OPERATING_EXPENSES      Travel        A  ⋯
+   2 │ Apple Inc.  1900-01-01  16000  NON-OPERATING_EXPENSES  Facility      A
+   3 │ Apple Inc.  1900-01-01  21000  ASSETS                  Depreciation  A
+   4 │ Apple Inc.  1900-01-01  26000  LIABILITIES             Receipt       A
+   5 │ Apple Inc.  1900-01-01  31000  NET_WORTH               Cash          A  ⋯
+   6 │ Apple Inc.  1900-01-01  36000  STATISTICS              FTE           A
+   7 │ Apple Inc.  1900-01-01  41000  REVENUE                 Sales         A
+                                                               3 columns omitted)</code></pre><p>There is lot to unpack here in above Julia code and lot is wrong (not best practice for sure).</p><p>First, <strong>what is a dataframe anyway</strong>, think of Julia DataFrame as tabular representation of data arranged in rows and columns. Unlike SQL, you should get into habit of reading and writing one column at a time (not because of reason, you can&#39;t read/write rows) for faster performance. Each column is an Array or a list of values, referred as vector.</p><p>Above Julia code creates accounts dataframe with columns name as AS<em>OF</em>DATE, DESCR, CATEGORY, ACCOUNT_TYPE, CLASSIFICATION, STATUS.</p><p>There are 35 rows, with same AS<em>OF</em>DATE, IDs starting from 11000-45000 in 1000 incremental values, all with STATUS = A (Active), 7 distinct Descriptions and account types (E=Expense, L=Liability, A= Assets, N=Net worth, S=Stats, R=Revenue) repeating 5 times per category.</p><p>For 35 rows, it&#39;s fine to store data like this, but now is a good time to learn about Categorical and Pooled Arrays, in case when dataframe has millions of rows.</p><h4 id="Accounts-chartfield"><a class="docs-heading-anchor" href="#Accounts-chartfield">Accounts chartfield</a><a id="Accounts-chartfield-1"></a><a class="docs-heading-anchor-permalink" href="#Accounts-chartfield" title="Permalink"></a></h4><pre><code class="language-julia hljs">using Pkg, DataFrames, CategoricalArrays, PooledArrays, Dates
+
+# here CLASSIFICATION column vector stores 3500 distinct values in an array
+CLASSIFICATION=repeat([&quot;OPERATING_EXPENSES&quot;,&quot;NON-OPERATING_EXPENSES&quot;, &quot;ASSETS&quot;,&quot;LIABILITIES&quot;,&quot;NET_WORTH&quot;,&quot;STATISTICS&quot;,&quot;REVENUE&quot;
+                ], inner=500)
+
+cl = categorical(CLASSIFICATION)
+levels(cl)
+
+# using PooledArrays
+pl = categorical(CLASSIFICATION)
+levels(pl)
+
+# show values in tabular format
+# run one command at a time
+df = DataFrame(Dict(&quot;Descr&quot; =&gt; &quot;CLASSIFICATION...ARR...&quot;, &quot;Value&quot; =&gt; size(CLASSIFICATION)[1]))
+push!(df,(&quot;CAT...ARR...&quot;,size(cl)[1]))
+push!(df,(&quot;CAT...ARR..COMPRESS.&quot;,size(compress(cl))[1]))
+push!(df,(&quot;POOL...ARR...&quot;,size(pl)[1]))
+push!(df,(&quot;POOL...ARR..COMPRESS.&quot;,size(compress(pl))[1]))
+push!(df,(&quot;CAT...LEVELs...&quot;,size(levels(cl))[1]))
+push!(df,(&quot;POOL...LEVELs...&quot;,size(levels(pl))[1]))
+push!(df,(&quot;CLASSIFICATION...MEMSIZE&quot;, Base.summarysize(CLASSIFICATION)))
+push!(df,(&quot;CAT...ARR...MEMSIZE&quot;, Base.summarysize(cl)))
+push!(df,(&quot;POOL...ARR...MEMSIZE&quot;, Base.summarysize(pl)))
+push!(df,(&quot;CAT...ARR..COMPRESS...MEMSIZE&quot;, Base.summarysize(compress(cl))))
+push!(df,(&quot;POOL...ARR..COMPRESS...MEMSIZE&quot;, Base.summarysize(compress(pl))))
+
+first(df,5)
+
+accountsDF = DataFrame(
+    ENTITY = &quot;Apple Inc.&quot;,
+    AS_OF_DATE=Date(&quot;1900-01-01&quot;, dateformat&quot;y-m-d&quot;),
+    ID = 11000:1000:45000,
+    CLASSIFICATION=repeat([
+        &quot;OPERATING_EXPENSES&quot;,&quot;NON-OPERATING_EXPENSES&quot;, &quot;ASSETS&quot;,&quot;LIABILITIES&quot;,&quot;NET_WORTH&quot;,&quot;STATISTICS&quot;,&quot;REVENUE&quot;
+                ], inner=5),
+    CATEGORY=[
+        &quot;Travel&quot;,&quot;Payroll&quot;,&quot;non-Payroll&quot;,&quot;Allowance&quot;,&quot;Cash&quot;,
+        &quot;Facility&quot;,&quot;Supply&quot;,&quot;Services&quot;,&quot;Investment&quot;,&quot;Misc.&quot;,
+        &quot;Depreciation&quot;,&quot;Gain&quot;,&quot;Service&quot;,&quot;Retired&quot;,&quot;Fault.&quot;,
+        &quot;Receipt&quot;,&quot;Accrual&quot;,&quot;Return&quot;,&quot;Credit&quot;,&quot;ROI&quot;,
+        &quot;Cash&quot;,&quot;Funds&quot;,&quot;Invest&quot;,&quot;Transfer&quot;,&quot;Roll-over&quot;,
+        &quot;FTE&quot;,&quot;Members&quot;,&quot;Non_Members&quot;,&quot;Temp&quot;,&quot;Contractors&quot;,
+        &quot;Sales&quot;,&quot;Merchant&quot;,&quot;Service&quot;,&quot;Consulting&quot;,&quot;Subscriptions&quot;],
+    STATUS=&quot;A&quot;,
+    DESCR=repeat([
+    &quot;operating expenses&quot;,&quot;non-operating expenses&quot;,&quot;assets&quot;,&quot;liability&quot;,&quot;net-worth&quot;,&quot;stats&quot;,&quot;revenue&quot;], inner=5),
+    ACCOUNT_TYPE=repeat([&quot;E&quot;,&quot;E&quot;,&quot;A&quot;,&quot;L&quot;,&quot;N&quot;,&quot;S&quot;,&quot;R&quot;],inner=5))</code></pre><div class="data-frame"><p>35 rows × 8 columns</p><table class="data-frame"><thead><tr><th></th><th>ENTITY</th><th>AS_OF_DATE</th><th>ID</th><th>CLASSIFICATION</th><th>CATEGORY</th><th>STATUS</th><th>DESCR</th><th>ACCOUNT_TYPE</th></tr><tr><th></th><th title="String">String</th><th title="Dates.Date">Date</th><th title="Int64">Int64</th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>Apple Inc.</td><td>1900-01-01</td><td>11000</td><td>OPERATING_EXPENSES</td><td>Travel</td><td>A</td><td>operating expenses</td><td>E</td></tr><tr><th>2</th><td>Apple Inc.</td><td>1900-01-01</td><td>12000</td><td>OPERATING_EXPENSES</td><td>Payroll</td><td>A</td><td>operating expenses</td><td>E</td></tr><tr><th>3</th><td>Apple Inc.</td><td>1900-01-01</td><td>13000</td><td>OPERATING_EXPENSES</td><td>non-Payroll</td><td>A</td><td>operating expenses</td><td>E</td></tr><tr><th>4</th><td>Apple Inc.</td><td>1900-01-01</td><td>14000</td><td>OPERATING_EXPENSES</td><td>Allowance</td><td>A</td><td>operating expenses</td><td>E</td></tr><tr><th>5</th><td>Apple Inc.</td><td>1900-01-01</td><td>15000</td><td>OPERATING_EXPENSES</td><td>Cash</td><td>A</td><td>operating expenses</td><td>E</td></tr><tr><th>6</th><td>Apple Inc.</td><td>1900-01-01</td><td>16000</td><td>NON-OPERATING_EXPENSES</td><td>Facility</td><td>A</td><td>non-operating expenses</td><td>E</td></tr><tr><th>7</th><td>Apple Inc.</td><td>1900-01-01</td><td>17000</td><td>NON-OPERATING_EXPENSES</td><td>Supply</td><td>A</td><td>non-operating expenses</td><td>E</td></tr><tr><th>8</th><td>Apple Inc.</td><td>1900-01-01</td><td>18000</td><td>NON-OPERATING_EXPENSES</td><td>Services</td><td>A</td><td>non-operating expenses</td><td>E</td></tr><tr><th>9</th><td>Apple Inc.</td><td>1900-01-01</td><td>19000</td><td>NON-OPERATING_EXPENSES</td><td>Investment</td><td>A</td><td>non-operating expenses</td><td>E</td></tr><tr><th>10</th><td>Apple Inc.</td><td>1900-01-01</td><td>20000</td><td>NON-OPERATING_EXPENSES</td><td>Misc.</td><td>A</td><td>non-operating expenses</td><td>E</td></tr><tr><th>11</th><td>Apple Inc.</td><td>1900-01-01</td><td>21000</td><td>ASSETS</td><td>Depreciation</td><td>A</td><td>assets</td><td>A</td></tr><tr><th>12</th><td>Apple Inc.</td><td>1900-01-01</td><td>22000</td><td>ASSETS</td><td>Gain</td><td>A</td><td>assets</td><td>A</td></tr><tr><th>13</th><td>Apple Inc.</td><td>1900-01-01</td><td>23000</td><td>ASSETS</td><td>Service</td><td>A</td><td>assets</td><td>A</td></tr><tr><th>14</th><td>Apple Inc.</td><td>1900-01-01</td><td>24000</td><td>ASSETS</td><td>Retired</td><td>A</td><td>assets</td><td>A</td></tr><tr><th>15</th><td>Apple Inc.</td><td>1900-01-01</td><td>25000</td><td>ASSETS</td><td>Fault.</td><td>A</td><td>assets</td><td>A</td></tr><tr><th>16</th><td>Apple Inc.</td><td>1900-01-01</td><td>26000</td><td>LIABILITIES</td><td>Receipt</td><td>A</td><td>liability</td><td>L</td></tr><tr><th>17</th><td>Apple Inc.</td><td>1900-01-01</td><td>27000</td><td>LIABILITIES</td><td>Accrual</td><td>A</td><td>liability</td><td>L</td></tr><tr><th>18</th><td>Apple Inc.</td><td>1900-01-01</td><td>28000</td><td>LIABILITIES</td><td>Return</td><td>A</td><td>liability</td><td>L</td></tr><tr><th>19</th><td>Apple Inc.</td><td>1900-01-01</td><td>29000</td><td>LIABILITIES</td><td>Credit</td><td>A</td><td>liability</td><td>L</td></tr><tr><th>20</th><td>Apple Inc.</td><td>1900-01-01</td><td>30000</td><td>LIABILITIES</td><td>ROI</td><td>A</td><td>liability</td><td>L</td></tr><tr><th>21</th><td>Apple Inc.</td><td>1900-01-01</td><td>31000</td><td>NET_WORTH</td><td>Cash</td><td>A</td><td>net-worth</td><td>N</td></tr><tr><th>22</th><td>Apple Inc.</td><td>1900-01-01</td><td>32000</td><td>NET_WORTH</td><td>Funds</td><td>A</td><td>net-worth</td><td>N</td></tr><tr><th>23</th><td>Apple Inc.</td><td>1900-01-01</td><td>33000</td><td>NET_WORTH</td><td>Invest</td><td>A</td><td>net-worth</td><td>N</td></tr><tr><th>24</th><td>Apple Inc.</td><td>1900-01-01</td><td>34000</td><td>NET_WORTH</td><td>Transfer</td><td>A</td><td>net-worth</td><td>N</td></tr><tr><th>25</th><td>Apple Inc.</td><td>1900-01-01</td><td>35000</td><td>NET_WORTH</td><td>Roll-over</td><td>A</td><td>net-worth</td><td>N</td></tr><tr><th>26</th><td>Apple Inc.</td><td>1900-01-01</td><td>36000</td><td>STATISTICS</td><td>FTE</td><td>A</td><td>stats</td><td>S</td></tr><tr><th>27</th><td>Apple Inc.</td><td>1900-01-01</td><td>37000</td><td>STATISTICS</td><td>Members</td><td>A</td><td>stats</td><td>S</td></tr><tr><th>28</th><td>Apple Inc.</td><td>1900-01-01</td><td>38000</td><td>STATISTICS</td><td>Non_Members</td><td>A</td><td>stats</td><td>S</td></tr><tr><th>29</th><td>Apple Inc.</td><td>1900-01-01</td><td>39000</td><td>STATISTICS</td><td>Temp</td><td>A</td><td>stats</td><td>S</td></tr><tr><th>30</th><td>Apple Inc.</td><td>1900-01-01</td><td>40000</td><td>STATISTICS</td><td>Contractors</td><td>A</td><td>stats</td><td>S</td></tr><tr><th>31</th><td>Apple Inc.</td><td>1900-01-01</td><td>41000</td><td>REVENUE</td><td>Sales</td><td>A</td><td>revenue</td><td>R</td></tr><tr><th>32</th><td>Apple Inc.</td><td>1900-01-01</td><td>42000</td><td>REVENUE</td><td>Merchant</td><td>A</td><td>revenue</td><td>R</td></tr><tr><th>33</th><td>Apple Inc.</td><td>1900-01-01</td><td>43000</td><td>REVENUE</td><td>Service</td><td>A</td><td>revenue</td><td>R</td></tr><tr><th>34</th><td>Apple Inc.</td><td>1900-01-01</td><td>44000</td><td>REVENUE</td><td>Consulting</td><td>A</td><td>revenue</td><td>R</td></tr><tr><th>35</th><td>Apple Inc.</td><td>1900-01-01</td><td>45000</td><td>REVENUE</td><td>Subscriptions</td><td>A</td><td>revenue</td><td>R</td></tr></tbody></table></div><p><strong>Categorical and Pooled Arrays</strong> as name suggests, are data structure to store voluminous data efficiently,specially when a column in a data frame has small number of distinct values (aka levels), repeated across entire column vector.</p><p>as an example, Finance Ledger may have millions of transactions and every row has one of these seven type of accounts. It&#39;s not recommended to store repeating value of entire string in every row. Instead, using a Categorical or PooledArray data type, memory/data size can be significantly reduced with out losing any data quality. (size(..) stays same for original, Categorical and PooledArray data type.</p><p>as you can see in above example, size of categorical / pooled array data type matches with original column vector but significantly reduces size/memory of data. (Base.summarysize(...)) is reduced 50% and is further reduced by 85% if used with compress(...))</p><p>Using Categorical Array type over PooledArray is recommended when there are fewer unique values, user need meaningful ordering and grouping. On the other hand, PoolArray is preferred when small memory usage is needed.</p><h4 id="Department-chartfield"><a class="docs-heading-anchor" href="#Department-chartfield">Department chartfield</a><a id="Department-chartfield-1"></a><a class="docs-heading-anchor-permalink" href="#Department-chartfield" title="Permalink"></a></h4><pre><code class="language- hljs">using DataFrames
+## create Accounts chartfield
+# DEPARTMENT Chartfield
+deptDF = DataFrame(
+    AS_OF_DATE=Date(&quot;2000-01-01&quot;, dateformat&quot;y-m-d&quot;), 
+    ID = 1100:100:1500,
+    CLASSIFICATION=[&quot;SALES&quot;,&quot;HR&quot;, &quot;IT&quot;,&quot;BUSINESS&quot;,&quot;OTHERS&quot;],
+    CATEGORY=[&quot;sales&quot;,&quot;human_resource&quot;,&quot;IT_Staff&quot;,&quot;business&quot;,&quot;others&quot;],
+    STATUS=&quot;A&quot;,
+    DESCR=[
+    &quot;Sales &amp; Marketing&quot;,&quot;Human Resource&quot;,&quot;Infomration Technology&quot;,&quot;Business leaders&quot;,&quot;other temp&quot;
+        ],
+    DEPT_TYPE=[&quot;S&quot;,&quot;H&quot;,&quot;I&quot;,&quot;B&quot;,&quot;O&quot;]);
+size(deptDF),deptDF[collect(1:5),:]</code></pre><h4 id="Location-chartfield"><a class="docs-heading-anchor" href="#Location-chartfield">Location chartfield</a><a id="Location-chartfield-1"></a><a class="docs-heading-anchor-permalink" href="#Location-chartfield" title="Permalink"></a></h4><pre><code class="language- hljs">using DataFrames
+locationDF = DataFrame(
+    AS_OF_DATE=Date(&quot;2000-01-01&quot;, dateformat&quot;y-m-d&quot;), 
+    ID = 11:1:22,
+    CLASSIFICATION=repeat([
+        &quot;Region A&quot;,&quot;Region B&quot;, &quot;Region C&quot;], inner=4),
+    CATEGORY=repeat([
+        &quot;Region A&quot;,&quot;Region B&quot;, &quot;Region C&quot;], inner=4),
+    STATUS=&quot;A&quot;,
+    DESCR=[
+&quot;Boston&quot;,&quot;New York&quot;,&quot;Philadelphia&quot;,&quot;Cleveland&quot;,&quot;Richmond&quot;,
+&quot;Atlanta&quot;,&quot;Chicago&quot;,&quot;St. Louis&quot;,&quot;Minneapolis&quot;,&quot;Kansas City&quot;,
+&quot;Dallas&quot;,&quot;San Francisco&quot;],
+    LOC_TYPE=&quot;Physical&quot;);
+locationDF[:,:]</code></pre><h4 id="Ledger-FACT"><a class="docs-heading-anchor" href="#Ledger-FACT">Ledger FACT</a><a id="Ledger-FACT-1"></a><a class="docs-heading-anchor-permalink" href="#Ledger-FACT" title="Permalink"></a></h4><pre><code class="language-julia hljs">## pu
+using DataFrames, Dates
+accountsDF = DataFrame(
+    ENTITY = &quot;Apple Inc.&quot;,
+    AS_OF_DATE=Date(&quot;1900-01-01&quot;, dateformat&quot;y-m-d&quot;),
+    ID = 11000:1000:45000,
+    CLASSIFICATION=repeat([
+        &quot;OPERATING_EXPENSES&quot;,&quot;NON-OPERATING_EXPENSES&quot;, &quot;ASSETS&quot;,&quot;LIABILITIES&quot;,&quot;NET_WORTH&quot;,&quot;STATISTICS&quot;,&quot;REVENUE&quot;
+                ], inner=5),
+    CATEGORY=[
+        &quot;Travel&quot;,&quot;Payroll&quot;,&quot;non-Payroll&quot;,&quot;Allowance&quot;,&quot;Cash&quot;,
+        &quot;Facility&quot;,&quot;Supply&quot;,&quot;Services&quot;,&quot;Investment&quot;,&quot;Misc.&quot;,
+        &quot;Depreciation&quot;,&quot;Gain&quot;,&quot;Service&quot;,&quot;Retired&quot;,&quot;Fault.&quot;,
+        &quot;Receipt&quot;,&quot;Accrual&quot;,&quot;Return&quot;,&quot;Credit&quot;,&quot;ROI&quot;,
+        &quot;Cash&quot;,&quot;Funds&quot;,&quot;Invest&quot;,&quot;Transfer&quot;,&quot;Roll-over&quot;,
+        &quot;FTE&quot;,&quot;Members&quot;,&quot;Non_Members&quot;,&quot;Temp&quot;,&quot;Contractors&quot;,
+        &quot;Sales&quot;,&quot;Merchant&quot;,&quot;Service&quot;,&quot;Consulting&quot;,&quot;Subscriptions&quot;],
+    STATUS=&quot;A&quot;,
+    DESCR=repeat([
+    &quot;operating expenses&quot;,&quot;non-operating expenses&quot;,&quot;assets&quot;,&quot;liability&quot;,&quot;net-worth&quot;,&quot;stats&quot;,&quot;revenue&quot;], inner=5),
+    ACCOUNT_TYPE=repeat([&quot;E&quot;,&quot;E&quot;,&quot;A&quot;,&quot;L&quot;,&quot;N&quot;,&quot;S&quot;,&quot;R&quot;],inner=5))
+# DEPARTMENT Chartfield
+deptDF = DataFrame(
+    AS_OF_DATE=Date(&quot;2000-01-01&quot;, dateformat&quot;y-m-d&quot;),
+    ID = 1100:100:1500,
+    CLASSIFICATION=[&quot;SALES&quot;,&quot;HR&quot;, &quot;IT&quot;,&quot;BUSINESS&quot;,&quot;OTHERS&quot;],
+    CATEGORY=[&quot;sales&quot;,&quot;human_resource&quot;,&quot;IT_Staff&quot;,&quot;business&quot;,&quot;others&quot;],
+    STATUS=&quot;A&quot;,
+    DESCR=[
+    &quot;Sales &amp; Marketing&quot;,&quot;Human Resource&quot;,&quot;Infomration Technology&quot;,&quot;Business leaders&quot;,&quot;other temp&quot;
+        ],
+    DEPT_TYPE=[&quot;S&quot;,&quot;H&quot;,&quot;I&quot;,&quot;B&quot;,&quot;O&quot;]);
+size(deptDF),deptDF[collect(1:5),:]
+
+locationDF = DataFrame(
+    AS_OF_DATE=Date(&quot;2000-01-01&quot;, dateformat&quot;y-m-d&quot;),
+    ID = 11:1:22,
+    CLASSIFICATION=repeat([
+        &quot;Region A&quot;,&quot;Region B&quot;, &quot;Region C&quot;], inner=4),
+    CATEGORY=repeat([
+        &quot;Region A&quot;,&quot;Region B&quot;, &quot;Region C&quot;], inner=4),
+    STATUS=&quot;A&quot;,
+    DESCR=[
+&quot;Boston&quot;,&quot;New York&quot;,&quot;Philadelphia&quot;,&quot;Cleveland&quot;,&quot;Richmond&quot;,
+&quot;Atlanta&quot;,&quot;Chicago&quot;,&quot;St. Louis&quot;,&quot;Minneapolis&quot;,&quot;Kansas City&quot;,
+&quot;Dallas&quot;,&quot;San Francisco&quot;],
+    LOC_TYPE=&quot;Physical&quot;);
+locationDF[:,:]
+
+# creating Ledger
+ledgerDF = DataFrame(
+            LEDGER = String[], FISCAL_YEAR = Int[], PERIOD = Int[], ORGID = String[],
+            OPER_UNIT = String[], ACCOUNT = Int[], DEPT = Int[], LOCATION = Int[],
+            POSTED_TOTAL = Float64[]
+            );
+
+# create 2020 Period 1-12 Actuals Ledger
+l = &quot;Actuals&quot;;
+fy = 2020;
+for p = 1:12
+    for i = 1:10^5
+        push!(ledgerDF, (l, fy, p, &quot;ABC Inc.&quot;, rand(locationDF.CATEGORY),
+            rand(accountsDF.ID), rand(deptDF.ID), rand(locationDF.ID), rand()*10^8))
+    end
+end
+
+# create 2021 Period 1-4 Actuals Ledger
+l = &quot;Actuals&quot;;
+fy = 2021;
+for p = 1:4
+    for i = 1:10^5
+        push!(ledgerDF, (l, fy, p, &quot;ABC Inc.&quot;, rand(locationDF.CATEGORY),
+            rand(accountsDF.ID), rand(deptDF.ID), rand(locationDF.ID), rand()*10^8))
+    end
+end
+
+# create 2021 Period 1-4 Budget Ledger
+l = &quot;Budget&quot;;
+fy = 2021;
+for p = 1:12
+    for i = 1:10^5
+        push!(ledgerDF, (l, fy, p, &quot;ABC Inc.&quot;, rand(locationDF.CATEGORY),
+            rand(accountsDF.ID), rand(deptDF.ID), rand(locationDF.ID), rand()*10^8))
+    end
+end
+
+# here is ~3 million rows ledger dataframe
+first(ledgerDF,5)</code></pre><div class="data-frame"><p>5 rows × 9 columns</p><table class="data-frame"><thead><tr><th></th><th>LEDGER</th><th>FISCAL_YEAR</th><th>PERIOD</th><th>ORGID</th><th>OPER_UNIT</th><th>ACCOUNT</th><th>DEPT</th><th>LOCATION</th><th>POSTED_TOTAL</th></tr><tr><th></th><th title="String">String</th><th title="Int64">Int64</th><th title="Int64">Int64</th><th title="String">String</th><th title="String">String</th><th title="Int64">Int64</th><th title="Int64">Int64</th><th title="Int64">Int64</th><th title="Float64">Float64</th></tr></thead><tbody><tr><th>1</th><td>Actuals</td><td>2020</td><td>1</td><td>ABC Inc.</td><td>Region A</td><td>29000</td><td>1400</td><td>12</td><td>9.85631e7</td></tr><tr><th>2</th><td>Actuals</td><td>2020</td><td>1</td><td>ABC Inc.</td><td>Region A</td><td>15000</td><td>1100</td><td>20</td><td>4.6416e7</td></tr><tr><th>3</th><td>Actuals</td><td>2020</td><td>1</td><td>ABC Inc.</td><td>Region B</td><td>23000</td><td>1300</td><td>12</td><td>9.85788e7</td></tr><tr><th>4</th><td>Actuals</td><td>2020</td><td>1</td><td>ABC Inc.</td><td>Region C</td><td>21000</td><td>1400</td><td>15</td><td>2.39697e7</td></tr><tr><th>5</th><td>Actuals</td><td>2020</td><td>1</td><td>ABC Inc.</td><td>Region C</td><td>16000</td><td>1300</td><td>17</td><td>9.43179e7</td></tr></tbody></table></div><h2 id="Supply-chain-data-model"><a class="docs-heading-anchor" href="#Supply-chain-data-model">Supply chain data model</a><a id="Supply-chain-data-model-1"></a><a class="docs-heading-anchor-permalink" href="#Supply-chain-data-model" title="Permalink"></a></h2><p>you will need following packages.</p><pre><code class="language-julia hljs">using Pkg
+Pkg.add(&quot;DataFrames&quot;)
+Pkg.add(&quot;Dates&quot;)
+Pkg.add(&quot;CategoricalArrays&quot;)
+Pkg.add(&quot;Interact&quot;)
+Pkg.add(&quot;WebIO&quot;)
+Pkg.add(&quot;CSV&quot;)
+Pkg.add(&quot;XLSX&quot;)
+Pkg.add(&quot;DelimitedFiles&quot;)
+Pkg.add(&quot;Distributions&quot;)
+Pkg.build(&quot;WebIO&quot;)
+Pkg.status();
+
+using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+    Building WebIO → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/c9529be473e97fa0b3b2642cdafcd0896b4c9494/build.log`
+      Status `~/.julia/environments/v1.7/Project.toml`
+  [336ed68f] CSV v0.10.3
+  [54eefc05] Cascadia v1.0.1
+  [324d7699] CategoricalArrays v0.10.5
+  [8f4d0f93] Conda v1.7.0
+  [a93c6f00] DataFrames v1.3.2
+  [31c24e10] Distributions v0.25.53
+  [e30172f5] Documenter v0.27.15
+  [8f5d6c58] EzXML v1.1.0
+  [708ec375] Gumbo v0.8.0
+  [cd3eb016] HTTP v0.9.17
+  [7073ff75] IJulia v1.23.2
+  [c601a237] Interact v0.10.4
+  [0f8b85d8] JSON3 v1.9.4
+  [b9914132] JSONTables v1.0.3
+  [4d0d745f] PDFIO v0.1.13
+  [c3e4b0f8] Pluto v0.18.4
+  [2dfb63ee] PooledArrays v1.4.0
+  [438e738f] PyCall v1.93.1
+  [88034a9c] StringDistances v0.11.2
+  [a2db99b7] TextAnalysis v0.7.3
+  [05625dda] WebDriver v0.1.2
+  [0f1e0344] WebIO v0.8.17
+  [fdbf4ff8] XLSX v0.7.9
+  [ade2ca70] Dates
+  [8bb1440f] DelimitedFiles</code></pre><p><em>rest of this blog, I will assume, you have added all packages and imported in current namespace/notebook scope.</em></p><h4 id="Supply-Chain-Data"><a class="docs-heading-anchor" href="#Supply-Chain-Data">Supply Chain Data</a><a id="Supply-Chain-Data-1"></a><a class="docs-heading-anchor-permalink" href="#Supply-Chain-Data" title="Permalink"></a></h4><p>We already covered DataFrames and ERP Finance data model in previous sections. in below section, let&#39;s recreate all Supply Chain DataFrames to continue advance analytics and visualization.</p><div class="admonition is-info"><header class="admonition-header">Note</header><div class="admonition-body"><p>All of Finance and supply chain data discussed here is also uploaded in GitHub repo under sampleData folder. This same script can be used to produce more voluminous data.</p></div></div><h4 id="Dimensions"><a class="docs-heading-anchor" href="#Dimensions">Dimensions</a><a id="Dimensions-1"></a><a class="docs-heading-anchor-permalink" href="#Dimensions" title="Permalink"></a></h4><ul><li><p>Item master, Item Attribs, Item Costing</p><p><strong>UNSPSC:</strong>  The United Nations Standard Products and Services Code® (UNSPSC®) is a global classification system of products and services.               These codes are used to classify products and services.</p><p><strong>GUDID:</strong> The Global Unique Device Identification Database (GUDID) is a database administered by the FDA that will serve as a reference catalog for every device with a unique device identifier (UDI).</p><p><strong>GTIN:</strong> Global Trade Item Number (GTIN) can be used by a company to uniquely identify all of its trade items. GS1 defines trade items as products or services that are priced, ordered or invoiced at any point in the supply chain.</p><p><strong>GMDN:</strong> The Global Medical Device Nomenclature (GMDN) is a comprehensive set of terms, within a structured category hierarchy, which name and group ALL medical device products including implantables, medical equipment, consumables, and diagnostic devices.</p></li><li><p>Vendor master, Vendor Attribs, Vendor Costing   Customer/Buyer/Procurement Officer Attribs   shipto, warehouse, storage &amp; inventory locations</p></li></ul><h4 id="Transactions"><a class="docs-heading-anchor" href="#Transactions">Transactions</a><a id="Transactions-1"></a><a class="docs-heading-anchor-permalink" href="#Transactions" title="Permalink"></a></h4><ul><li>PurchaseOrder</li><li>MSR - Material Service</li><li>Voucher</li><li>Invoice</li><li>Receipt</li><li>Shipment</li><li>Sales, Revenue</li><li>Travel, Expense, TimeCard</li><li>Accounting Lines</li></ul><h2 id="Item-Master"><a class="docs-heading-anchor" href="#Item-Master">Item Master</a><a id="Item-Master-1"></a><a class="docs-heading-anchor-permalink" href="#Item-Master" title="Permalink"></a></h2><pre><code class="language-julia hljs">import Pkg
+Pkg.add(&quot;XLSX&quot;)
+Pkg.add(&quot;CSV&quot;)
+using XLSX, CSV, DataFrames
+###############################
+## create SUPPLY CHAIN DATA ###
+###############################
+# Item master, Item Attribs, Item Costing ##
+#       UNSPSC, GUDID, GTIN, GMDN
+############################################
+
+##########
+# UNSPSC #
+##########
+# UNSPSC file can be downloaded from this link https://www.ungm.org/Public/UNSPSC
+# xf = XLSX.readxlsx(&quot;assets/sampleData/UNGM_UNSPSC_09-Apr-2022..xlsx&quot;)
+# xf will display names of sheets and rows with data
+# let&#39;s read this data in to a DataFrame
+
+# using below command will read xlsx data into DataFrame but will not render column labels
+# df = DataFrame(XLSX.readdata(&quot;assets/sampleData/UNGM_UNSPSC_09-Apr-2022..xlsx&quot;, &quot;UNSPSC&quot;, &quot;A1:D12988&quot;), :auto)
+# dfUNSPSC = DataFrame(XLSX.readtable(&quot;assets/sampleData/UNGM_UNSPSC_09-Apr-2022..xlsx&quot;, &quot;UNSPSC&quot;)...)
+# ... operator will splat the tuple (data, column_labels) into the constructor of DataFrame
+
+# replace missing values with an integer 99999
+# replace!(dfUNSPSC.&quot;Parent key&quot;, missing =&gt; 99999)
+
+# let&#39;s export this clean csv, we&#39;ll load this into database
+# CSV.write(&quot;UNSPSC.csv&quot;, dfUNSPSC)
+
+# # remember to empty dataFrame after usage
+# # Julia will flush it out automatically after session,
+# # but often ERP data gets bulky during session
+# Base.summarysize(dfUNSPSC)
+# empty!(dfUNSPSC)
+# Base.summarysize(dfUNSPSC)
+
+# first(dfUNSPSC, 5)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`</code></pre><h4 id="GUDID-Database"><a class="docs-heading-anchor" href="#GUDID-Database">GUDID Database</a><a id="GUDID-Database-1"></a><a class="docs-heading-anchor-permalink" href="#GUDID-Database" title="Permalink"></a></h4><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+##########
+# GUDID ##
+##########
+# The complete list of GUDID Data Elements and descriptions can be found at this link.
+# https://www.fda.gov/media/120974/download
+# The complete GUDID Database (delimited version) download (250+MB)
+# https://accessgudid.nlm.nih.gov/release_files/download/AccessGUDID_Delimited_Full_Release_20220401.zip
+# let&#39;s extract all GUDID files in a folder
+# readdir(pwd())
+# readdir(&quot;assets/sampleData/GUDID&quot;)
+# since these files are in txt (delimited) format, we&#39;ll use delimited pkg
+
+########################
+## large txt files #####
+## read one at a time ##
+########################
+
+# data, header = readdlm(&quot;assets/sampleData/GUDID/contacts.txt&quot;, &#39;|&#39;, header=true)
+# dfGUDIDcontacts = DataFrame(data, vec(header))
+
+# data, header = readdlm(&quot;assets/sampleData/GUDID/identifiers.txt&quot;, &#39;|&#39;, header=true)
+# dfGUDIDidentifiers = DataFrame(data, vec(header))
+
+# data, header = readdlm(&quot;assets/sampleData/GUDID/device.txt&quot;, &#39;|&#39;, header=true)
+# dfGUDIDdevice = DataFrame(data, vec(header))
+
+# # remember to empty dataFrame after usage
+# # Julia will flush it out automatically after session,
+# # but often ERP data gets bulky during session
+# Base.summarysize(dfGUDIDcontacts),Base.summarysize(dfGUDIDidentifiers),Base.summarysize(dfGUDIDdevice)
+# empty!(dfGUDIDcontacts)
+# empty!(dfGUDIDidentifiers)
+# empty!(dfGUDIDdevice)
+# Base.summarysize(dfGUDIDcontacts),Base.summarysize(dfGUDIDidentifiers),Base.summarysize(dfGUDIDdevice)</code></pre><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+##########
+# GTIN ###
+##########
+
+# xf = XLSX.readxlsx(&quot;assets/sampleData/DS_GTIN_ALL.xlsx&quot;)
+# xf will display names of sheets and rows with data
+# let&#39;s read this data in to a DataFrame
+
+# using below command will read xlsx data into DataFrame but will not render column labels
+# df = DataFrame(XLSX.readdata(&quot;assets/sampleData/DS_GTIN_ALL.xlsx&quot;, &quot;Worksheet&quot;, &quot;A14:E143403   &quot;), :auto)
+# dfGTIN = DataFrame(XLSX.readtable(&quot;assets/sampleData/DS_GTIN_ALL.xlsx&quot;, &quot;Worksheet&quot;;first_row=14)...)
+# ... operator will splat the tuple (data, column_labels) into the constructor of DataFrame
+
+# replace missing values with an integer 99999
+# replace!(dfUNSPSC.&quot;Parent key&quot;, missing =&gt; 99999)
+# size(dfUNSPSC)
+
+# let&#39;s export this clean csv, we&#39;ll load this into database
+# CSV.write(&quot;UNSPSC.csv&quot;, dfUNSPSC)
+# readdir(pwd())
+
+# # remember to empty dataFrame after usage
+# # Julia will flush it out automatically after session,
+# # but often ERP data gets bulky during session
+# Base.summarysize(dfGTIN)
+# empty!(dfGTIN)
+# Base.summarysize(dfGTIN)</code></pre><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+##########
+# GMDN ###
+##########
+
+## GMDN data is not available
+
+# # remember to empty dataFrame after usage
+# # Julia will flush it out automatically after session,
+# # but often ERP data gets bulky during session
+# Base.summarysize(dfGMDN)
+# empty!(dfGMDN)
+# Base.summarysize(dfGMDN)</code></pre><h4 id="Vendor-Master"><a class="docs-heading-anchor" href="#Vendor-Master">Vendor Master</a><a id="Vendor-Master-1"></a><a class="docs-heading-anchor-permalink" href="#Vendor-Master" title="Permalink"></a></h4><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+#################
+# Vendor master #
+#################
+# data, header = readdlm(&quot;assets/sampleData/GUDID/device.txt&quot;, &#39;|&#39;, header=true)
+# dfGUDIDdevice = DataFrame(data, vec(header))
+# create Vendor Master from GUDID dataset
+# show(first(dfGUDIDdevice,5), allcols=true)
+# show(first(dfGUDIDdevice[:,[:brandName, :catalogNumber, :dunsNumber, :companyName, :rx, :otc]],5), allcols=true)
+# names(dfGUDIDdevice)
+# dfVendor = unique(dfGUDIDdevice[:,[:brandName, :catalogNumber, :dunsNumber, :companyName, :rx, :otc]])
+# dfVendor = unique(dfGUDIDdevice[:,[:companyName]]) # 7574 unique vendors
+
+# dfVendor = unique(dfGUDIDdevice[:,[:brandName, :dunsNumber, :companyName, :rx, :otc]])
+# dfVendor is a good dataset, have 216k rows for 7574 unique vendors
+
+# # remember to empty dataFrame after usage
+# # Julia will flush it out automatically after session,
+# # but often ERP data gets bulky during session
+# Base.summarysize(dfVendor)
+# empty!(dfVendor)
+# Base.summarysize(dfVendor)</code></pre><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+#### Location Master
+
+#  data, header = readdlm(&quot;assets/sampleData/uscities.csv&quot;, &#39;,&#39;, header=true)
+#  dfLocation = DataFrame(data, vec(header))
+
+# # remember to empty dataFrame after usage
+# # Julia will flush it out automatically after session,
+# # but often ERP data gets bulky during session
+# Base.summarysize(dfLocation)
+# empty!(dfLocation)
+# Base.summarysize(dfLocation)</code></pre><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+dfOrgMaster = DataFrame(
+    ENTITY=repeat([&quot;HeadOffice&quot;], inner=8),
+    GROUP=repeat([&quot;Operations&quot;], inner=8),
+    DEPARTMENT=[&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;HR&quot;,&quot;HR&quot;,&quot;MFG&quot;],
+    UNIT=[&quot;Sourcing&quot;,&quot;Sourcing&quot;,&quot;Maintenance&quot;,&quot;Support&quot;,&quot;Services&quot;,&quot;Helpdesk&quot;,&quot;ServiceCall&quot;,&quot;IT&quot;])</code></pre><div class="data-frame"><p>8 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>ENTITY</th><th>GROUP</th><th>DEPARTMENT</th><th>UNIT</th></tr><tr><th></th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>2</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>3</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Maintenance</td></tr><tr><th>4</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Support</td></tr><tr><th>5</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Services</td></tr><tr><th>6</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>Helpdesk</td></tr><tr><th>7</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>ServiceCall</td></tr><tr><th>8</th><td>HeadOffice</td><td>Operations</td><td>MFG</td><td>IT</td></tr></tbody></table></div><h2 id="creating-complete-Supply-Chain-Data-Model-DataFrames"><a class="docs-heading-anchor" href="#creating-complete-Supply-Chain-Data-Model-DataFrames">creating complete Supply Chain Data Model DataFrames</a><a id="creating-complete-Supply-Chain-Data-Model-DataFrames-1"></a><a class="docs-heading-anchor-permalink" href="#creating-complete-Supply-Chain-Data-Model-DataFrames" title="Permalink"></a></h2><p>now since we created Supply chain attribute, chartfields / dimensions</p><ul><li>item master</li><li>vendor master</li><li>location master</li><li>org Hierarchy</li></ul><p>using above chartfields, let&#39;s create following Supply Chain Transactions</p><ul><li>MSR - Material Service request</li><li>PurchaseOrder</li><li>Voucher</li><li>Invoice</li><li>Receipt</li><li>Shipment</li><li>Sales, Revenue</li><li>Travel, Expense, TimeCard</li><li>Accounting Lines</li></ul><h4 id="MSR-Material-Service-request"><a class="docs-heading-anchor" href="#MSR-Material-Service-request">MSR - Material Service request</a><a id="MSR-Material-Service-request-1"></a><a class="docs-heading-anchor-permalink" href="#MSR-Material-Service-request" title="Permalink"></a></h4><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+sampleSize = 1000 # number of rows, scale as needed
+
+# data, header = readdlm(&quot;assets/sampleData/GUDID/device.txt&quot;, &#39;|&#39;, header=true)
+# df GUDIDdevice = DataFrame(data, vec(header))
+# dfVendor = unique(dfGUDIDdevice[:,[:brandName, :dunsNumber, :companyName, :rx, :otc]])
+# data, header = readdlm(&quot;assets/sampleData/uscities.csv&quot;, &#39;,&#39;, header=true)
+# dfLocation = DataFrame(data, vec(header))
+# dfOrgMaster = DataFrame(
+#    ENTITY=repeat([&quot;HeadOffice&quot;], inner=8),
+#    GROUP=repeat([&quot;Operations&quot;], inner=8),
+#    DEPARTMENT=[&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;HR&quot;,&quot;HR&quot;,&quot;MFG&quot;],
+#    UNIT=[&quot;Sourcing&quot;,&quot;Sourcing&quot;,&quot;Maintenance&quot;,&quot;Support&quot;,&quot;Services&quot;,&quot;Helpdesk&quot;,&quot;ServiceCall&quot;,&quot;IT&quot;])
+
+# dfMSR = DataFrame(
+#    UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+#    MSR_DATE=rand(collect(Date(2020,1,1):Day(1):Date(2022,5,1)), sampleSize),
+#    FROM_UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+#    TO_UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+#    GUDID = rand(dfGUDIDdevice.PrimaryDI, sampleSize),
+#    QTY = rand(dfOrgMaster.UNIT, sampleSize));
+# first(dfMSR, 5)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">1000</code></pre><h4 id="PO-Purchase-Order"><a class="docs-heading-anchor" href="#PO-Purchase-Order">PO - Purchase Order</a><a id="PO-Purchase-Order-1"></a><a class="docs-heading-anchor-permalink" href="#PO-Purchase-Order" title="Permalink"></a></h4><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+sampleSize = 1000 # number of rows, scale as needed
+
+# data, header = readdlm(&quot;assets/sampleData/GUDID/device.txt&quot;, &#39;|&#39;, header=true)
+# dfGUDIDdevice = DataFrame(data, vec(header))
+# dfVendor = unique(dfGUDIDdevice[:,[:brandName, :dunsNumber, :companyName, :rx, :otc]])
+# data, header = readdlm(&quot;assets/sampleData/uscities.csv&quot;, &#39;,&#39;, header=true)
+# dfLocation = DataFrame(data, vec(header))
+dfOrgMaster = DataFrame(
+    ENTITY=repeat([&quot;HeadOffice&quot;], inner=8),
+    GROUP=repeat([&quot;Operations&quot;], inner=8),
+    DEPARTMENT=[&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;HR&quot;,&quot;HR&quot;,&quot;MFG&quot;],
+    UNIT=[&quot;Sourcing&quot;,&quot;Sourcing&quot;,&quot;Maintenance&quot;,&quot;Support&quot;,&quot;Services&quot;,&quot;Helpdesk&quot;,&quot;ServiceCall&quot;,&quot;IT&quot;]);
+
+# dfPO = DataFrame(
+#    UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+#    PO_DATE=rand(collect(Date(2020,1,1):Day(1):Date(2022,5,1)), sampleSize),
+#    VENDOR=rand(unique(dfVendor.companyName), sampleSize),
+#    GUDID = rand(dfGUDIDdevice.PrimaryDI, sampleSize),
+#    QTY = rand(1:150, sampleSize),
+#    UNIT_PRICE = rand(Normal(100, 2), sampleSize)
+#    );
+# show(first(dfPO, 5),allcols=true)</code></pre><div class="data-frame"><p>8 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>ENTITY</th><th>GROUP</th><th>DEPARTMENT</th><th>UNIT</th></tr><tr><th></th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>2</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>3</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Maintenance</td></tr><tr><th>4</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Support</td></tr><tr><th>5</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Services</td></tr><tr><th>6</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>Helpdesk</td></tr><tr><th>7</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>ServiceCall</td></tr><tr><th>8</th><td>HeadOffice</td><td>Operations</td><td>MFG</td><td>IT</td></tr></tbody></table></div><h4 id="Invoice-Voucher-Invoice"><a class="docs-heading-anchor" href="#Invoice-Voucher-Invoice">Invoice - Voucher Invoice</a><a id="Invoice-Voucher-Invoice-1"></a><a class="docs-heading-anchor-permalink" href="#Invoice-Voucher-Invoice" title="Permalink"></a></h4><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+
+sampleSize = 1000 # number of rows, scale as needed
+
+# data, header = readdlm(&quot;assets/sampleData/GUDID/device.txt&quot;, &#39;|&#39;, header=true)
+# dfGUDIDdevice = DataFrame(data, vec(header))
+# dfVendor = unique(dfGUDIDdevice[:,[:brandName, :dunsNumber, :companyName, :rx, :otc]])
+# data, header = readdlm(&quot;assets/sampleData/uscities.csv&quot;, &#39;,&#39;, header=true)
+# dfLocation = DataFrame(data, vec(header))
+dfOrgMaster = DataFrame(
+    ENTITY=repeat([&quot;HeadOffice&quot;], inner=8),
+    GROUP=repeat([&quot;Operations&quot;], inner=8),
+    DEPARTMENT=[&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;HR&quot;,&quot;HR&quot;,&quot;MFG&quot;],
+    UNIT=[&quot;Sourcing&quot;,&quot;Sourcing&quot;,&quot;Maintenance&quot;,&quot;Support&quot;,&quot;Services&quot;,&quot;Helpdesk&quot;,&quot;ServiceCall&quot;,&quot;IT&quot;]);
+
+# dfVCHR = DataFrame(
+#    UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+#    VCHR_DATE=rand(collect(Date(2020,1,1):Day(1):Date(2022,5,1)), sampleSize),
+#    STATUS=rand([&quot;Closed&quot;,&quot;Paid&quot;,&quot;Open&quot;,&quot;Cancelled&quot;,&quot;Exception&quot;], sampleSize),
+#    VENDOR_INVOICE_NUM = rand(10001:9999999, sampleSize),
+#    VENDOR=rand(unique(dfVendor.companyName), sampleSize),
+#    GUDID = rand(dfGUDIDdevice.PrimaryDI, sampleSize),
+#    QTY = rand(1:150, sampleSize),
+#    UNIT_PRICE = rand(Normal(100, 2), sampleSize)
+#    );
+# show(first(dfVCHR, 5),allcols=true)</code></pre><div class="data-frame"><p>8 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>ENTITY</th><th>GROUP</th><th>DEPARTMENT</th><th>UNIT</th></tr><tr><th></th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>2</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>3</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Maintenance</td></tr><tr><th>4</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Support</td></tr><tr><th>5</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Services</td></tr><tr><th>6</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>Helpdesk</td></tr><tr><th>7</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>ServiceCall</td></tr><tr><th>8</th><td>HeadOffice</td><td>Operations</td><td>MFG</td><td>IT</td></tr></tbody></table></div><h4 id="Sales-Revenue-Register"><a class="docs-heading-anchor" href="#Sales-Revenue-Register">Sales - Revenue Register</a><a id="Sales-Revenue-Register-1"></a><a class="docs-heading-anchor-permalink" href="#Sales-Revenue-Register" title="Permalink"></a></h4><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+sampleSize = 1000 # number of rows, scale as needed
+
+# data, header = readdlm(&quot;assets/sampleData/GUDID/device.txt&quot;, &#39;|&#39;, header=true)
+# dfGUDIDdevice = DataFrame(data, vec(header))
+# dfVendor = unique(dfGUDIDdevice[:,[:brandName, :dunsNumber, :companyName, :rx, :otc]])
+# data, header = readdlm(&quot;assets/sampleData/uscities.csv&quot;, &#39;,&#39;, header=true)
+# dfLocation = DataFrame(data, vec(header))
+dfOrgMaster = DataFrame(
+    ENTITY=repeat([&quot;HeadOffice&quot;], inner=8),
+    GROUP=repeat([&quot;Operations&quot;], inner=8),
+    DEPARTMENT=[&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;HR&quot;,&quot;HR&quot;,&quot;MFG&quot;],
+    UNIT=[&quot;Sourcing&quot;,&quot;Sourcing&quot;,&quot;Maintenance&quot;,&quot;Support&quot;,&quot;Services&quot;,&quot;Helpdesk&quot;,&quot;ServiceCall&quot;,&quot;IT&quot;]);
+
+# dfREVENUE = DataFrame(
+#    UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+#    SALES_DATE=rand(collect(Date(2020,1,1):Day(1):Date(2022,5,1)), sampleSize),
+#    STATUS=rand([&quot;Sold&quot;,&quot;Pending&quot;,&quot;Hold&quot;,&quot;Cancelled&quot;,&quot;Exception&quot;], sampleSize),
+#    SALES_RECEIPT_NUM = rand(10001:9999999, sampleSize),
+#    CUSTOMER=rand(unique(dfVendor.companyName), sampleSize),
+#    GUDID = rand(dfGUDIDdevice.PrimaryDI, sampleSize),
+#    QTY = rand(1:150, sampleSize),
+#    UNIT_PRICE = rand(Normal(100, 2), sampleSize)
+#    );
+# show(first(dfREVENUE, 5),allcols=true)</code></pre><div class="data-frame"><p>8 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>ENTITY</th><th>GROUP</th><th>DEPARTMENT</th><th>UNIT</th></tr><tr><th></th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>2</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>3</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Maintenance</td></tr><tr><th>4</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Support</td></tr><tr><th>5</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Services</td></tr><tr><th>6</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>Helpdesk</td></tr><tr><th>7</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>ServiceCall</td></tr><tr><th>8</th><td>HeadOffice</td><td>Operations</td><td>MFG</td><td>IT</td></tr></tbody></table></div><h4 id="Shipment-Receipt"><a class="docs-heading-anchor" href="#Shipment-Receipt">Shipment - Receipt</a><a id="Shipment-Receipt-1"></a><a class="docs-heading-anchor-permalink" href="#Shipment-Receipt" title="Permalink"></a></h4><pre><code class="language-julia hljs">using DataFrames, Dates, Interact, CategoricalArrays, WebIO, CSV, XLSX, DelimitedFiles, Distributions
+sampleSize = 1000 # number of rows, scale as needed
+
+# data, header = readdlm(&quot;assets/sampleData/GUDID/device.txt&quot;, &#39;|&#39;, header=true)
+# dfGUDIDdevice = DataFrame(data, vec(header))
+# dfVendor = unique(dfGUDIDdevice[:,[:brandName, :dunsNumber, :companyName, :rx, :otc]])
+# data, header = readdlm(&quot;assets/sampleData/uscities.csv&quot;, &#39;,&#39;, header=true)
+# dfLocation = DataFrame(data, vec(header))
+dfOrgMaster = DataFrame(
+    ENTITY=repeat([&quot;HeadOffice&quot;], inner=8),
+    GROUP=repeat([&quot;Operations&quot;], inner=8),
+    DEPARTMENT=[&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;Procurement&quot;,&quot;HR&quot;,&quot;HR&quot;,&quot;MFG&quot;],
+    UNIT=[&quot;Sourcing&quot;,&quot;Sourcing&quot;,&quot;Maintenance&quot;,&quot;Support&quot;,&quot;Services&quot;,&quot;Helpdesk&quot;,&quot;ServiceCall&quot;,&quot;IT&quot;])
+
+# dfSHIPRECEIPT = DataFrame(
+#    UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+#    SHIP_DATE=rand(collect(Date(2020,1,1):Day(1):Date(2022,5,1)), sampleSize),
+#    STATUS=rand([&quot;Shippped&quot;,&quot;Returned&quot;,&quot;In process&quot;,&quot;Cancelled&quot;,&quot;Exception&quot;], sampleSize),
+#    SHIPMENT_NUM = rand(10001:9999999, sampleSize),
+#    CUSTOMER=rand(unique(dfVendor.companyName), sampleSize),
+#    GUDID = rand(dfGUDIDdevice.PrimaryDI, sampleSize),
+#    QTY = rand(1:150, sampleSize),
+#    UNIT_PRICE = rand(Normal(100, 2), sampleSize)
+#    );
+# show(first(dfSHIPRECEIPT, 5),allcols=true)</code></pre><div class="data-frame"><p>8 rows × 4 columns</p><table class="data-frame"><thead><tr><th></th><th>ENTITY</th><th>GROUP</th><th>DEPARTMENT</th><th>UNIT</th></tr><tr><th></th><th title="String">String</th><th title="String">String</th><th title="String">String</th><th title="String">String</th></tr></thead><tbody><tr><th>1</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>2</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Sourcing</td></tr><tr><th>3</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Maintenance</td></tr><tr><th>4</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Support</td></tr><tr><th>5</th><td>HeadOffice</td><td>Operations</td><td>Procurement</td><td>Services</td></tr><tr><th>6</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>Helpdesk</td></tr><tr><th>7</th><td>HeadOffice</td><td>Operations</td><td>HR</td><td>ServiceCall</td></tr><tr><th>8</th><td>HeadOffice</td><td>Operations</td><td>MFG</td><td>IT</td></tr></tbody></table></div></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../process/">« what do we know</a><a class="docs-footer-nextpage" href="../graph/">graph »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.15 on <span class="colophon-date" title="Sunday 17 April 2022 05:48">Sunday 17 April 2022</span>. Using Julia version 1.7.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

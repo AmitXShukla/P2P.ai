@@ -1,2 +1,404 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>analytics · P2P.ai</title><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.039/juliamono-regular.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../"><img src="../assets/logo.png" alt="P2P.ai logo"/></a><div class="docs-package-name"><span class="docs-autofit"><a href="../">P2P.ai</a></span></div><form class="docs-search" action="../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../">Introduction</a></li><li><a class="tocitem" href="../define/">Define Problem</a></li><li><a class="tocitem" href="../path/">How did we get here</a></li><li><a class="tocitem" href="../process/">what do we know</a></li><li><a class="tocitem" href="../facts/">get Facts straight</a></li><li><a class="tocitem" href="../graph/">graph</a></li><li><a class="tocitem" href="../query/">data insights</a></li><li class="is-active"><a class="tocitem" href>analytics</a><ul class="internal"><li><a class="tocitem" href="#would-could-should"><span>would could should</span></a></li></ul></li><li><a class="tocitem" href="../ml/">AI predictions</a></li><li><a class="tocitem" href="../api/">API</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>analytics</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>analytics</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/AmitXShukla/P2P.ai/blob/master/src/P2P.jl/docs/src/analytics.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Analytics"><a class="docs-heading-anchor" href="#Analytics">Analytics</a><a id="Analytics-1"></a><a class="docs-heading-anchor-permalink" href="#Analytics" title="Permalink"></a></h1><h2 id="would-could-should"><a class="docs-heading-anchor" href="#would-could-should">would could should</a><a id="would-could-should-1"></a><a class="docs-heading-anchor-permalink" href="#would-could-should" title="Permalink"></a></h2></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../query/">« data insights</a><a class="docs-footer-nextpage" href="../ml/">AI predictions »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.15 on <span class="colophon-date" title="Thursday 14 April 2022 06:04">Thursday 14 April 2022</span>. Using Julia version 1.7.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>analytics · P2P.ai</title><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.039/juliamono-regular.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.11/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../"><img src="../assets/logo.png" alt="P2P.ai logo"/></a><div class="docs-package-name"><span class="docs-autofit"><a href="../">P2P.ai</a></span></div><form class="docs-search" action="../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../">Introduction</a></li><li><a class="tocitem" href="../define/">Define Problem</a></li><li><a class="tocitem" href="../path/">How did we get here</a></li><li><a class="tocitem" href="../process/">what do we know</a></li><li><a class="tocitem" href="../facts/">get Facts straight</a></li><li><a class="tocitem" href="../graph/">graph</a></li><li><a class="tocitem" href="../query/">data insights</a></li><li class="is-active"><a class="tocitem" href>analytics</a><ul class="internal"><li><a class="tocitem" href="#what-if,-would,-could,-should"><span>what-if, would, could, should</span></a></li><li><a class="tocitem" href="#GL-BalanceSheet,-IncomeStatement-and-CashFlow"><span>GL BalanceSheet, IncomeStatement &amp; CashFlow</span></a></li><li><a class="tocitem" href="#Supply-chain-Procurement-Pipeline"><span>Supply chain Procurement Pipeline</span></a></li></ul></li><li><a class="tocitem" href="../ml/">AI predictions</a></li><li><a class="tocitem" href="../api/">API</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>analytics</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>analytics</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/AmitXShukla/P2P.ai/blob/master/src/P2P.jl/docs/src/analytics.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Analytics"><a class="docs-heading-anchor" href="#Analytics">Analytics</a><a id="Analytics-1"></a><a class="docs-heading-anchor-permalink" href="#Analytics" title="Permalink"></a></h1><p>In previous chapters, we learned, created and loaded Finance and Supply chain datasets in to Julia language dataframes, RDBMS database.</p><p>We also created a Graph schema, loaded ERP data into Graph schema and created pattern matching Graph SQLs to get data insights.</p><p>In this chapter, we&#39;ll load Original ERP dataset WITH Graph GSQLs results to run interactive data analytics.</p><p>These interactive data anlytics will help us run interactive visualiztion/analysis on following sample scenarios.</p><h2 id="what-if,-would,-could,-should"><a class="docs-heading-anchor" href="#what-if,-would,-could,-should">what-if, would, could, should</a><a id="what-if,-would,-could,-should-1"></a><a class="docs-heading-anchor-permalink" href="#what-if,-would,-could,-should" title="Permalink"></a></h2><h4 id="Finance"><a class="docs-heading-anchor" href="#Finance">Finance</a><a id="Finance-1"></a><a class="docs-heading-anchor-permalink" href="#Finance" title="Permalink"></a></h4><ul><li>Region A is merged with Region B</li><li>Employee resume work from office, how much Travel amounts % will increase.</li><li>% of Office supply expenses given to Employee as home office setup</li><li>would Region A, Cash Flow Investment have returned 7% ROI</li><li>would Region B received Government/investor funding</li><li>could have increased IT operating expenses by 5%</li><li>could have reduced HR temp staff</li><li>should have paid vendor invoiced on time to recive rebate</li><li>should have applied loan to increase production</li><li>should have retired a particular Asset</li></ul><h4 id="Supply-chain"><a class="docs-heading-anchor" href="#Supply-chain">Supply chain</a><a id="Supply-chain-1"></a><a class="docs-heading-anchor-permalink" href="#Supply-chain" title="Permalink"></a></h4><ul><li>during 2020, what UNSPSC category experience highest surge in source orders</li><li>during 2020, in &quot;cleaning, supplies&quot; category, what are the other items sold more than average</li><li>what are most requested items in &quot;cleaning, supplies&quot; category</li><li>what are most requested items in &quot;essentials&quot; category</li><li>what are most requested items in &quot;life savings drugs / GUDID implants&quot; category</li><li>was there an decrease in implants, in other words, were they any cardiac or other critical operational surgery delay during covid</li><li>what are items purchase together with devices in category = ventilators</li><li>was there an increased use items categorized as &quot;controlled substance&quot; items</li><li>what are the items, which were in backlog most frequently and waited longest</li></ul><h2 id="GL-BalanceSheet,-IncomeStatement-and-CashFlow"><a class="docs-heading-anchor" href="#GL-BalanceSheet,-IncomeStatement-and-CashFlow">GL BalanceSheet, IncomeStatement &amp; CashFlow</a><a id="GL-BalanceSheet,-IncomeStatement-and-CashFlow-1"></a><a class="docs-heading-anchor-permalink" href="#GL-BalanceSheet,-IncomeStatement-and-CashFlow" title="Permalink"></a></h2><h4 id="Balance-Sheet-(Interactive)"><a class="docs-heading-anchor" href="#Balance-Sheet-(Interactive)">Balance Sheet (Interactive)</a><a id="Balance-Sheet-(Interactive)-1"></a><a class="docs-heading-anchor-permalink" href="#Balance-Sheet-(Interactive)" title="Permalink"></a></h4><pre><code class="language-julia hljs">@manipulate for ld = Dict(&quot;Actuals&quot;=&gt; &quot;Actuals&quot;, &quot;Budget&quot; =&gt; &quot;Budget&quot;), 
+                rg = Dict(&quot;Region A&quot;=&gt; &quot;Region A&quot;, &quot;Region B&quot; =&gt; &quot;Region B&quot;, &quot;Region C&quot; =&gt; &quot;Region C&quot;),
+                yr = slider(2020:1:2022; value=2021),
+                qtr = 1:1:4
+    
+    @show ld, rg, yr, qtr
+    
+select(gdf_plot[(
+    (gdf_plot.FISCAL_YEAR .== yr)
+    .&amp;
+    (gdf_plot.QTR .== qtr)
+    .&amp;
+    (gdf_plot.LEDGER .== ld)
+    .&amp;
+    (gdf_plot.OPER_UNIT .== rg)
+    ),:],
+        :OPER_UNIT =&gt; :Org,
+        :FISCAL_YEAR =&gt; :FY,
+        :QTR =&gt; :Qtr,
+        :ACCOUNTS_CLASSIFICATION =&gt; :Accounts,
+        :DEPT_CLASSIFICATION =&gt; :Dept,
+        # :LOCATION_CLASSIFICATION =&gt; :Region,
+        :LOCATION_DESCR =&gt; :Loc,
+        :TOTAL =&gt; :TOTAL)
+end</code></pre><pre><code class="language-julia hljs">using Pkg
+Pkg.add(&quot;DataFrames&quot;)
+Pkg.add(&quot;Dates&quot;)
+Pkg.add(&quot;CategoricalArrays&quot;)
+Pkg.add(&quot;Interact&quot;)
+Pkg.add(&quot;WebIO&quot;)
+Pkg.build(&quot;WebIO&quot;)
+using DataFrames, Dates, Interact, CategoricalArrays, WebIO
+Pkg.status();</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">    Updating registry at `~/.julia/registries/General`
+    Updating git-repo `https://github.com/JuliaRegistries/General.git`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+   Resolving package versions...
+  No Changes to `~/.julia/environments/v1.7/Project.toml`
+  No Changes to `~/.julia/environments/v1.7/Manifest.toml`
+    Building WebIO → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/c9529be473e97fa0b3b2642cdafcd0896b4c9494/build.log`
+      Status `~/.julia/environments/v1.7/Project.toml`
+  [336ed68f] CSV v0.10.3
+  [54eefc05] Cascadia v1.0.1
+  [324d7699] CategoricalArrays v0.10.5
+  [8f4d0f93] Conda v1.7.0
+  [a93c6f00] DataFrames v1.3.2
+  [31c24e10] Distributions v0.25.53
+  [e30172f5] Documenter v0.27.15
+  [8f5d6c58] EzXML v1.1.0
+  [708ec375] Gumbo v0.8.0
+  [cd3eb016] HTTP v0.9.17
+  [7073ff75] IJulia v1.23.2
+  [c601a237] Interact v0.10.4
+  [0f8b85d8] JSON3 v1.9.4
+  [b9914132] JSONTables v1.0.3
+  [4d0d745f] PDFIO v0.1.13
+  [c3e4b0f8] Pluto v0.18.4
+  [2dfb63ee] PooledArrays v1.4.0
+  [438e738f] PyCall v1.93.1
+  [88034a9c] StringDistances v0.11.2
+  [a2db99b7] TextAnalysis v0.7.3
+  [05625dda] WebDriver v0.1.2
+  [0f1e0344] WebIO v0.8.17
+  [fdbf4ff8] XLSX v0.7.9
+  [ade2ca70] Dates
+  [8bb1440f] DelimitedFiles</code></pre><pre><code class="language-julia hljs">using DataFrames, Dates
+# create dummy data
+accountsDF = DataFrame(
+    ENTITY = &quot;Apple Inc.&quot;,
+    AS_OF_DATE=Date(&quot;1900-01-01&quot;, dateformat&quot;y-m-d&quot;),
+    ID = 11000:1000:45000,
+    CLASSIFICATION=repeat([
+        &quot;OPERATING_EXPENSES&quot;,&quot;NON-OPERATING_EXPENSES&quot;, &quot;ASSETS&quot;,&quot;LIABILITIES&quot;,&quot;NET_WORTH&quot;,&quot;STATISTICS&quot;,&quot;REVENUE&quot;
+                ], inner=5),
+    CATEGORY=[
+        &quot;Travel&quot;,&quot;Payroll&quot;,&quot;non-Payroll&quot;,&quot;Allowance&quot;,&quot;Cash&quot;,
+        &quot;Facility&quot;,&quot;Supply&quot;,&quot;Services&quot;,&quot;Investment&quot;,&quot;Misc.&quot;,
+        &quot;Depreciation&quot;,&quot;Gain&quot;,&quot;Service&quot;,&quot;Retired&quot;,&quot;Fault.&quot;,
+        &quot;Receipt&quot;,&quot;Accrual&quot;,&quot;Return&quot;,&quot;Credit&quot;,&quot;ROI&quot;,
+        &quot;Cash&quot;,&quot;Funds&quot;,&quot;Invest&quot;,&quot;Transfer&quot;,&quot;Roll-over&quot;,
+        &quot;FTE&quot;,&quot;Members&quot;,&quot;Non_Members&quot;,&quot;Temp&quot;,&quot;Contractors&quot;,
+        &quot;Sales&quot;,&quot;Merchant&quot;,&quot;Service&quot;,&quot;Consulting&quot;,&quot;Subscriptions&quot;],
+    STATUS=&quot;A&quot;,
+    DESCR=repeat([
+    &quot;operating expenses&quot;,&quot;non-operating expenses&quot;,&quot;assets&quot;,&quot;liability&quot;,&quot;net-worth&quot;,&quot;stats&quot;,&quot;revenue&quot;], inner=5),
+    ACCOUNT_TYPE=repeat([&quot;E&quot;,&quot;E&quot;,&quot;A&quot;,&quot;L&quot;,&quot;N&quot;,&quot;S&quot;,&quot;R&quot;],inner=5));
+
+# DEPARTMENT Chartfield
+deptDF = DataFrame(
+    AS_OF_DATE=Date(&quot;2000-01-01&quot;, dateformat&quot;y-m-d&quot;),
+    ID = 1100:100:1500,
+    CLASSIFICATION=[&quot;SALES&quot;,&quot;HR&quot;, &quot;IT&quot;,&quot;BUSINESS&quot;,&quot;OTHERS&quot;],
+    CATEGORY=[&quot;sales&quot;,&quot;human_resource&quot;,&quot;IT_Staff&quot;,&quot;business&quot;,&quot;others&quot;],
+    STATUS=&quot;A&quot;,
+    DESCR=[
+    &quot;Sales &amp; Marketing&quot;,&quot;Human Resource&quot;,&quot;Infomration Technology&quot;,&quot;Business leaders&quot;,&quot;other temp&quot;
+        ],
+    DEPT_TYPE=[&quot;S&quot;,&quot;H&quot;,&quot;I&quot;,&quot;B&quot;,&quot;O&quot;]);
+
+# LOCATION Chartfield
+locationDF = DataFrame(
+    AS_OF_DATE=Date(&quot;2000-01-01&quot;, dateformat&quot;y-m-d&quot;),
+    ID = 11:1:22,
+    CLASSIFICATION=repeat([
+        &quot;Region A&quot;,&quot;Region B&quot;, &quot;Region C&quot;], inner=4),
+    CATEGORY=repeat([
+        &quot;Region A&quot;,&quot;Region B&quot;, &quot;Region C&quot;], inner=4),
+    STATUS=&quot;A&quot;,
+    DESCR=[
+&quot;Boston&quot;,&quot;New York&quot;,&quot;Philadelphia&quot;,&quot;Cleveland&quot;,&quot;Richmond&quot;,
+&quot;Atlanta&quot;,&quot;Chicago&quot;,&quot;St. Louis&quot;,&quot;Minneapolis&quot;,&quot;Kansas City&quot;,
+&quot;Dallas&quot;,&quot;San Francisco&quot;],
+    LOC_TYPE=&quot;Physical&quot;);
+
+# creating Ledger
+ledgerDF = DataFrame(
+            LEDGER = String[], FISCAL_YEAR = Int[], PERIOD = Int[], ORGID = String[],
+            OPER_UNIT = String[], ACCOUNT = Int[], DEPT = Int[], LOCATION = Int[],
+            POSTED_TOTAL = Float64[]
+            );
+
+# create 2020 Period 1-12 Actuals Ledger
+l = &quot;Actuals&quot;;
+fy = 2020;
+for p = 1:12
+    for i = 1:10^5
+        push!(ledgerDF, (l, fy, p, &quot;ABC Inc.&quot;, rand(locationDF.CATEGORY),
+            rand(accountsDF.ID), rand(deptDF.ID), rand(locationDF.ID), rand()*10^8))
+    end
+end
+
+# create 2021 Period 1-4 Actuals Ledger
+l = &quot;Actuals&quot;;
+fy = 2021;
+for p = 1:4
+    for i = 1:10^5
+        push!(ledgerDF, (l, fy, p, &quot;ABC Inc.&quot;, rand(locationDF.CATEGORY),
+            rand(accountsDF.ID), rand(deptDF.ID), rand(locationDF.ID), rand()*10^8))
+    end
+end
+
+# create 2021 Period 1-4 Budget Ledger
+l = &quot;Budget&quot;;
+fy = 2021;
+for p = 1:12
+    for i = 1:10^5
+        push!(ledgerDF, (l, fy, p, &quot;ABC Inc.&quot;, rand(locationDF.CATEGORY),
+            rand(accountsDF.ID), rand(deptDF.ID), rand(locationDF.ID), rand()*10^8))
+    end
+end
+
+# here is ~3 million rows ledger dataframe
+size(ledgerDF)
+
+# rename dimensions columns for innerjoin
+df_accounts = rename(accountsDF, :ID =&gt; :ACCOUNTS_ID, :CLASSIFICATION =&gt; :ACCOUNTS_CLASSIFICATION,
+    :CATEGORY =&gt; :ACCOUNTS_CATEGORY, :DESCR =&gt; :ACCOUNTS_DESCR);
+df_dept = rename(deptDF, :ID =&gt; :DEPT_ID, :CLASSIFICATION =&gt; :DEPT_CLASSIFICATION,
+    :CATEGORY =&gt; :DEPT_CATEGORY, :DESCR =&gt; :DEPT_DESCR);
+df_location = rename(locationDF, :ID =&gt; :LOCATION_ID, :CLASSIFICATION =&gt; :LOCATION_CLASSIFICATION,
+    :CATEGORY =&gt; :LOCATION_CATEGORY, :DESCR =&gt; :LOCATION_DESCR);
+
+# join Ledger accounts chartfield with accounts chartfield dataframe to pull all accounts fields
+# join Ledger dept chartfield with dept chartfield dataframe to pull all dept fields
+# join Ledger location chartfield with location chartfield dataframe to pull all location fields
+df_ledger = innerjoin(
+                innerjoin(
+                    innerjoin(ledgerDF, df_accounts, on = [:ACCOUNT =&gt; :ACCOUNTS_ID], makeunique=true),
+                    df_dept, on = [:DEPT =&gt; :DEPT_ID], makeunique=true), df_location,
+                on = [:LOCATION =&gt; :LOCATION_ID], makeunique=true);
+
+# note, how ledger DF has 28 columns now (inclusive of all chartfields join)
+size(df_accounts),size(df_dept),size(df_location), size(ledgerDF), size(df_ledger)
+
+function periodToQtr(x)
+    if x ∈ 1:3
+        return 1
+    elseif x ∈ 4:6
+        return 2
+    elseif x ∈ 7:9
+        return 3
+    else return 4
+    end
+end
+
+# now we will use this function to transform a new column
+transform!(df_ledger, :PERIOD =&gt; ByRow(periodToQtr) =&gt; :QTR)
+
+# let&#39;s create one more generic function, which converts a number to USD currency
+function numToCurrency(x)
+        return string(&quot;USD &quot;,round(x/10^6; digits = 2), &quot; million&quot;)
+end
+
+transform!(df_ledger, :POSTED_TOTAL =&gt; ByRow(numToCurrency) =&gt; :TOTAL)
+df_ledger[1:5,[&quot;POSTED_TOTAL&quot;,&quot;TOTAL&quot;]]
+&quot;df_ledger_size after transformation is: &quot;, size(df_ledger)</code></pre><pre class="documenter-example-output"><code class="nohighlight hljs ansi">(&quot;df_ledger_size after transformation is: &quot;, (2800000, 30))</code></pre><h4 id="Income-Statement-(Interactive)"><a class="docs-heading-anchor" href="#Income-Statement-(Interactive)">Income Statement (Interactive)</a><a id="Income-Statement-(Interactive)-1"></a><a class="docs-heading-anchor-permalink" href="#Income-Statement-(Interactive)" title="Permalink"></a></h4><pre><code class="nohighlight hljs">@manipulate for ld = Dict(&quot;Actuals&quot;=&gt; &quot;Actuals&quot;, &quot;Budget&quot; =&gt; &quot;Budget&quot;), 
+                rg = Dict(&quot;Region A&quot;=&gt; &quot;Region A&quot;, &quot;Region B&quot; =&gt; &quot;Region B&quot;, &quot;Region C&quot; =&gt; &quot;Region C&quot;),
+                yr = slider(2020:1:2022; value=2021),
+                qtr = 1:1:4
+    
+    @show ld, rg, yr, qtr
+    
+select(gdf_plot[(
+    (gdf_plot.FISCAL_YEAR .== yr)
+    .&amp;
+    (gdf_plot.QTR .== qtr)
+    .&amp;
+    (gdf_plot.LEDGER .== ld)
+    .&amp;
+    (gdf_plot.OPER_UNIT .== rg)
+    .&amp;
+    (in.(gdf_plot.ACCOUNTS_CLASSIFICATION, Ref([&quot;ASSETS&quot;, &quot;LIABILITIES&quot;, &quot;REVENUE&quot;,&quot;NET_WORTH&quot;])))
+    ),:],
+        :OPER_UNIT =&gt; :Org,
+        :FISCAL_YEAR =&gt; :FY,
+        :QTR =&gt; :Qtr,
+        :ACCOUNTS_CLASSIFICATION =&gt; :Accounts,
+        :DEPT_CLASSIFICATION =&gt; :Dept,
+        # :LOCATION_CLASSIFICATION =&gt; :Region,
+        :LOCATION_DESCR =&gt; :Loc,
+        :TOTAL =&gt; :TOTAL)
+end</code></pre><h4 id="Cash-Flow-Statement-(Interactive)"><a class="docs-heading-anchor" href="#Cash-Flow-Statement-(Interactive)">Cash Flow Statement (Interactive)</a><a id="Cash-Flow-Statement-(Interactive)-1"></a><a class="docs-heading-anchor-permalink" href="#Cash-Flow-Statement-(Interactive)" title="Permalink"></a></h4><pre><code class="nohighlight hljs">@manipulate for ld = Dict(&quot;Actuals&quot;=&gt; &quot;Actuals&quot;, &quot;Budget&quot; =&gt; &quot;Budget&quot;), 
+                rg = Dict(&quot;Region A&quot;=&gt; &quot;Region A&quot;, &quot;Region B&quot; =&gt; &quot;Region B&quot;, &quot;Region C&quot; =&gt; &quot;Region C&quot;),
+                yr = slider(2020:1:2022; value=2021),
+                qtr = 1:1:4
+    
+    @show ld, rg, yr, qtr
+    
+select(gdf_plot[(
+    (gdf_plot.FISCAL_YEAR .== yr)
+    .&amp;
+    (gdf_plot.QTR .== qtr)
+    .&amp;
+    (gdf_plot.LEDGER .== ld)
+    .&amp;
+    (gdf_plot.OPER_UNIT .== rg)
+    .&amp;
+    (in.(gdf_plot.ACCOUNTS_CLASSIFICATION, Ref([&quot;NON-OPERATING_EXPENSES&quot;,&quot;OPERATING_EXPENSES&quot;])))
+    ),:],
+        :OPER_UNIT =&gt; :Org,
+        :FISCAL_YEAR =&gt; :FY,
+        :QTR =&gt; :Qtr,
+        :ACCOUNTS_CLASSIFICATION =&gt; :Accounts,
+        :DEPT_CLASSIFICATION =&gt; :Dept,
+        # :LOCATION_CLASSIFICATION =&gt; :Region,
+        :LOCATION_DESCR =&gt; :Loc,
+        :TOTAL =&gt; :TOTAL)
+end</code></pre><h4 id="Supplychain-Material-Service-Request"><a class="docs-heading-anchor" href="#Supplychain-Material-Service-Request">Supplychain Material Service Request</a><a id="Supplychain-Material-Service-Request-1"></a><a class="docs-heading-anchor-permalink" href="#Supplychain-Material-Service-Request" title="Permalink"></a></h4><pre><code class="nohighlight hljs">sampleSize = 1000 # number of rows, scale as needed
+
+dfMSR = DataFrame(
+    UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+    MSR_DATE=rand(collect(Date(2020,1,1):Day(1):Date(2022,5,1)), sampleSize),
+    FROM_UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+    TO_UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+    GUDID = rand(dfGUDIDdevice.PrimaryDI, sampleSize),
+    QTY = rand(dfOrgMaster.UNIT, sampleSize));
+first(dfMSR, 5)</code></pre><h4 id="ITEM/Vendor-Master-Voucher-Invoice-data"><a class="docs-heading-anchor" href="#ITEM/Vendor-Master-Voucher-Invoice-data">ITEM/Vendor Master Voucher Invoice data</a><a id="ITEM/Vendor-Master-Voucher-Invoice-data-1"></a><a class="docs-heading-anchor-permalink" href="#ITEM/Vendor-Master-Voucher-Invoice-data" title="Permalink"></a></h4><pre><code class="nohighlight hljs">sampleSize = 1000 # number of rows, scale as needed
+
+dfVCHR = DataFrame(
+    UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+    VCHR_DATE=rand(collect(Date(2020,1,1):Day(1):Date(2022,5,1)), sampleSize),
+    STATUS=rand([&quot;Closed&quot;,&quot;Paid&quot;,&quot;Open&quot;,&quot;Cancelled&quot;,&quot;Exception&quot;], sampleSize),
+    VENDOR_INVOICE_NUM = rand(10001:9999999, sampleSize),
+    VENDOR=rand(unique(dfVendor.companyName), sampleSize),
+    GUDID = rand(dfGUDIDdevice.PrimaryDI, sampleSize),
+    QTY = rand(1:150, sampleSize),
+    UNIT_PRICE = rand(Normal(100, 2), sampleSize)
+    );
+show(first(dfVCHR, 5),allcols=true)</code></pre><h4 id="Supply-chain-Shipment-Receipt-data"><a class="docs-heading-anchor" href="#Supply-chain-Shipment-Receipt-data">Supply chain Shipment Receipt data</a><a id="Supply-chain-Shipment-Receipt-data-1"></a><a class="docs-heading-anchor-permalink" href="#Supply-chain-Shipment-Receipt-data" title="Permalink"></a></h4><pre><code class="nohighlight hljs">sampleSize = 1000 # number of rows, scale as needed
+dfSHIPRECEIPT = DataFrame(
+    UNIT = rand(dfOrgMaster.UNIT, sampleSize),
+    SHIP_DATE=rand(collect(Date(2020,1,1):Day(1):Date(2022,5,1)), sampleSize),
+    STATUS=rand([&quot;Shippped&quot;,&quot;Returned&quot;,&quot;In process&quot;,&quot;Cancelled&quot;,&quot;Exception&quot;], sampleSize),
+    SHIPMENT_NUM = rand(10001:9999999, sampleSize),
+    CUSTOMER=rand(unique(dfVendor.companyName), sampleSize),
+    GUDID = rand(dfGUDIDdevice.PrimaryDI, sampleSize),
+    QTY = rand(1:150, sampleSize),
+    UNIT_PRICE = rand(Normal(100, 2), sampleSize)
+    );
+show(first(dfSHIPRECEIPT, 5),allcols=true)</code></pre><h2 id="Supply-chain-Procurement-Pipeline"><a class="docs-heading-anchor" href="#Supply-chain-Procurement-Pipeline">Supply chain Procurement Pipeline</a><a id="Supply-chain-Procurement-Pipeline-1"></a><a class="docs-heading-anchor-permalink" href="#Supply-chain-Procurement-Pipeline" title="Permalink"></a></h2><pre><code class="nohighlight hljs">## Ledger Visual
+#	plot_data = gdf_plot[(
+#		(gdf_plot.FISCAL_YEAR .== yr_p)
+#		.&amp;
+#		(gdf_plot.LEDGER .== ld_p)
+#		.&amp;
+#		(gdf_plot.OPER_UNIT .== rg_p)
+#		.&amp;
+#		(gdf_plot.LOCATION_DESCR .== ldescr)
+#		.&amp;
+#		(gdf_plot.DEPT_CLASSIFICATION .== ddescr)
+#		.&amp;
+#		(gdf_plot.ACCOUNTS_CLASSIFICATION .== adescr))
+#		, :];
+#	# @df plot_data scatter(:QTR, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, label=&quot;$ld_p Total by #    $yr_p for $rg_p&quot;)
+#	@df plot_data plot(:QTR, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, 
+#		label=[
+#			&quot;$ld_p by $yr_p for $rg_p $ldescr $adescr $ddescr&quot;
+#			],
+#		lw=3)
+
+## Actuals vs Budget comparison
+
+#	plot_data_a = gdf_plot[(
+#		(gdf_plot.FISCAL_YEAR .== yr_p)
+#		.&amp;
+#		(gdf_plot.LEDGER .== &quot;Actuals&quot;)
+#		.&amp;
+#		(gdf_plot.OPER_UNIT .== rg_p)
+#		.&amp;
+#		(gdf_plot.LOCATION_DESCR .== ldescr)
+#		.&amp;
+#		(gdf_plot.DEPT_CLASSIFICATION .== ddescr)
+#		.&amp;
+#		(gdf_plot.ACCOUNTS_CLASSIFICATION .== adescr))
+#		, :];
+	# @df plot_data scatter(:QTR, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, label=&quot;$ld_p Total by # $yr_p for $rg_p&quot;)
+#	plot_data_b = gdf_plot[(
+#		(gdf_plot.FISCAL_YEAR .== yr_p)
+#		.&amp;
+#		(gdf_plot.LEDGER .== &quot;Budget&quot;)
+#		.&amp;
+#		(gdf_plot.OPER_UNIT .== rg_p)
+#		.&amp;
+#		(gdf_plot.LOCATION_DESCR .== ldescr)
+#		.&amp;
+#		(gdf_plot.DEPT_CLASSIFICATION .== ddescr)
+#		.&amp;
+#		(gdf_plot.ACCOUNTS_CLASSIFICATION .== adescr))
+#		, :];
+# @df plot_data scatter(:QTR, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, label=&quot;$ld_p Total by $yr_p # for $rg_p&quot;)
+#	@df plot_data_a plot(:QTR, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, 
+#		label=[
+#			&quot;Actuals by $yr_p for $rg_p $ldescr $adescr $ddescr&quot;
+#			],
+#		lw=3)
+#	@df plot_data_b plot!(:QTR, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, 
+#		label=[
+#			&quot;Budget by $yr_p for $rg_p $ldescr $adescr $ddescr&quot;
+#			],
+#		lw=3)
+
+# plot_data
+
+	# plot_data = gdf_plot[(
+	# 	(gdf_plot.FISCAL_YEAR .== yr_p)
+	# 	.&amp;
+	# 	(gdf_plot.LEDGER .== ld_p)
+	# 	.&amp;
+	# 	(gdf_plot.OPER_UNIT .== rg_p)
+	# 	.&amp;
+	# 	(gdf_plot.LOCATION_DESCR .== ldescr)
+	# 	.&amp;
+	# 	(gdf_plot.DEPT_CLASSIFICATION .== ddescr)
+	# 	.&amp;
+	# 	(gdf_plot.ACCOUNTS_CLASSIFICATION .== adescr))
+	# 	, :];
+	# @df plot_data scatter(:QTR, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, label=&quot;$ld_p Total by $yr_p for $rg_p&quot;)
+	# @df gdf_plot plot(:QTR, :ACCOUNTS_CLASSIFICATION, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, 
+	# 	label=[
+	# 		&quot;$ld_p by $yr_p for $rg_p $ldescr $adescr $ddescr&quot;
+	# 		],
+	# 	lw=3)
+#	@df gdf_plot scatter(:QTR, :ACCOUNTS_CLASSIFICATION, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, 
+#		label=[
+#			&quot;$ld_p by $yr_p for $rg_p $ldescr for $ddescr&quot;
+#			],
+#		lw=3)
+
+
+	# plot_data = gdf_plot[(
+	# 	(gdf_plot.FISCAL_YEAR .== yr_p)
+	# 	.&amp;
+	# 	(gdf_plot.LEDGER .== ld_p)
+	# 	.&amp;
+	# 	(gdf_plot.OPER_UNIT .== rg_p)
+	# 	.&amp;
+	# 	(gdf_plot.LOCATION_DESCR .== ldescr)
+	# 	.&amp;
+	# 	(gdf_plot.DEPT_CLASSIFICATION .== ddescr)
+	# 	.&amp;
+	# 	(gdf_plot.ACCOUNTS_CLASSIFICATION .== adescr))
+	# 	, :];
+	# @df plot_data scatter(:QTR, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, label=&quot;$ld_p Total by $yr_p for $rg_p&quot;)
+	# @df gdf_plot plot(:QTR, :ACCOUNTS_CLASSIFICATION, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, 
+	# 	label=[
+	# 		&quot;$ld_p by $yr_p for $rg_p $ldescr $adescr $ddescr&quot;
+	# 		],
+	# 	lw=3)
+#	@df gdf_plot scatter(:QTR, :DEPT_CLASSIFICATION, :TOTAL/10^8, title = &quot;Finance Ledger Data&quot;, xlabel=&quot;Quarter&quot;, ylabel=&quot;Total (in USD million)&quot;, 
+#		label=[
+#			&quot;$ld_p by $yr_p for $rg_p $ldescr for $adescr&quot;
+#			],
+#		lw=3)</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../query/">« data insights</a><a class="docs-footer-nextpage" href="../ml/">AI predictions »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.15 on <span class="colophon-date" title="Sunday 17 April 2022 05:48">Sunday 17 April 2022</span>. Using Julia version 1.7.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

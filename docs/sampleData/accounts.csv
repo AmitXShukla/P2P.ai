@@ -1,0 +1,36 @@
+ENTITY,AS_OF_DATE,ID,CLASSIFICATION,CATEGORY,STATUS,DESCR,ACCOUNT_TYPE
+Apple Inc.,1900-01-01,11000,OPERATING_EXPENSES,Travel,A,operating expenses,E
+Apple Inc.,1900-01-01,12000,OPERATING_EXPENSES,Payroll,A,operating expenses,E
+Apple Inc.,1900-01-01,13000,OPERATING_EXPENSES,non-Payroll,A,operating expenses,E
+Apple Inc.,1900-01-01,14000,OPERATING_EXPENSES,Allowance,A,operating expenses,E
+Apple Inc.,1900-01-01,15000,OPERATING_EXPENSES,Cash,A,operating expenses,E
+Apple Inc.,1900-01-01,16000,NON-OPERATING_EXPENSES,Facility,A,non-operating expenses,E
+Apple Inc.,1900-01-01,17000,NON-OPERATING_EXPENSES,Supply,A,non-operating expenses,E
+Apple Inc.,1900-01-01,18000,NON-OPERATING_EXPENSES,Services,A,non-operating expenses,E
+Apple Inc.,1900-01-01,19000,NON-OPERATING_EXPENSES,Investment,A,non-operating expenses,E
+Apple Inc.,1900-01-01,20000,NON-OPERATING_EXPENSES,Misc.,A,non-operating expenses,E
+Apple Inc.,1900-01-01,21000,ASSETS,Depreciation,A,assets,A
+Apple Inc.,1900-01-01,22000,ASSETS,Gain,A,assets,A
+Apple Inc.,1900-01-01,23000,ASSETS,Service,A,assets,A
+Apple Inc.,1900-01-01,24000,ASSETS,Retired,A,assets,A
+Apple Inc.,1900-01-01,25000,ASSETS,Fault.,A,assets,A
+Apple Inc.,1900-01-01,26000,LIABILITIES,Receipt,A,liability,L
+Apple Inc.,1900-01-01,27000,LIABILITIES,Accrual,A,liability,L
+Apple Inc.,1900-01-01,28000,LIABILITIES,Return,A,liability,L
+Apple Inc.,1900-01-01,29000,LIABILITIES,Credit,A,liability,L
+Apple Inc.,1900-01-01,30000,LIABILITIES,ROI,A,liability,L
+Apple Inc.,1900-01-01,31000,NET_WORTH,Cash,A,net-worth,N
+Apple Inc.,1900-01-01,32000,NET_WORTH,Funds,A,net-worth,N
+Apple Inc.,1900-01-01,33000,NET_WORTH,Invest,A,net-worth,N
+Apple Inc.,1900-01-01,34000,NET_WORTH,Transfer,A,net-worth,N
+Apple Inc.,1900-01-01,35000,NET_WORTH,Roll-over,A,net-worth,N
+Apple Inc.,1900-01-01,36000,STATISTICS,FTE,A,stats,S
+Apple Inc.,1900-01-01,37000,STATISTICS,Members,A,stats,S
+Apple Inc.,1900-01-01,38000,STATISTICS,Non_Members,A,stats,S
+Apple Inc.,1900-01-01,39000,STATISTICS,Temp,A,stats,S
+Apple Inc.,1900-01-01,40000,STATISTICS,Contractors,A,stats,S
+Apple Inc.,1900-01-01,41000,REVENUE,Sales,A,revenue,R
+Apple Inc.,1900-01-01,42000,REVENUE,Merchant,A,revenue,R
+Apple Inc.,1900-01-01,43000,REVENUE,Service,A,revenue,R
+Apple Inc.,1900-01-01,44000,REVENUE,Consulting,A,revenue,R
+Apple Inc.,1900-01-01,45000,REVENUE,Subscriptions,A,revenue,R

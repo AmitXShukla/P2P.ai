@@ -1,0 +1,6 @@
+AS_OF_DATE,ID,CLASSIFICATION,CATEGORY,STATUS,DESCR,DEPT_TYPE
+2000-01-01,1100,SALES,sales,A,Sales & Marketing,S
+2000-01-01,1200,HR,human_resource,A,Human Resource,H
+2000-01-01,1300,IT,IT_Staff,A,Infomration Technology,I
+2000-01-01,1400,BUSINESS,business,A,Business leaders,B
+2000-01-01,1500,OTHERS,others,A,other temp,O

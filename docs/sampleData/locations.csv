@@ -1,0 +1,13 @@
+AS_OF_DATE,ID,CLASSIFICATION,CATEGORY,STATUS,DESCR,LOC_TYPE
+2000-01-01,11,Region A,Region A,A,Boston,Physical
+2000-01-01,12,Region A,Region A,A,New York,Physical
+2000-01-01,13,Region A,Region A,A,Philadelphia,Physical
+2000-01-01,14,Region A,Region A,A,Cleveland,Physical
+2000-01-01,15,Region B,Region B,A,Richmond,Physical
+2000-01-01,16,Region B,Region B,A,Atlanta,Physical
+2000-01-01,17,Region B,Region B,A,Chicago,Physical
+2000-01-01,18,Region B,Region B,A,St. Louis,Physical
+2000-01-01,19,Region C,Region C,A,Minneapolis,Physical
+2000-01-01,20,Region C,Region C,A,Kansas City,Physical
+2000-01-01,21,Region C,Region C,A,Dallas,Physical
+2000-01-01,22,Region C,Region C,A,San Francisco,Physical

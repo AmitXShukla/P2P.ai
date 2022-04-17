@@ -65,6 +65,11 @@ Pkg.build("PyCall");
 
 ## create graph, vertices and edges
 
+!!! info
+    Below code is an example of using Julia Langauge to call pytigergraph Python package, run GSQLs on TGCLOUD.
+
+    In future, depending on demand, I may write pytigergprah package in Julia Lang.
+
 ```@example
 import Pkg
 # you may not need to add conda, pytigergraph
@@ -81,14 +86,68 @@ Conda.add("pyTigerGraph")
 tg = pyimport("pyTigerGraph")
 # please don't expect below credentials to work for you, and signup at tgcloud
 hostName = "https://p2p.i.tgcloud.io"
-userName = "tigercloud"
-password = "tigercloud"
-conn = tg.TigerGraphConnection(host=hostName, username=userName, password=password)
-
+userName = "amit"
+password = "password"
+graphName = "P2P"
+conn = tg.TigerGraphConnection(host=hostName, username=userName, password=password, graphname=graphName)
+# conn.gsql(getSchema)
 ```
 
+!!! warning
+    Operations that DO NOT need a Token
+    
+    Viewing the schema of your graph using functions such as getSchema and getVertexTypes does not require you to have an authentication token. A token is also not required to run gsql commands through pyTigerGraph.
+    
+    Sample Connection
+    
+    conn = tg.TigerGraphConnection(host='https://pytigergraph-demo.i.tgcloud.io', username='tigergraph' password='password' graphname='DemoGraph')
+    
+    Operations that DO need a Token
+
+    A token is required to view or modify any actual DATA in the graph. Examples are: upserting data, deleting edges, and getting stats about any loaded vertices. A token is also required to get version data about the TigerGraph instance.
+
+    Sample Connection
+
+    conn = tg.TigerGraphConnection(host='https://pytigergraph-demo.i.tgcloud.io', username='tigergraph' password='password' graphname='DemoGraph', apiToken='av1im8nd2v06clbnb424jj7fp09hp049')
+
+
+!!! note
+    Below code is directly executed over Python environment
+    
+    first you will also need to install pyTigerGraph in your python environment,
+
+    !pip install -U pyTigerGraph
+    
+    then execute following commands to create TGCloud Graph
+
+```@python
+import pyTigerGraph as tg
+hostName = "https://p2p.i.tgcloud.io"
+userName = "amit"
+password = "password"
+graphName = "P2P"
+conn = tg.TigerGraphConnection(host=hostName, username=userName, password=password, graphname=graphName)
+
+conn.gsql("ls")
+conn.gsql('''USE GLOBAL
+DROP ALL
+''')
+
+conn.gsql('''
+  USE GLOBAL
+  CREATE VERTEX Galaxy (PRIMARY_ID unit STRING, star BOOL, gas BOOL, dust BOOL, breathableAir BOOL, water BOOL, land BOOL, sky BOOL) WITH primary_id_as_attribute="true"
+  CREATE VERTEX Species (PRIMARY_ID unit STRING, intelligence BOOL, crawl INT, swim INT, walk INT, runningSpeed INT, eat INT, drink INT, sleep INT) WITH primary_id_as_attribute="true"
+  CREATE DIRECTED EDGE live_in (From Species, To Galaxy, living_since DATETIME) WITH REVERSE_EDGE="is_home"
+  CREATE UNDIRECTED EDGE behavior (From Species, To Species, like_date DATETIME)
+  CREATE DIRECTED EDGE give_food (From Galaxy, To Species) WITH REVERSE_EDGE="feeds"
+''')
+results = conn.gsql('CREATE GRAPH P2P(Galaxy, Species, live_in, behavior, give_food)')
 ```
-TODO - julia and tg version
+
+![Graph 1](https://github.com/AmitXShukla/P2P.ai/blob/main/docs/assets/images/graph1.png?raw=true)
+    
+```
+TODO - query data from TG RESTAPI and display as julia GRAPHMAKIE plot
 
 graph 1 - sun => swirling gas & dust form earth or
  someone create earth

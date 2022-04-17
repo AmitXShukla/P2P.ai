@@ -1,0 +1,7 @@
+unit,intelligence,crawl,swim,walk,runningSpeed,eat,drink,sleep
+Dinosaur,true,7,0,7,7,9,3,6
+Mammoth,true,9,3,6,5,8,2,8
+Birds,true,0,0,0,9,1,1,2
+BigFoot,true,7,7,7,7,8,2,8
+Cockroach,false,0,0,0,10,1,1,1
+Human,false,9,1,1,1,9,10,9

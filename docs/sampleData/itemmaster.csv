@@ -1,0 +1,42 @@
+unit,drug,category,essentials,luxury
+ToiletPaper,false,Cleaning Supplies,true,false
+Vacuum,false,Cleaning Supplies,true,false
+Bucket,false,Cleaning Supplies,true,false
+Rags or chamois mop,false,Cleaning Supplies,true,false
+dishwashing soap,false,Cleaning Supplies,true,false
+All-purpose cleaner,false,Cleaning Supplies,true,false
+Scrubbing sponges,false,Cleaning Supplies,true,false
+Baking soda,false,Cleaning Supplies,true,false
+White vinegar,false,Cleaning Supplies,true,false
+lemons,false,Cleaning Supplies,true,false
+Adenosine,true,Rx,true,false
+Atropine ,true,Rx,true,false
+Calcium gluconate,true,Rx,true,false
+Dextrose 10%,true,Rx,true,false
+Dopamine,true,Rx,true,false
+"Epinephrine 1 : 10,000",true,Rx,true,false
+Fentanyl,true,Rx,true,false
+Hydralazine,true,Rx,true,false
+Lorazepam,true,Rx,true,false
+Morphine,true,Rx,true,false
+Naloxone,true,Rx,true,false
+Phenobarbital,true,Rx,true,false
+Sodium Bicarbonate,true,Rx,true,false
+Vecuronium,true,Rx,true,false
+"Volume Expanders RBCs, NS",true,Rx,true,false
+sodium nitrite,true,Rx,true,false
+sodium nitroprusside,true,Rx,true,false
+sodium thiosulfate,true,Rx,true,false
+sodium valproate,true,Rx,true,false
+spectinomycin,true,Rx,true,false
+spironolactone,true,Rx,true,false
+stavudine,true,Rx,true,false
+streptokinase,true,Rx,true,false
+streptomycin,true,Rx,true,false
+sulfadiazine,true,Rx,true,false
+sulfadoxine,true,Rx,true,false
+sulfadoxine + pyrimethamine,true,Rx,true,false
+sulfamethoxazole,true,Rx,true,false
+trimethoprim,true,Rx,true,false
+tamoxifen,true,Rx,true,false
+testosterone,true,Rx,true,false

@@ -1,0 +1,9 @@
+unit,star,gas,dust,breathableAir,water,land,sky
+Sun,true,true,true,false,false,false,false
+Earth,false,true,true,true,true,true,true
+Jupiter,false,true,true,false,false,true,true
+Saturn,false,true,true,false,false,true,true
+Mars,false,true,true,false,false,true,true
+Mercury,false,true,true,false,false,true,true
+Uranus,false,true,true,false,false,true,true
+Venus,false,true,true,false,false,true,true

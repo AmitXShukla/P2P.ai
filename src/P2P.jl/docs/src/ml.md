@@ -12,4 +12,10 @@ predict increase material service request by region
 
 predict turn-around time by item i.e. procurement pipeline
 
+-----
+
+## Real-time TimeSeries, StatsModel predictions
+	Predict Operating and non-operating expense for year
+	Predict Actuals to Budget variance and FORECAST
+	using SARIMA model to predict "Region A" NET-WORTH
 

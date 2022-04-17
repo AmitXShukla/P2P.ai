@@ -137,40 +137,66 @@ conn.gsql('''
   USE GLOBAL
   CREATE VERTEX Galaxy (PRIMARY_ID unit STRING, star BOOL, gas BOOL, dust BOOL, breathableAir BOOL, water BOOL, land BOOL, sky BOOL) WITH primary_id_as_attribute="true"
   CREATE VERTEX Species (PRIMARY_ID unit STRING, intelligence BOOL, crawl INT, swim INT, walk INT, runningSpeed INT, eat INT, drink INT, sleep INT) WITH primary_id_as_attribute="true"
+  CREATE VERTEX ItemMaster (PRIMARY_ID unit STRING, drug BOOL, category STRING, essentials BOOL, luxury BOOL) WITH primary_id_as_attribute="true"
   CREATE DIRECTED EDGE live_in (From Species, To Galaxy, living_since DATETIME) WITH REVERSE_EDGE="is_home"
   CREATE UNDIRECTED EDGE behavior (From Species, To Species, like_date DATETIME)
   CREATE DIRECTED EDGE give_food (From Galaxy, To Species) WITH REVERSE_EDGE="feeds"
+  CREATE DIRECTED EDGE essentials (From Species, To Species) WITH REVERSE_EDGE="survival_Kit"
+  CREATE DIRECTED EDGE used_by (From ItemMaster, To Species)
 ''')
-results = conn.gsql('CREATE GRAPH P2P(Galaxy, Species, live_in, behavior, give_food)')
+results = conn.gsql('CREATE GRAPH P2P(Galaxy, Species, ItemMaster, live_in, behavior, give_food, essentials, used_by)')
 ```
 
 ![Graph 1](https://github.com/AmitXShukla/P2P.ai/blob/main/docs/assets/images/graph1.png?raw=true)
     
+#### Loading Data
+
+```example
+conn.gsql('''
+USE GLOBAL
+USE GRAPH P2P
+CREATE LOADING JOB P2P_PATH FOR GRAPH P2P {
+DEFINE FILENAME file1 = "sampleData/galaxy.csv";
+DEFINE FILENAME file2 = "sampleData/species.csv";
+DEFINE FILENAME file3 = "sampleData/itemmaster.csv";
+LOAD file1 TO VERTEX Galaxy VALUES ($"unit", $"star", $"gas", $"dust", $"breathableAir", $"water", $"land", $"sky") USING header="true", separator=",";
+LOAD file2 TO VERTEX Species VALUES ($"unit", $"intelligence", $"crawl", $"swim", $"walk", $"runningSpeed", $"eat", $"drink", $"sleep") USING header="true", separator=",";
+LOAD file3 TO VERTEX ItemMaster VALUES ($"unit", $"drug", $"category", $"essentials", $"luxury") USING header="true", separator=",";
+}
+''')
+
+results = conn.gsql('RUN LOADING JOB P2P_PATH USING file1="sampleData/galaxy.csv", "sampleData/species.csv", "sampleData/itemmaster.csv"')
 ```
-TODO - query data from TG RESTAPI and display as julia GRAPHMAKIE plot
 
-graph 1 - sun => swirling gas & dust form earth or
- someone create earth
-graph 2
-dinaosaur, cocroaches, fish, mammoth lives in earth
-internal (supply chain, virus) or external (fireball) disruption
-they all eat drink and sleep
-who eats , drinks and sleeps more, die
-roaches and fish survive
+You can also manually upload your data to TGCloud.
 
-human eat, drink, sleep
-chain is interrupted
-fight
+    Please see, a copy of datasets can be found inside sampleData folder. or use sampleData jupter notebook to generate more volume data sets.
 
-supply chain, virus handle it
+![Graph 2](https://github.com/AmitXShukla/P2P.ai/blob/main/docs/assets/images/graph2.png?raw=true)
 
-that is it, simple , we are here to fix supply chain crisis
+You can also manually map your data to vertices/edges in TGCloud.
 
-now, why toliet paper,
-because tp belongs to a family of clearning supplies
-if you solve it for tp, you solve it for all cleanign supplies category
+![Graph 3](https://github.com/AmitXShukla/P2P.ai/blob/main/docs/assets/images/graph3.png?raw=true)
 
-and if you solve it for cleaning supply, you can solve it for all "life essentials"
-```
+** Do NOT forget to publish your data mappings and load data.**
+
+![Graph 4](https://github.com/AmitXShukla/P2P.ai/blob/main/docs/assets/images/graph4.png?raw=true)
+
+
+**Conclusion**
+
+I would love to share my queries with you in details (and you'll figure it out, that I cheated).
+but here is the conclusion.
+
+Human needs TP, Cleaning Supplies as much as "Morphine" or "Oxygen" and god forbid, perhaps "Ventilators".
+
+But Cockroaches don't because Cockroaches are living before Dinosaurs and still around, and that is all because of their behaviors which helps them survive.
+
+**which is Eat Less, Drink more, Sleep less and RUN all day long.**
+
+![Graph 5](https://github.com/AmitXShukla/P2P.ai/blob/main/docs/assets/images/graph5.png?raw=true)
+
 
 *I am not sure, if you buy all the logic above or not, but I am sure, you now know how to create, plot and define graph, vertices and edges.*
+
+In next chapter, I promise, I will not use silly logic and instead will focus on real life data and use cases.

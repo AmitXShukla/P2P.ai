@@ -1,0 +1,9 @@
+ENTITY,GROUP,DEPARTMENT,UNIT
+HeadOffice,Operations,Procurement,Sourcing
+HeadOffice,Operations,Procurement,Sourcing
+HeadOffice,Operations,Procurement,Maintenance
+HeadOffice,Operations,Procurement,Support
+HeadOffice,Operations,Procurement,Services
+HeadOffice,Operations,HR,Helpdesk
+HeadOffice,Operations,HR,ServiceCall
+HeadOffice,Operations,MFG,IT

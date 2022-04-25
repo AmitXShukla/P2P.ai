@@ -1,3 +1,12 @@
+##  how much of travel costs can be expense back to employee as incentives
+
+    **please see:** to see meaningful results, increase sample size in Julia/Python notebook and create data at-least 5-10 million rows per data frame
+    GitHub doesn't allow voluminous data upload, hence, I uploaded only 1000 rows per dataframe
+
+    look at assets/sampleData/sampleData.ipynb file and change variable SampleSize,
+    then re-run / extract sample data CSVs to load into Graph.
+
+
 ```@python
 import pyTigerGraph as tg
 hostName = "https://p2p.i.tgcloud.io"
@@ -46,13 +55,30 @@ results = conn.gsql('RUN LOADING JOB P2P_PATH USING file1="sampleData/galaxy.csv
 
 ## given employees are working remote, what are savings in operating expenses, if one fourth of locations in California are permanently closed
 
-USE GRAPH operExpenses
+USE GRAPH P2PFinSCM
+SET syntax_version="v2"
 
-INTERPRET QUERY () SYNTAX v2 {
+#### a 2-hop query can produce similar results but can calculate average as well
+// we need yearly average,
 
-  operExp =  SELECT s
-               FROM Ledger:s - (by_account>*) - Account:a
-               WHERE a.ID == "13000";
+CREATE QUERY acctRollupV31 (VERTEX<Account> a) {
+    OrAccum  @visited = FALSE;
+    AvgAccum @@avg_total;
+    AvgAccum @@avg_period;
+    
+    start = {a};
 
-    PRINT  operExp;
+    first_neighbors = SELECT tgt
+        FROM start:s -(by_account:b)- Ledger:tgt
+        ACCUM tgt.@visited += TRUE, s.@visited += TRUE;
+
+    second_neighbors = SELECT tgt
+        FROM first_neighbors -(:b)- :tgt
+        WHERE tgt.@visited == FALSE
+        POST-ACCUM @@avg_total += tgt.POSTED_TOTAL;
+        POST-ACCUM @@avg_period += tgt.FISCAL_YEAR;
+
+    PRINT second_neighbors;
+    PRINT @@avg_total;
+    PRINT @@avg_period;
 }

@@ -1,7 +1,6 @@
-## Billion \$\$ toilet paper
-yes, you read this title right, Billion Dollar toilet paper.
+## Procure to Pay
 
-This book is about Data Science, Graph Analysis to understand, how something like toilet paper is sold as gold during Pandemic. In next few chapters, we will use data science technologies to understand, predict and perhaps prevent global supply chain shortages specially for those items which every person needs to survive.
+This book is about Data Science, Graph Analysis to understand, Procure to Pay occasionally referred as Buy to Pay | Source to Pay or Order to Cash, Supply Chain life cycle operations to effectively manage products, services & supplies in an organizations. In next few chapters, we will use data science technologies to understand, predict and perhaps prevent global supply chain shortages specially for those items which every person needs to survive.
 
 ---
 ## about Author
@@ -11,7 +10,7 @@ This book is about Data Science, Graph Analysis to understand, how something lik
 
     **Bio:** [about me](https://github.com/AmitXShukla)
 
-    **Last Update Date:** Apr 04 2022
+    **Last Update Date:** July 10 2022
 
     **Who should read this:** small, medium, large ERP Consultants
 
@@ -39,11 +38,11 @@ Complete source code can be found here.
 
 !!! note
 
-    **Platform:** TigerGraph, Oracle OCI, AWS, Google or Microsoft Azure data cloud.
+    **Platform:** Oracle OCI, AWS, Google or Microsoft Azure data cloud.
 
-    **Analytics:** Jupyter NBs, Julia Pluto notebooks, TigerGraph GSQL, Power BI, Tableau, Oracle Analytics Cloud or Kibana
+    **Analytics:** Jupyter | Pluto notebooks, Power BI, Tableau, Oracle Analytics Cloud
 
-    **Programming/Framework:** Python, Julia, FluxML, TigerGraph GSQL, TigerGraph ML
+    **Programming/Framework:** Julia, FluxML, Graph Analytics
 
 ---
 ## Procure2Pay.ai
@@ -67,7 +66,6 @@ This package also show case reporting, visualizations to support real time, live
 Pages = [
 	"index.md"
     "define.md"
-    "path.md"
     "process.md"
     "facts.md"
     "graph.md"
